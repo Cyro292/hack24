@@ -1,10 +1,10 @@
-from fastapi import FastAPI, WebSocket
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from app.text_to_speech.text_to_speech_service import (
     create_audio_file_from_text,
 )
 from app.speech_to_text.speech_to_text_service import get_text_from_audio_file
 from app.check_reroute.check_reroute_service import get_reroute_nessary
-from app.vad.webrtc_service import is_speech
+from app.vad.vad_service import is_speech, get_possibility_of_speech
 
 app = FastAPI()
 
@@ -49,7 +49,10 @@ async def check_redirect():
 @app.websocket("/word_probability/")
 async def word_probability(websocket: WebSocket):
     await websocket.accept()
-    while True:
-        audio_data = await websocket.receive_bytes()
-        speech_probability = is_speech(audio_data)
-        await websocket.send_text(f"Speech probability: {speech_probability}")
+    try:
+        while True:
+            audio_data = await websocket.receive_bytes()
+            speech_probability = get_possibility_of_speech(audio_data)
+            await websocket.send_text(f"Speech probability: {speech_probability}")
+    except WebSocketDisconnect:
+        print("WebSocket connection closed")
