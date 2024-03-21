@@ -153,6 +153,8 @@ for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings",
 
 
 
+     
+# %%    
 # mongo_client = get_mongo_client()
 
 # DB_NAME="natel"
