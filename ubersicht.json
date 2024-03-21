@@ -728,156 +728,6 @@
                 "name": "Amt für Militär und Zivilschutz",
                 "tel": "+41 58 229 71 11",
                 "email": ""
-            },
-            "verkehr": {
-                "strassenverkehr": {
-                    "name": "Strassenverkehrs- und Schifffahrtsamt",
-                    "tel": "+41 58 229 22 22",
-                    "email": "info.stva@sg.ch"
-                },
-                "oeffentlicher-verkehr": {
-                    "name": "Amt für öffentlichen Verkehr",
-                    "tel": "+41 58 229 34 88",
-                    "email": ""
-                },
-                "baustellen": {
-                    "name": "Baudepartement",
-                    "tel": "+41 58 229 30 34",
-                    "email": ""
-                },
-                "schifffahrt": {
-                    "name": "Strassenverkehrs- und Schifffahrtsamt",
-                    "tel": "+41 58 229 93 20",
-                    "email": ""
-                }
-            },
-            "kultur": {
-                "staatsarchiv": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "kulturerbe": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "archaeologie": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "kantonsbibliothek-vadiana": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "stiftsarchiv": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "denkmalpflege": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "Kulturstandorte-und-institutionen": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                }
-            },
-            "wirtschaft-arbeit": {
-                "standortfoerderung": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "arbeitnehmende": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "arbeitslos-arbeit-finden": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "arbeitgebende": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "konkurswesen": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                }
-            },
-            "recht": {
-                "staatsanwaltschaft-jugendanwaltschaft": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "gerichte": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "planungs-bau-umweltrecht": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "beschaffungswesen": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "handelsregister-notariate": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "buergerrecht-zivilstand": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "beglaubigungen": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                }
-            },
-            "bauen": {
-                "tiefbau": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "raumentwicklung": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "baugesuch-baubewilligung": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "ich-will-bauen": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                },
-                "hochbau": {
-                    "name": "",
-                    "tel": "",
-                    "email": ""
-                }
             }
         }
     },
@@ -896,7 +746,12 @@
             "sonderbewilligungen": "https://www.sg.ch/verkehr/strassenverkehr/sonderbewilligungen.html",
             "rechnung_gebuehren": "https://www.sg.ch/verkehr/strassenverkehr/rechnung_gebuehren.html",
             "formulare_merkblaetter": "https://www.sg.ch/verkehr/strassenverkehr/formulare_merkblaetter.html",
-            "medizinische_kontrolluntersuchung_seniorinnen_und_senioren": "https://www.sg.ch/verkehr/strassenverkehr/medizinische_kontrolluntersuchung_seniorinnen_und_senioren.html"
+            "medizinische_kontrolluntersuchung_seniorinnen_und_senioren": "https://www.sg.ch/verkehr/strassenverkehr/medizinische_kontrolluntersuchung_seniorinnen_und_senioren.html",
+            "contact": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 22 22",
+                "email": "info.stva@sg.ch"
+            }
         },
         "oeffentlicher-verkehr": {
             "URL": "https://www.sg.ch/verkehr/oeffentlicher-verkehr.html",
@@ -907,10 +762,20 @@
             "infrastrukturprojekte": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/infrastrukturprojekte.html",
             "planung-oev-angebote": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/planung-oev-angebote.html",
             "s-bahn-bodensse": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/s-bahn-bodensse.html",
-            "fahrplanprozess": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/fahrplanprozess.html"
+            "fahrplanprozess": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/fahrplanprozess.html",
+            "contact": {
+                "name": "Amt für öffentlichen Verkehr",
+                "tel": "+41 58 229 34 88",
+                "email": ""
+            }
         },
         "baustellen": {
-            "URL": "https://www.sg.ch/verkehr/baustellen.html"
+            "URL": "https://www.sg.ch/verkehr/baustellen.html",
+            "contact": {
+                "name": "Baudepartement",
+                "tel": "+41 58 229 30 34",
+                "email": ""
+            }
         },
         "schifffahrt": {
             "URL": "https://www.sg.ch/verkehr/schifffahrt.html",
@@ -921,7 +786,34 @@
             "steuern-und-gebuehren": "https://www.sg.ch/verkehr/schifffahrt/steuern-und-gebuehren.html",
             "schiffsfuehrer": "https://www.sg.ch/verkehr/schifffahrt/schiffsfuehrer.html",
             "ausweise---fuehrer-und-schiff": "https://www.sg.ch/verkehr/schifffahrt/ausweise---fuehrer-und-schiff.html",
-            "seepolizei--seerettung---sturmwarndienst": "https://www.sg.ch/verkehr/schifffahrt/seepolizei--seerettung---sturmwarndienst.html"
+            "seepolizei--seerettung---sturmwarndienst": "https://www.sg.ch/verkehr/schifffahrt/seepolizei--seerettung---sturmwarndienst.html",
+            "contact": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 93 20",
+                "email": ""
+            }
+        },
+        "category-contact": {
+            "strassenverkehr": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 22 22",
+                "email": "info.stva@sg.ch"
+            },
+            "oeffentlicher-verkehr": {
+                "name": "Amt für öffentlichen Verkehr",
+                "tel": "+41 58 229 34 88",
+                "email": ""
+            },
+            "baustellen": {
+                "name": "Baudepartement",
+                "tel": "+41 58 229 30 34",
+                "email": ""
+            },
+            "schifffahrt": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 93 20",
+                "email": ""
+            }
         }
     },
     "kultur": {
@@ -938,14 +830,24 @@
             "ihr-besuch-im-lesesaal": "https://www.sg.ch/kultur/staatsarchiv/ihr-besuch-im-lesesaal.html",
             "uber-uns": "https://www.sg.ch/kultur/staatsarchiv/uber-uns.html",
             "Oeffentliche-Organe": "https://www.sg.ch/kultur/staatsarchiv/Oeffentliche-Organe.html",
-            "kontakt": "https://www.sg.ch/kultur/staatsarchiv/kontakt.html"
+            "kontakt": "https://www.sg.ch/kultur/staatsarchiv/kontakt.html",
+            "contact": {
+                "name": "Staatsarchiv St.Gallen",
+                "tel": "+41 58 229 32 05",
+                "email": "info.staatsarchiv@sg.ch"
+            }
         },
         "leitfaden-downloads": {
             "URL": "https://www.sg.ch/kultur/leitfaden-downloads.html"
         },
         "kulturerbe": {
             "URL": "https://www.sg.ch/kultur/kulturerbe.html",
-            "Fachstelle-Kulturerbe": "https://www.sg.ch/kultur/kulturerbe/Fachstelle-Kulturerbe.html"
+            "Fachstelle-Kulturerbe": "https://www.sg.ch/kultur/kulturerbe/Fachstelle-Kulturerbe.html",
+            "contact": {
+                "name": "Christopher Rühle, Leiter Fachstelle Kulturerbe",
+                "tel": "+41 58 229 21 51",
+                "email": "christopher.ruehle@sg.ch"
+            }
         },
         "kulturfoerderung": {
             "URL": "https://www.sg.ch/kultur/kulturfoerderung.html",
@@ -967,7 +869,12 @@
             "links": "https://www.sg.ch/kultur/archaeologie/links.html",
             "funde-melden": "https://www.sg.ch/kultur/archaeologie/funde-melden.html",
             "ueber-uns": "https://www.sg.ch/kultur/archaeologie/ueber-uns.html",
-            "gesetzliche-grundlagen": "https://www.sg.ch/kultur/archaeologie/gesetzliche-grundlagen.html"
+            "gesetzliche-grundlagen": "https://www.sg.ch/kultur/archaeologie/gesetzliche-grundlagen.html",
+            "contact": {
+                "name": "Kantonsarchäologie",
+                "tel": "+41 58 229 38 72",
+                "email": "archaeologie@sg.ch"
+            }
         },
         "kantonsbibliothek-vadiana": {
             "URL": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana.html",
@@ -983,13 +890,23 @@
             "schenkungen": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/schenkungen.html",
             "links": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/links.html",
             "digitale-angebote": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/digitale-angebote.html",
-            "bibliothekswesen-st-gallen": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/bibliothekswesen-st-gallen.html"
+            "bibliothekswesen-st-gallen": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/bibliothekswesen-st-gallen.html",
+            "contact": {
+                "name": "Kantonsbibliothek Vadiana - Bibliothek Hauptpost",
+                "tel": "+41 58 229 09 90",
+                "email": "info@bibliosg.ch"
+            }
         },
         "stiftsarchiv": {
             "URL": "https://www.sg.ch/kultur/stiftsarchiv.html",
             "benutzung": "https://www.sg.ch/kultur/stiftsarchiv/benutzung.html",
             "recherche": "https://www.sg.ch/kultur/stiftsarchiv/recherche.html",
-            "bestaende": "https://www.sg.ch/kultur/stiftsarchiv/bestaende.html"
+            "bestaende": "https://www.sg.ch/kultur/stiftsarchiv/bestaende.html",
+            "contact": {
+                "name": "Stiftsarchiv",
+                "tel": "+41 58 229 38 23",
+                "email": "info.stiftsarchiv@sg.ch"
+            }
         },
         "denkmalpflege": {
             "URL": "https://www.sg.ch/kultur/denkmalpflege.html",
@@ -998,7 +915,12 @@
             "Leitfaden": "https://www.sg.ch/kultur/denkmalpflege/Leitfaden.html",
             "Weiterfuehrende-Informationen": "https://www.sg.ch/kultur/denkmalpflege/Weiterfuehrende-Informationen.html",
             "Bauberatung": "https://www.sg.ch/kultur/denkmalpflege/Bauberatung.html",
-            "Subventionen": "https://www.sg.ch/kultur/denkmalpflege/Subventionen.html"
+            "Subventionen": "https://www.sg.ch/kultur/denkmalpflege/Subventionen.html",
+            "contact": {
+                "name": "Denkmalpflege Kanton St.Gallen",
+                "tel": "+41 58 229 38 71",
+                "email": ""
+            }
         },
         "Kulturstandorte-und-institutionen": {
             "URL": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen.html",
@@ -1009,7 +931,12 @@
             "schloss-werdenberg": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/schloss-werdenberg.html",
             "altes-bad-pfaefers": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/altes-bad-pfaefers.html",
             "unesco-weltkulturerbe-stiftsbezirk-st-gallen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/unesco-weltkulturerbe-stiftsbezirk-st-gallen.html",
-            "Lokremise_St_Gallen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/Lokremise_St_Gallen.html"
+            "Lokremise_St_Gallen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/Lokremise_St_Gallen.html",
+            "contact": {
+                "name": "Amt für Kultur",
+                "tel": "+41 58 229 21 50",
+                "email": "kultur@sg.ch"
+            }
         },
         "kulturkanton-st-gallen": {
             "URL": "https://www.sg.ch/kultur/kulturkanton-st-gallen.html",
@@ -1021,6 +948,43 @@
             "info-grafik-perspektive-kulturfoerderung6": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung6.html",
             "info-grafik-perspektive-kulturfoerderung1": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung1.html",
             "info-grafik-perspektive-kulturfoerderung3": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung3.html"
+        },
+        "category-contact": {
+            "staatsarchiv": {
+                "name": "Staatsarchiv St.Gallen",
+                "tel": "+41 58 229 32 05",
+                "email": "info.staatsarchiv@sg.ch"
+            },
+            "kulturerbe": {
+                "name": "Christopher Rühle, Leiter Fachstelle Kulturerbe",
+                "tel": "+41 58 229 21 51",
+                "email": "christopher.ruehle@sg.ch"
+            },
+            "archaeologie": {
+                "name": "Kantonsarchäologie",
+                "tel": "+41 58 229 38 72",
+                "email": "archaeologie@sg.ch"
+            },
+            "kantonsbibliothek-vadiana": {
+                "name": "Kantonsbibliothek Vadiana - Bibliothek Hauptpost",
+                "tel": "+41 58 229 09 90",
+                "email": "info@bibliosg.ch"
+            },
+            "stiftsarchiv": {
+                "name": "Stiftsarchiv",
+                "tel": "+41 58 229 38 23",
+                "email": "info.stiftsarchiv@sg.ch"
+            },
+            "denkmalpflege": {
+                "name": "Denkmalpflege Kanton St.Gallen",
+                "tel": "+41 58 229 38 71",
+                "email": ""
+            },
+            "Kulturstandorte-und-institutionen": {
+                "name": "Amt für Kultur",
+                "tel": "+41 58 229 21 50",
+                "email": "kultur@sg.ch"
+            }
         }
     },
     "wirtschaft-arbeit": {
@@ -1034,14 +998,24 @@
             "tourismus": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/tourismus.html",
             "innovation-leben": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/innovation-leben.html",
             "start-up-und-gruender": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/start-up-und-gruender.html",
-            "Arbeits-undFachkraefte": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/Arbeits-undFachkraefte.html"
+            "Arbeits-undFachkraefte": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/Arbeits-undFachkraefte.html",
+            "contact": {
+                "name": "Daniel Müller, Leiter Standortförderung",
+                "tel": "+41 58 229 64 64",
+                "email": "daniel.mueller@sg.ch"
+            }
         },
         "arbeitnehmende": {
             "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende.html",
             "insolvenzentschaedigung": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/insolvenzentschaedigung.html",
             "arbeitssicherheit-und-gesundheitsschutz": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeitssicherheit-und-gesundheitsschutz.html",
             "arbeiten-in-der-schweiz": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeiten-in-der-schweiz.html",
-            "arbeiten-in-europa": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeiten-in-europa.html"
+            "arbeiten-in-europa": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeiten-in-europa.html",
+            "contact": {
+                "name": "Arbeitsmarkt",
+                "tel": "+41 58 229 48 38",
+                "email": ""
+            }
         },
         "arbeitslos-arbeit-finden": {
             "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden.html",
@@ -1049,7 +1023,12 @@
             "job-chancen-verbessern": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/job-chancen-verbessern.html",
             "rav": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/rav.html",
             "stellenangebote": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/stellenangebote.html",
-            "rav-anmeldung": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/rav-anmeldung.html"
+            "rav-anmeldung": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/rav-anmeldung.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
         },
         "informatik": {
             "URL": "https://www.sg.ch/wirtschaft-arbeit/informatik.html",
@@ -1071,7 +1050,12 @@
             "personalabbau": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/personalabbau.html",
             "messwesen": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/messwesen.html",
             "kurzarbeit-anmelden": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/kurzarbeit-anmelden.html",
-            "bewilligungen": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/bewilligungen.html"
+            "bewilligungen": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/bewilligungen.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
         },
         "schwarzarbeit": {
             "URL": "https://www.sg.ch/wirtschaft-arbeit/schwarzarbeit.html"
@@ -1084,10 +1068,42 @@
             "wissenswertes": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/wissenswertes.html",
             "Standorte": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/Standorte.html",
             "links": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/links.html",
-            "konkursverzeichnis": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/konkursverzeichnis.html"
+            "konkursverzeichnis": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/konkursverzeichnis.html",
+            "contact": {
+                "name": "Konkursamt",
+                "tel": "+41 58 229 37 66",
+                "email": "info.dika@sg.ch"
+            }
         },
         "arbeitsrechtliche-auskunft": {
             "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitsrechtliche-auskunft.html"
+        },
+        "category-contact": {
+            "standortfoerderung": {
+                "name": "Daniel Müller, Leiter Standortförderung",
+                "tel": "+41 58 229 64 64",
+                "email": "daniel.mueller@sg.ch"
+            },
+            "arbeitnehmende": {
+                "name": "Arbeitsmarkt",
+                "tel": "+41 58 229 48 38",
+                "email": ""
+            },
+            "arbeitslos-arbeit-finden": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "arbeitgebende": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "konkurswesen": {
+                "name": "Konkursamt",
+                "tel": "+41 58 229 37 66",
+                "email": "info.dika@sg.ch"
+            }
         }
     },
     "recht": {
@@ -1101,7 +1117,12 @@
             "gesetzliche-grundlage": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/gesetzliche-grundlage.html",
             "elektronischer-rechtsverkehr-staatsanwaltschaft": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/elektronischer-rechtsverkehr-staatsanwaltschaft.html",
             "standorte": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/standorte.html",
-            "jugendanwaltschaft": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/jugendanwaltschaft.html"
+            "jugendanwaltschaft": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/jugendanwaltschaft.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
         },
         "unentgeltliche-rechtspflege": {
             "URL": "https://www.sg.ch/recht/unentgeltliche-rechtspflege.html"
@@ -1115,7 +1136,12 @@
             "organisation---standorte": "https://www.sg.ch/recht/gerichte/organisation---standorte.html",
             "links": "https://www.sg.ch/recht/gerichte/links.html",
             "offenlegung-interessenbindung": "https://www.sg.ch/recht/gerichte/offenlegung-interessenbindung.html",
-            "informationen---formulare": "https://www.sg.ch/recht/gerichte/informationen---formulare.html"
+            "informationen---formulare": "https://www.sg.ch/recht/gerichte/informationen---formulare.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
         },
         "planungs-bau-umweltrecht": {
             "URL": "https://www.sg.ch/recht/planungs-bau-umweltrecht.html",
@@ -1124,10 +1150,20 @@
             "energierecht": "https://www.sg.ch/recht/planungs-bau-umweltrecht/energierecht.html",
             "umweltrecht": "https://www.sg.ch/recht/planungs-bau-umweltrecht/umweltrecht.html",
             "gewaesserrecht": "https://www.sg.ch/recht/planungs-bau-umweltrecht/gewaesserrecht.html",
-            "Planungs_und_Baugesetz": "https://www.sg.ch/recht/planungs-bau-umweltrecht/Planungs_und_Baugesetz.html"
+            "Planungs_und_Baugesetz": "https://www.sg.ch/recht/planungs-bau-umweltrecht/Planungs_und_Baugesetz.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
         },
         "opferhilfe": {
-            "URL": "https://www.sg.ch/recht/opferhilfe.html"
+            "URL": "https://www.sg.ch/recht/opferhilfe.html",
+            "contact": {
+                "name": "Opferhilfe SG – AR – AI",
+                "tel": "+41 71 227 11 00",
+                "email": "info@ohsg.ch"
+            }
         },
         "beschaffungswesen": {
             "URL": "https://www.sg.ch/recht/beschaffungswesen.html",
@@ -1140,7 +1176,12 @@
             "vergabestatistik": "https://www.sg.ch/recht/beschaffungswesen/vergabestatistik.html",
             "vergabeverbot-an-russische-anbieterinnen": "https://www.sg.ch/recht/beschaffungswesen/vergabeverbot-an-russische-anbieterinnen.html",
             "handbuch-zum-beschaffungswesen": "https://www.sg.ch/recht/beschaffungswesen/handbuch-zum-beschaffungswesen.html",
-            "simap-ausschreibungsplattform-": "https://www.sg.ch/recht/beschaffungswesen/simap-ausschreibungsplattform-.html"
+            "simap-ausschreibungsplattform-": "https://www.sg.ch/recht/beschaffungswesen/simap-ausschreibungsplattform-.html",
+            "contact": {
+                "name": "Generalsekretariat Finanzdepartement",
+                "tel": "+41 58 229 42 99",
+                "email": "beschaffungswesen@sg.ch"
+            }
         },
         "geldspiele": {
             "URL": "https://www.sg.ch/recht/geldspiele.html"
@@ -1151,7 +1192,12 @@
             "offene-stellen": "https://www.sg.ch/recht/handelsregister-notariate/offene-stellen.html",
             "merkblaetter": "https://www.sg.ch/recht/handelsregister-notariate/merkblaetter.html",
             "standorte": "https://www.sg.ch/recht/handelsregister-notariate/standorte.html",
-            "amtsnotariate": "https://www.sg.ch/recht/handelsregister-notariate/amtsnotariate.html"
+            "amtsnotariate": "https://www.sg.ch/recht/handelsregister-notariate/amtsnotariate.html",
+            "contact": {
+                "name": "Amt für Handelsregister und Notariate",
+                "tel": "+41 58 229 37 24",
+                "email": "info.afhn@sg.ch"
+            }
         },
         "buergerrecht-zivilstand": {
             "URL": "https://www.sg.ch/recht/buergerrecht-zivilstand.html",
@@ -1162,14 +1208,66 @@
             "adoption": "https://www.sg.ch/recht/buergerrecht-zivilstand/adoption.html",
             "zivilstandsereignisse-in-der-schweiz": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsereignisse-in-der-schweiz.html",
             "einbuergerung": "https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung.html",
-            "zivilstandsereignis-im-ausland": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsereignis-im-ausland.html"
+            "zivilstandsereignis-im-ausland": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsereignis-im-ausland.html",
+            "contact": {
+                "name": "Amt für Gemeinden und Bürgerrecht",
+                "tel": "+41 58 229 62 31",
+                "email": "info.diafgb@sg.ch"
+            }
         },
         "beglaubigungen": {
             "URL": "https://www.sg.ch/recht/beglaubigungen.html",
             "webshop-beglaubigungen": "https://www.sg.ch/recht/beglaubigungen/webshop-beglaubigungen.html",
             "deckblaetter--oeffentliche-urkunden--fuer-anwaelte": "https://www.sg.ch/recht/beglaubigungen/deckblaetter--oeffentliche-urkunden--fuer-anwaelte.html",
             "unterschriftenliste-fuer-gemeinden": "https://www.sg.ch/recht/beglaubigungen/unterschriftenliste-fuer-gemeinden.html",
-            "adressen-staatskanzleien-der-schweiz": "https://www.sg.ch/recht/beglaubigungen/adressen-staatskanzleien-der-schweiz.html"
+            "adressen-staatskanzleien-der-schweiz": "https://www.sg.ch/recht/beglaubigungen/adressen-staatskanzleien-der-schweiz.html",
+            "contact": {
+                "name": "Regierungsgebäude",
+                "tel": "+41 58 229 37 90",
+                "email": "beglaubigungen@sg.ch"
+            }
+        },
+        "category-contact": {
+            "staatsanwaltschaft-jugendanwaltschaft": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "gerichte": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "planungs-bau-umweltrecht": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "beschaffungswesen": {
+                "name": "Generalsekretariat Finanzdepartement",
+                "tel": "+41 58 229 42 99",
+                "email": "beschaffungswesen@sg.ch"
+            },
+            "opferhilfe": {
+                "name": "Opferhilfe SG – AR – AI",
+                "tel": "+41 71 227 11 00",
+                "email": "info@ohsg.ch"
+            },
+            "handelsregister-notariate": {
+                "name": "Amt für Handelsregister und Notariate",
+                "tel": "+41 58 229 37 24",
+                "email": "info.afhn@sg.ch"
+            },
+            "buergerrecht-zivilstand": {
+                "name": "Amt für Gemeinden und Bürgerrecht",
+                "tel": "+41 58 229 62 31",
+                "email": "info.diafgb@sg.ch"
+            },
+            "beglaubigungen": {
+                "name": "Regierungsgebäude",
+                "tel": "+41 58 229 37 90",
+                "email": "beglaubigungen@sg.ch"
+            }
         }
     },
     "bauen": {
@@ -1189,7 +1287,12 @@
             "richtlinien--normalien--merkblaetter": "https://www.sg.ch/bauen/tiefbau/richtlinien--normalien--merkblaetter.html",
             "oeffentliche-planauflagen-kantonsstrassenprojekte": "https://www.sg.ch/bauen/tiefbau/oeffentliche-planauflagen-kantonsstrassenprojekte.html",
             "Laermbelastungskataster": "https://www.sg.ch/bauen/tiefbau/Laermbelastungskataster.html",
-            "verkehrszahlen": "https://www.sg.ch/bauen/tiefbau/verkehrszahlen.html"
+            "verkehrszahlen": "https://www.sg.ch/bauen/tiefbau/verkehrszahlen.html",
+            "contact": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 34",
+                "email": "info.budtba@sg.ch"
+            }
         },
         "raumentwicklung": {
             "URL": "https://www.sg.ch/bauen/raumentwicklung.html",
@@ -1199,14 +1302,24 @@
             "bauenausserhalbbauzonen": "https://www.sg.ch/bauen/raumentwicklung/bauenausserhalbbauzonen.html",
             "internationaleprojekte": "https://www.sg.ch/bauen/raumentwicklung/internationaleprojekte.html",
             "kantonaleplanung": "https://www.sg.ch/bauen/raumentwicklung/kantonaleplanung.html",
-            "ortsplanung": "https://www.sg.ch/bauen/raumentwicklung/ortsplanung.html"
+            "ortsplanung": "https://www.sg.ch/bauen/raumentwicklung/ortsplanung.html",
+            "contact": {
+                "name": "Amt für Raumentwicklung und Geoinformation",
+                "tel": "+41 58 229 31 47",
+                "email": "info.budareg@sg.ch"
+            }
         },
         "baugesuch-baubewilligung": {
             "URL": "https://www.sg.ch/bauen/baugesuch-baubewilligung.html",
             "zusatzformulare": "https://www.sg.ch/bauen/baugesuch-baubewilligung/zusatzformulare.html",
             "hilfsmittel": "https://www.sg.ch/bauen/baugesuch-baubewilligung/hilfsmittel.html",
             "baugesuch-einreichen": "https://www.sg.ch/bauen/baugesuch-baubewilligung/baugesuch-einreichen.html",
-            "kontakte1": "https://www.sg.ch/bauen/baugesuch-baubewilligung/kontakte1.html"
+            "kontakte1": "https://www.sg.ch/bauen/baugesuch-baubewilligung/kontakte1.html",
+            "contact": {
+                "name": "Koordinationsstelle Bau",
+                "tel": "",
+                "email": "baugesuch@sg.ch"
+            }
         },
         "wohnbaufoerderung": {
             "URL": "https://www.sg.ch/bauen/wohnbaufoerderung.html"
@@ -1217,14 +1330,51 @@
             "umweltschutz-beim-bauen": "https://www.sg.ch/bauen/ich-will-bauen/umweltschutz-beim-bauen.html",
             "bauen-innerhalb-bauzone": "https://www.sg.ch/bauen/ich-will-bauen/bauen-innerhalb-bauzone.html",
             "ich-will-bauen": "https://www.sg.ch/bauen/ich-will-bauen/ich-will-bauen.html",
-            "gewaesser": "https://www.sg.ch/bauen/ich-will-bauen/gewaesser.html"
+            "gewaesser": "https://www.sg.ch/bauen/ich-will-bauen/gewaesser.html",
+            "contact": {
+                "name": "Bau- und Umweltdepartement Kanton St.Gallen",
+                "tel": "+41 58 229 30 03",
+                "email": ""
+            }
         },
         "hochbau": {
             "URL": "https://www.sg.ch/bauen/hochbau.html",
             "bauten": "https://www.sg.ch/bauen/hochbau/bauten.html",
             "richtlinien-und-vorlagen": "https://www.sg.ch/bauen/hochbau/richtlinien-und-vorlagen.html",
             "Ausschreibungen": "https://www.sg.ch/bauen/hochbau/Ausschreibungen.html",
-            "formular-buchbestellung": "https://www.sg.ch/bauen/hochbau/formular-buchbestellung.html"
+            "formular-buchbestellung": "https://www.sg.ch/bauen/hochbau/formular-buchbestellung.html",
+            "contact": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 17",
+                "email": "info.budhba@sg.ch"
+            }
+        },
+        "category-contact": {
+            "tiefbau": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 34",
+                "email": "info.budtba@sg.ch"
+            },
+            "raumentwicklung": {
+                "name": "Amt für Raumentwicklung und Geoinformation",
+                "tel": "+41 58 229 31 47",
+                "email": "info.budareg@sg.ch"
+            },
+            "baugesuch-baubewilligung": {
+                "name": "Koordinationsstelle Bau",
+                "tel": "",
+                "email": "baugesuch@sg.ch"
+            },
+            "ich-will-bauen": {
+                "name": "Bau- und Umweltdepartement Kanton St.Gallen",
+                "tel": "+41 58 229 30 03",
+                "email": ""
+            },
+            "hochbau": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 17",
+                "email": "info.budhba@sg.ch"
+            }
         }
     }
 }
