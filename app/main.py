@@ -6,7 +6,7 @@ from app.text_to_speech.text_to_speech_service import (
 from app.speech_to_text.speech_to_text_service import get_text_from_audio_file
 from app.check_reroute.check_reroute_service import get_reroute_nessary
 from app.vad.webrtc_service import is_speech
-from app.check_reroute.check_reroute_service import get_reroute_nessary 
+from app.check_reroute.check_reroute_service import get_reroute_nessary
 import os
 from app.call_handling.call_manager import Call
 
@@ -45,7 +45,7 @@ async def wisper():
 async def check_redirect():
 
     response = await get_reroute_nessary(
-        "Biite leite mich zu Migrationsamt weiter",
+        "Hallo wie gehts. Ich habe eine Frage zu St. Gallen. Kannst du mir einen Menschen an die Leitung geben",
         "-",
     )
 
@@ -78,7 +78,3 @@ async def get_audio(name: str):
 
     return FileResponse(file_path, media_type="audio/mpeg")
 
-
-@app.get("/redirect_nessar/")
-async def redirect_nessar():
-    return {"message": "Hello World v1.2.1"}

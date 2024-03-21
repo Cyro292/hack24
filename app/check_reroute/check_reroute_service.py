@@ -13,7 +13,7 @@ async def get_reroute_nessary(question: str, context: str):
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "reroute_number": {"type": "number", "description": "Sichherit darüber ob der Anruf weitergeleitet werden soll oder nicht. 10 bedeutet weiterleiten, 0 bedeutet nicht weiterleiten"},
+                    "reroute_number": {"type": "number", "description": "Sichherit darüber ob der Anruf weitergeleitet werden soll oder nicht. Du kannst werte 1-10 geben. 10 bedeutet weiterleiten, 0 bedeutet nicht weiterleiten"},
                     "department": {"type": "string", "description": "abteilung"},
                     "telephone_number": {
                         "type": "string",
@@ -35,4 +35,4 @@ async def get_reroute_nessary(question: str, context: str):
     telephone_number = arguments["telephone_number"]
     department = arguments["department"]
 
-    return content
+    return arguments
