@@ -1,7 +1,6 @@
 import os
 import boto3
 import asyncio
-from contextlib import closing
 from dotenv import load_dotenv
 
 
