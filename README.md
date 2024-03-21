@@ -12,7 +12,7 @@ aws ecr create-repository --repository-name natelai-backend --region eu-central-
 
 ## docker build and run
 docker build -t natelai-backend .  
-docker run -d --name natelai-backend -p 8000:80 natelai-backend  
+docker run -it --rm --name natelai-backend -p 8000:80 natelai-backend  
 
 ## docker deploy
 docker tag natelai-backend:latest 064310218222.dkr.ecr.eu-central-1.amazonaws.com/natelai-backend:latest  
