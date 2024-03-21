@@ -75,8 +75,15 @@ class Call:
         resp = VoiceResponse()
 
         # Start recording the call and set the callback URL
-        record = Record(action=f"{request.base_url}voice/recording", timeout=10)
-        # resp.append(record)
+        record = Record(
+            recordingStatusCallback=f"{request.base_url}voice/recording",
+            timeout=10,
+            playBeep=False,
+            trim="trim-silence",
+            recordingStatusCallbackMethod="POST",
+            recordingStatusCallbackEvent="completed",
+        )
+        resp.append(record)
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
@@ -234,6 +241,10 @@ class Call:
                 self.assistant, self.speech_result
             )
 
+            print("Reroute number: ", reroute_n)
+
+            print("Reroute number: ", reroute_n)
+
             if int(reroute_n) == 10:
                 print(tel_n, department)
                 return await self.redirect_call(request, "+41772800638")
@@ -276,7 +287,12 @@ def call_llms(assistant: Assistant, question: str):
 
         results = [future.result() for future in futures]
 
-    return results[0], results[1]['reroute_number'], results[1]['telephone_number'], results[1]['department']
+    return (
+        results[0],
+        results[1]["reroute_number"],
+        results[1]["telephone_number"],
+        results[1]["department"],
+    )
 
 
 def reroute(reroute_n: int) -> bool:
