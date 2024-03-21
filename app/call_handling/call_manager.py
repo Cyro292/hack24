@@ -22,15 +22,29 @@ class Call:
         "PROCESSING": 4,
         "END": 5,
     }
+    
+    client = None
+    state = None
 
     def __init__(self) -> None:
         account_sid = "AC690145ec38222226d949960846d71393"
         auth_token = os.environ["TWILIO_AUTH_TOKEN"]
-        client = Client(account_sid, auth_token)
-        state = self.STATES["INITIAL"]
+        self.client = Client(account_sid, auth_token)
+        self.state = self.STATES["INITIAL"]
 
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
+      
+    async def send_sms(self, body: str, to: str):
+        message = self.client.messages.create(
+            from_='+14243651541',
+            body=body,
+            to=to
+        )
+
+        print(message.sid)
+        
+        return message.sid
 
     async def redirect_call(self, request: Request, phone_no: str):
         resp = VoiceResponse()
