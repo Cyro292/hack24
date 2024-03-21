@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-async def ask_reroute(question: str):
+async def get_reroute_response_from_question(question: str):
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -22,13 +22,4 @@ async def ask_reroute(question: str):
         response_format={"type": "json_object"},
     )
 
-    content = response.choices[0].message["content"]
-
-    if not content["reroute"]:
-        print("Something went wrong when rerouting.")
-        return None
-
-    if content["reroute"] > 0.5:
-        return True
-
-    return False
+    return response
