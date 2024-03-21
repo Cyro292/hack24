@@ -212,7 +212,7 @@ class Call:
             answer, reroute_n, tel_n, department = call_llms(
                 self.assistant, self.speech_result)
 
-            if int(reroute_n) > 6:
+            if int(reroute_n) == 10:
                 print(tel_n, department)
                 return await self.redirect_call(request, "+41772800638")
             else:
