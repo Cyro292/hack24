@@ -1,5 +1,3 @@
-import pprint
-from llama_index.core.response.notebook_utils import display_response
 from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
 from llama_index.core.settings import Settings
 from llama_index.llms.openai import OpenAI
@@ -19,6 +17,7 @@ from pymongo.errors import ConnectionFailure
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 def get_mongo_client():
     """Establish connection to the MongoDB."""
@@ -58,8 +57,8 @@ def query_vector_store(
 
     query_engine = index.as_query_engine(similarity_top_k=similarity_top_k)
     response = query_engine.query(query)
-    display_response(response)
-    pprint.pprint(response.source_nodes)
+
+    return response.source_nodes
 
 
 # Usage

@@ -1,5 +1,6 @@
 # Starting from "kultur", the information still needs to be filled
 
+
 router = {
     'bildung-sport': {
         'bslb': {
