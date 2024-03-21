@@ -44,7 +44,7 @@ async def wisper():
 async def check_redirect():
 
     response = await get_reroute_info(
-        "Hallo wie gehts. Ich habe eine Frage zu St. Gallen. Kannst du mir die beantworten?"
+        "Hallo wie gehts. Ich habe eine Frage zu St. Gallen. Kannst du mich weiterleiten?"
     )
 
     return {"message": response}

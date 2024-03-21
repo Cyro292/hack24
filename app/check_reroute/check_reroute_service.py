@@ -11,13 +11,13 @@ def get_reroute_info(question: str):
     function_data = [
         {
             "name": "reroute",
-            "description": "Verwende ausschließlich die Informationen, die du in der Frage und in den Kontakten hast, um den Anruf an die richtige Abteilung weiterzuleiten. Sei schnell",
+            "description": "Verwende ausschließlich die Informationen, die du in der Frage und in den Kontakten hast. Sei schnell",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "reroute_number": {
                         "type": "number",
-                        "description": "Wie sicher ist es das der Anruf zu einem anderen Menschlichen Mitarbeiteer weitergeleitet werden soll. Gib werte von 1 bis 10. 10 bedeutet weiterleiten, 0 bedeutet nicht weiterleiten",
+                        "description": "Gib werte von 1 bis 10. 0 bedeutet er will mit der AI weitersprechen und nicht weiterleitet werden. 10 bedeutet der Kunde will unbedingt zu einem Menschlichen Mitarbeiter weiterleiten.",
                     },
                     "department": {"type": "string", "description": "abteilung"},
                     "telephone_number": {
