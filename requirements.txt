@@ -1,2 +1,5 @@
 fastapi
 uvicorn
+dotenv
+pymongo
+openai
