@@ -1,5 +1,9 @@
 from fastapi import FastAPI
-from app.textToSpeach.textToSpeachService import getAudioLinkFromText
+from app.text_to_speech.text_to_speach_service import (
+    get_audio_link_from_text,
+    create_audio_file_from_text,
+)
+from app.speach_to_text.speach_to_text_service import get_text_from_audio_file
 
 app = FastAPI()
 
@@ -12,8 +16,23 @@ async def root():
 @app.get("/polly/")
 async def polly():
 
-    response = await getAudioLinkFromText("Hallo Welt. Ich bin dein Sprachassistent.")
+    response = await create_audio_file_from_text(
+        "Hallo Welt. Ich bin dein Sprachassistent.", "assets/audio/output.mp3"
+    )
 
     return {
         "link": response,
     }
+
+
+@app.get("/wisper/")
+async def wisper():
+
+    text = await get_text_from_audio_file("assets/audio/input.mp3")
+
+    return {"transscript": {text}}
+
+
+@app.get("/check-router/")
+async def checkRedirect():
+    return {"message": "Hello World"}
