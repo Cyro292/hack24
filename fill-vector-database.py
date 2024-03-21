@@ -151,8 +151,6 @@ for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings",
         with open(os.path.join('logs', f'checkpoint_{i+start_index+1}.pkl'), 'wb') as f:
             pickle.dump(nodes[:i+start_index+1], f)
 
-
-
      
 # %%    
 mongo_client = get_mongo_client()
@@ -163,6 +161,13 @@ COLLECTION_NAME="sg_records"
 db = mongo_client[DB_NAME]
 collection = db[COLLECTION_NAME]
 
+# %%
+# To ensure we are working with a fresh collection 
+# delete any existing records in the collection
+
+collection.delete_many({})
+
+# %%
 # Ingest (or reload/update) data into MongoDB
 vector_store = MongoDBAtlasVectorSearch(mongo_client, db_name=DB_NAME, collection_name=COLLECTION_NAME, index_name="vector_index")
 vector_store.add(nodes)
