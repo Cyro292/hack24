@@ -10,3 +10,4 @@ llama-index-embeddings-openai
 httpx
 boto3
 requests
+webrtcvad
