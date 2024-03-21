@@ -22,7 +22,7 @@ load_dotenv()
 
 # Loading the llm and embedding models
 llm = OpenAI()
-embed_model=OpenAIEmbedding(model="text-embedding-3-small",dimensions=1536)
+embed_model=OpenAIEmbedding(model="text-embedding-3-small",dimensions=256)
 Settings.llm = llm
 Settings.embed_model=embed_model
 
@@ -106,7 +106,7 @@ for document in data_processed:
 # %% 
 
 ### Parsing the data into nodes ###
-parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
+parser = SentenceSplitter(chunk_size=2048, chunk_overlap=20)
 nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
 
 
@@ -117,13 +117,38 @@ nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
 # You can find the embeddings for the 5000 first nodes in the `embeddings.json` file
 # You can use this file to save time
 # Maybe we can run the requests concurrently?
+import os
+import pickle
 from tqdm import tqdm
 
-for i, node in enumerate(tqdm(nodes, desc="Generating embeddings")):
+checkpoint_interval = 100  # Save a checkpoint every 100 nodes
+
+# Create logs directory if it doesn't exist
+if not os.path.exists('logs'):
+    os.makedirs('logs')
+
+# Load the last checkpoint
+checkpoint_files = sorted([f for f in os.listdir('logs') if f.startswith('checkpoint_') and f.endswith('.pkl')])
+if checkpoint_files:
+    last_checkpoint_file = checkpoint_files[-1]
+    with open(os.path.join('logs', last_checkpoint_file), 'rb') as f:
+        nodes[:start_index] = pickle.load(f)
+    start_index = int(last_checkpoint_file.split('_')[1].split('.')[0])
+else:
+    start_index = 0
+    
+print(f"Starting from index {start_index}")
+
+for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings", initial=start_index, total=len(nodes))):
     node_embedding = embed_model.get_text_embedding(
         node.get_content(metadata_mode="all")
     )
     node.embedding = node_embedding
+
+    # Save a checkpoint every checkpoint_interval nodes
+    if (i + start_index + 1) % checkpoint_interval == 0:
+        with open(os.path.join('logs', f'checkpoint_{i+start_index+1}.pkl'), 'wb') as f:
+            pickle.dump(nodes[:i+start_index+1], f)
 
         
 # mongo_client = get_mongo_client()
