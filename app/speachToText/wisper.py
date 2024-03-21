@@ -14,4 +14,4 @@ async def transcripeAudioFileToText(audio_file_path: str):
         transcription = client.audio.transcriptions.create(
             model="whisper-1", file=audio_file, prompt=prompt
         )
-    return transcription["text"]
+    return transcription
