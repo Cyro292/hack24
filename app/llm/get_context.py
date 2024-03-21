@@ -1,6 +1,14 @@
 import pprint
 from llama_index.core.response.notebook_utils import display_response
 from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
+from llama_index.core.settings import Settings
+from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
+
+llm = OpenAI()
+embed_model=OpenAIEmbedding(model="text-embedding-3-small",dimensions=512)
+Settings.llm = llm
+Settings.embed_model=embed_model
 
 from llama_index.core import VectorStoreIndex, StorageContext
 from dotenv import load_dotenv
@@ -44,6 +52,7 @@ def query_vector_store(
         db_name=db_name,
         collection_name=collection_name,
         index_name=index_name,
+        dimension=512,  # Add this line
     )
     index = VectorStoreIndex.from_vector_store(vector_store)
 
