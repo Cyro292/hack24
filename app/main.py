@@ -43,7 +43,9 @@ async def wisper():
 @app.get("/check-router/")
 async def check_redirect():
 
-    response = get_reroute_info("Hallo, wie komme ich zur Orthopedie? Bitte leite mich weiter")
+    response = get_reroute_info(
+        "Hallo, wie komme ich zur Orthopedie? kann ich mit einem Experten sprechen"
+    )
 
     return {"message": response}
 
