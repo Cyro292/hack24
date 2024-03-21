@@ -1,13 +1,53 @@
+#%%
 #!pip install datasets pandas openai pymongo 
 import os
+import pandas as pd
+
+import json
 from dotenv import load_dotenv
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
+from llama_index.core.settings import Settings
+from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.core import Document
+from llama_index.core.schema import MetadataMode
+
 from generate_embeddings import generate_embeddings
 
-# Loda the .env file (API keys, URI's etc.)
-load_dotenv()
+load_dotenv() # Loda the .env file (API keys, URI's etc.)
+
+
+# Loading the llm and embedding models
+llm = OpenAI()
+embed_model=OpenAIEmbedding(model="text-embedding-3-small",dimensions=1536)
+Settings.llm = llm
+Settings.embed_model=embed_model
+
+
+aggregated_data = pd.read_csv('aggregated_data.csv')
+aggregated_data = aggregated_data.dropna(subset=['lists'])
+
+
+# Convert the DataFrame to a JSON representation
+data_json = aggregated_data.to_json(orient='records')
+# Load the JSON data into a Python list of dictionaries
+data_list = json.loads(data_json)
+
+
+# Convert all the lists to a string
+
+    
+    
+    #
+    # item['lists'] = json.dumps(item['lists'])
+
+
+#
+
+
 
 
 # Establish MongoDB connection
@@ -37,7 +77,11 @@ else:
 
 
 
+
 # Ingest (or reload/update) data into MongoDB
+
+
+
 
 
 
@@ -45,54 +89,5 @@ else:
 
 
 
-EMBEDDING_MODEL = "text-embedding-3-small"
 
-# Query the vector search index
-def vector_search(user_query, collection):
-    """
-    Perform a vector search in the MongoDB collection based on the user query.
-
-    Args:
-    user_query (str): The user's query string.
-    collection (MongoCollection): The MongoDB collection to search.
-
-    Returns:
-    list: A list of matching documents.
-    """
-
-    # Generate embedding for the user query
-    query_embedding = generate_embeddings(user_query, EMBEDDING_MODEL)
-
-    if query_embedding is None:
-        return "Invalid query or embedding generation failed."
-
-    # Define the vector search pipeline
-    pipeline = [
-        {
-            "$vectorSearch": {
-                "index": "vector_index",
-                "queryVector": query_embedding,
-                "path": "plot_embedding_optimised",
-                "numCandidates": 150,  # Number of candidate matches to consider
-                "limit": 5  # Return top 5 matches
-            }
-        },
-        {
-            "$project": {
-                "_id": 0,  # Exclude the _id field
-                "plot_embedding_opitimzed": 0,  # Exclude the plot_embedding_opitimzed field
-                "plot": 1,  # Include the plot field
-                "title": 1,  # Include the title field
-                "genres": 1, # Include the genres field
-                "score": {
-                    "$meta": "vectorSearchScore"  # Include the search score
-                }
-            }
-        }
-    ]
-
-    # Execute the search
-    results = collection.aggregate(pipeline)
-    return list(results)
-
-
+ #%%
