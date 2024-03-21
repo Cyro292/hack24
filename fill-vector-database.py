@@ -1,10 +1,8 @@
 #%%
 import os
-import pandas as pd
-
 import json
-
-from mongo_client import get_mongo_client
+import ast
+import pandas as pd
 
 from dotenv import load_dotenv
 
@@ -16,6 +14,7 @@ from llama_index.core.schema import MetadataMode
 from llama_index.vector_stores.mongodb import MongoDBAtlasVectorSearch
 from llama_index.core.node_parser import SentenceSplitter
 
+from mongo_client import get_mongo_client
 from generate_embeddings import generate_embeddings
 
 # Loda the .env file (API keys, URI's etc.)
@@ -34,9 +33,6 @@ data_json = aggregated_data.to_json(orient='records')
 # Load the JSON data into a Python list of dictionaries
 data_list = json.loads(data_json)
 # data_list
-
-
-import ast
 
 def aggregate_headings_paragraphs(data):
     headings = ast.literal_eval(data['headings'])
@@ -70,31 +66,28 @@ def aggregate_headings_paragraphs(data):
     }
 
 # Usage
-content = []
+data_processed = []
 for data in data_list:
     new_data = aggregate_headings_paragraphs(data)
-    content.append(new_data)
+    data_processed.append(new_data)
     
-content
-
-
 
 #%%
 
 ### Generate a list of llama documents (one for each web page) ###
 llama_documents = []
 
-for document in data_list:
+for document in data_processed:
     meta_data = {
         "filepath": document["filepath"],
-        "strong_bold": document["strong_bold"],
-        "blockquotes": document["blockquotes"],
     }
+    
+    # "strong_bold": document["strong_bold"], "blockquotes": document["blockquotes"],
 
     # Storing the filepath, strong_bold and blockquotes as strings
     meta_data["filepath"] = json.dumps(document["filepath"])
-    meta_data["strong_bold"] = json.dumps(document["strong_bold"])
-    meta_data["blockquotes"] = json.dumps(document["blockquotes"])
+    #meta_data["strong_bold"] = json.dumps(document["strong_bold"])
+    #meta_data["blockquotes"] = json.dumps(document["blockquotes"])
     
     
     document["content"] = json.dumps(document["content"])
@@ -110,22 +103,27 @@ for document in data_list:
     # add the generated Document object to the llama_documents list
     llama_documents.append(llama_document)
 
+# %% 
 
-# parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
-# nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
+### Parsing the data into nodes ###
+parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
+nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
 
 
-# # This will take a while because here, all the OpenAI API-requests are made
-# # Louis: I ran this for 30+ min. (on Google-Colab) and it only computed 5000 embeddings
-# # You can find the embeddings for the 5000 first nodes in the `embeddings.json` file
-# # You can use this file to save time
-# # Maybe we can run the requests concurrently?
-# for i, node in enumerate(nodes):
-#     node_embedding = embed_model.get_text_embedding(
-#         node.get_content(metadata_mode="all")
-#     )
-#     node.embedding = node_embedding
-#     print(f'Generated embedding for node {i}/{len(nodes)}')
+# %% Create the embeddings
+
+# This will take a while because here, all the OpenAI API-requests are made
+# Louis: I ran this for 30+ min. (on Google-Colab) and it only computed 5000 embeddings
+# You can find the embeddings for the 5000 first nodes in the `embeddings.json` file
+# You can use this file to save time
+# Maybe we can run the requests concurrently?
+from tqdm import tqdm
+
+for i, node in enumerate(tqdm(nodes, desc="Generating embeddings")):
+    node_embedding = embed_model.get_text_embedding(
+        node.get_content(metadata_mode="all")
+    )
+    node.embedding = node_embedding
 
         
 # mongo_client = get_mongo_client()
