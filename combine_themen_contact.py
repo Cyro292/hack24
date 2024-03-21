@@ -1,6 +1,5 @@
 import json
 
-
 def merge_json(themen_data_file, contact_data_file):
     
     # Load the first JSON file
@@ -20,11 +19,12 @@ def merge_json(themen_data_file, contact_data_file):
             for subtopic_key, subtopic_value in list(subtopics.items()):
                 print(subtopic_key, subtopic_value)
                 
-                # This checks if the subtopic is a dictionary and exists in the contact information
+                # The subtopic is a dictionary and is a category name
                 if isinstance(subtopic_value, dict) and subtopic_key in contact_data[category]:
                     # Merge the contact information into the subtopic dictionary
                     themen_data[category][subtopic_key]['contact'] = contact_data[category][subtopic_key]
                 
+                # THe subtopic is not a category name and not a URL
                 elif subtopic_key != 'URL':
                     # Handle nested subtopics
                     for nested_key, nested_value in list(subtopic_value.items()):
