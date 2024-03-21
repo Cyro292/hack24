@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
-import generate_embeddings
+from generate_embeddings import generate_embeddings
 
 # Loda the .env file (API keys, URI's etc.)
 load_dotenv()
