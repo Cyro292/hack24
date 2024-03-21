@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from app.text_to_speech.text_to_speach_service import (
+from app.text_to_speech.text_to_speech_service import (
     get_audio_link_from_text,
     create_audio_file_from_text,
 )
-from app.speach_to_text.speach_to_text_service import get_text_from_audio_file
+from app.speech_to_text.speech_to_text_service import get_text_from_audio_file
 
 app = FastAPI()
 
