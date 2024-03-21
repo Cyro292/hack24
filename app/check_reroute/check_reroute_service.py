@@ -17,7 +17,7 @@ def get_reroute_info(question: str):
                 "properties": {
                     "reroute_number": {
                         "type": "number",
-                        "description": "Gib werte von 1 bis 10. 0 bedeutet er will mit der AI weitersprechen und nicht weiterleitet werden. 10 bedeutet der Kunde will unbedingt zu einem Menschlichen Mitarbeiter weiterleiten.",
+                        "description": "Gib werte von 1 bis 10. 0 bedeutet er will mit der AI weitersprechen und nicht weiterleitet werden. 10 bedeutet der Kunde will unbedingt zu einem Menschlichen Mitarbeiter weiterleiten. Schätze die Wahrscheinlichkeit, dass der Kunde weitergeleitet werden will zwischen diesen beiden werten ein.",
                     },
                     "department": {"type": "string", "description": "abteilung"},
                     "telephone_number": {
