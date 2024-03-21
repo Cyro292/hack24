@@ -14,9 +14,21 @@ async def ask_reroute(question: str):
         messages=[
             {
                 "role": "system",
-                "content": "You are a Decider. You are in a conversation with a user who is asking for advice and you need find out if the user needs to be rerouted to a human expert. You should awnser in Json format. with the key reroute and the value true or false.",
+                "content": "You need to decide if the reroute and need to decide with a number from 0 to 1 if the user wants a redirect to a human expert rather then the AI. 0 means no reroute and 1 means reroute. The var should be named reroute.",
             },
             {"role": "user", "content": question},
         ],
+        temperature=0.7,
+        response_format={"type": "json_object"},
     )
-    return response.choices[0].message["content"]
+
+    content = response.choices[0].message["content"]
+
+    if not content["reroute"]:
+        print("Something went wrong when rerouting.")
+        return None
+
+    if content["reroute"] > 0.5:
+        return True
+
+    return False
