@@ -9,8 +9,11 @@ from app.check_reroute.check_reroute_service import get_reroute_nessary
 from app.vad.webrtc_service import is_speech
 import time
 import os
+from app.call_handling.call_manager import Call
 
 app = FastAPI()
+
+call = Call()
 
 
 @app.get("/")
@@ -59,26 +62,10 @@ async def word_probability(websocket: WebSocket):
         await websocket.send_text(f"Speech probability: {speech_probability}")
 
 
-@app.post("/voice")
-async def voice(request: Request):
-    """Respond to incoming phone calls with a 'Hello world' message"""
-    # Start our TwiML response
-    resp = VoiceResponse()
-
-    # Read a message aloud to the caller
-    # resp.say("Hello world!")
-
-    # Play an audio file for the caller
-    timestamp = time.time()
-    audio_filename = f"output_{timestamp}.mp3"
-    await create_audio_file_from_text(
-        "Hallo Welt. Ich bin dein Sprachassistent.", f"assets/audio/{audio_filename}"
-    )
-    audio_filelink = f"{request.base_url}audio/{audio_filename}"
-    resp.play(audio_filelink)
-
-    # Convert the response to a string and set the content type to 'text/xml'
-    return Response(content=str(resp), media_type="text/xml")
+@app.post("/voice/{path:path}")
+async def voice(request: Request, path: str):
+    print("voice request", request)
+    return await call.send_reply(request, path)
 
 
 @app.get("/audio/{name}")
