@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-dotenv
+python-dotenv
 pymongo
 openai
 datasets
