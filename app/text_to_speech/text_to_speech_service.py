@@ -13,6 +13,6 @@ async def get_audio_link_from_text(text: str):
     return link
 
 
-async def create_audio_file_from_text(text: str, output_path: str):
-    response = await audio_file_from_text(text, output_path)
+async def create_audio_file_from_text(text: str, output_path: str, voice_profile: str = "de-At/Hannah"):
+    response = await audio_file_from_text(text, output_path, voice_profile)
     return response

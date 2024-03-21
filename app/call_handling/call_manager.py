@@ -56,7 +56,7 @@ class Call:
 
         await create_audio_file_from_text(
             message,
-            f"assets/audio/{audio_filename}",
+            f"assets/audio/{audio_filename}", voice_profile="de-DE/Daniel"
         )
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"

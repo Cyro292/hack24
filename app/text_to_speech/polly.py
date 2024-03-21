@@ -34,7 +34,17 @@ async def request_polly_from_text(text: str):
     return response
 
 
-async def audio_file_from_text(text: str, audio_output_path: str):
+async def audio_file_from_text(text: str, audio_output_path: str, voice_profile: str = "de-At/Hannah"):
+    
+    voice_profiles = {
+        "de-At/Hannah": ["de-AT", "Hannah"],
+        "de-DE/Vicki": ["de-DE", "Vicki"],
+        "de-DE/Marlene": ["de-DE", "Marlene"],
+        "de-DE/Hans": ["de-DE", "Hans"],
+        "de-DE/Daniel": ["de-DE", "Daniel"],
+    }
+    
+    voice_language, voice_id = voice_profiles[voice_profile]
 
     session = boto3.Session(
         aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
@@ -47,9 +57,9 @@ async def audio_file_from_text(text: str, audio_output_path: str):
         response = client.synthesize_speech(
             Text=text,
             Engine="neural",
-            LanguageCode="de-AT",
+            LanguageCode=voice_language,
             OutputFormat="mp3",
-            VoiceId="Hannah",
+            VoiceId=voice_id,
         )
         return response
 
