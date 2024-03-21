@@ -2,7 +2,7 @@ import json
 from .open_ai import get_ai_awnser_with_function
 
 
-async def get_reroute_info(question: str):
+def get_reroute_info(question: str):
 
     with open("data/json/contact_info.json") as f:
         router = json.load(f)
@@ -32,7 +32,7 @@ async def get_reroute_info(question: str):
 
     tool_choice = {"type": "function", "function": {"name": "reroute"}}
 
-    response = await get_ai_awnser_with_function(
+    response = get_ai_awnser_with_function(
         question, prompt, function_data, tool_choice=tool_choice
     )
 
