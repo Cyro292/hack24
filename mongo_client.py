@@ -1,3 +1,4 @@
+import os
 from pymongo.mongo_client import MongoClient
 from pymongo.errors import ConnectionFailure
 from dotenv import load_dotenv
