@@ -1,0 +1,268 @@
+{
+    "bildung-sport": {
+        "bslb": {
+            "name": "Berufs-, Studien- und Laufbahnberatung",
+            "tel": "+41 58 229 84 08",
+            "email": "irene.marciello@sg.ch"
+        },
+        "volksschule": {
+            "name": "Amt f\u00fcr Volksschule",
+            "tel": "+41 58 229 32 36",
+            "email": "avs@sg.ch"
+        },
+        "mittelschule": {
+            "name": "Amt f\u00fcr Mittelschulen",
+            "tel": "+41 58 229 32 21",
+            "email": "info.bldams@sg.ch"
+        },
+        "hochschule": {
+            "name": "Amt f\u00fcr Hochschulen",
+            "tel": "+41 58 229 62 00",
+            "email": "info.bldahs@sg.ch"
+        },
+        "berufsbildung": {
+            "name": "Amt f\u00fcr Berufsbildung",
+            "tel": "+41 58 229 38 76",
+            "email": "info.bldabb@sg.ch"
+        },
+        "sport": {
+            "name": "Amt f\u00fcr Sport",
+            "tel": "+41 58 229 39 26",
+            "email": "sport@sg.ch"
+        }
+    },
+    "steuern-finanzen": {
+        "steuern": {
+            "name": "Steueramt",
+            "tel": "+41 58 229 41 01",
+            "email": "felix.sager@sg.ch"
+        },
+        "finanzen": {
+            "name": "Generalsekretariat Finanzdepartement",
+            "tel": "+41 58 229 32 85",
+            "email": "gs.fdgs@sg.ch"
+        }
+    },
+    "politik-verwaltung": {
+        "abstimmungen-wahlen": {
+            "name": "Dienst f\u00fcr politische Rechte",
+            "tel": "+41 58 229 88 88",
+            "email": "wahlen@sg.ch"
+        }
+    },
+    "gesundheit-soziales": {
+        "verbraucherschutz": {
+            "name": "Amt f\u00fcr Verbraucherschutz und Veterin\u00e4rwesen",
+            "tel": "+41 58 229 28 00",
+            "email": "info.avsv@sg.ch"
+        },
+        "gesundheit": {
+            "name": "Gesundheitsdepartement",
+            "tel": "+41 58 229 35 70",
+            "email": "info.gdgs@sg.ch"
+        },
+        "soziales": {
+            "name": "Amt f\u00fcr Soziales",
+            "tel": "+41 58 229 33 18",
+            "email": ""
+        }
+    },
+    "sicherheit": {
+        "kantonspolizei": {
+            "name": "Kantonspolizei St.Gallen",
+            "tel": "+41 58 229 49 49",
+            "email": "infokapo@kapo.sg.ch"
+        },
+        "asyl-fluechtlinge": {
+            "name": "Asylabteilung / Migrationsamt",
+            "tel": "+41 58 229 31 11",
+            "email": ""
+        },
+        "schweizer-pass-id": {
+            "name": "Ausweisstelle",
+            "tel": "+41 58 229 36 31",
+            "email": "ausweisstelle@sg.ch"
+        },
+        "einreise-aufenthalt-ausreise": {
+            "name": "Asylabteilung / Migrationsamt",
+            "tel": "+41 58 229 36 90",
+            "email": ""
+        },
+        "haeusliche-gewalt": {
+            "name": "Koordinationsstelle H\u00e4usliche Gewalt und Menschenhandel, Sicherheits- und Justizdepartement",
+            "tel": "+41 58 229 75 43",
+            "email": "petra.baumann@sg.ch"
+        },
+        "justizvollzug": {
+            "name": "Amt f\u00fcr Justizvollzug",
+            "tel": "+41 58 229 36 99",
+            "email": ""
+        },
+        "datenschutz": {
+            "name": "Fachstelle f\u00fcr Datenschutz",
+            "tel": "+41 58 229 14 14",
+            "email": ""
+        },
+        "militaer-zivilschutz": {
+            "name": "Amt f\u00fcr Milit\u00e4r und Zivilschutz",
+            "tel": "+41 58 229 71 11",
+            "email": ""
+        }
+    },
+    "verkehr": {
+        "strassenverkehr": {
+            "name": "Strassenverkehrs- und Schifffahrtsamt",
+            "tel": "+41 58 229 22 22",
+            "email": "info.stva@sg.ch"
+        },
+        "oeffentlicher-verkehr": {
+            "name": "Amt f\u00fcr \u00f6ffentlichen Verkehr",
+            "tel": "+41 58 229 34 88",
+            "email": ""
+        },
+        "baustellen": {
+            "name": "Baudepartement",
+            "tel": "+41 58 229 30 34",
+            "email": ""
+        },
+        "schifffahrt": {
+            "name": "Strassenverkehrs- und Schifffahrtsamt",
+            "tel": "+41 58 229 93 20",
+            "email": ""
+        }
+        },
+
+    "kultur": {
+        "staatsarchiv": {
+            "name": "Staatsarchiv St.Gallen",
+            "tel": "+41 58 229 32 05",
+            "email": "info.staatsarchiv@sg.ch"
+        },
+        "kulturerbe": {
+            "name": "Christopher Rühle, Leiter Fachstelle Kulturerbe",
+            "tel": "+41 58 229 21 51",
+            "email": "christopher.ruehle@sg.ch"
+        },
+        "archaeologie": {
+            "name": "Kantonsarchäologie",
+            "tel": "+41 58 229 38 72",
+            "email": "archaeologie@sg.ch"
+        },
+        "kantonsbibliothek-vadiana": {
+            "name": "Kantonsbibliothek Vadiana - Bibliothek Hauptpost",
+            "tel": "+41 58 229 09 90",
+            "email": "info@bibliosg.ch"
+        },
+        "stiftsarchiv": {
+            "name": "Stiftsarchiv",
+            "tel": "+41 58 229 38 23",
+            "email": "info.stiftsarchiv@sg.ch"
+        },
+        "denkmalpflege": {
+            "name": "Denkmalpflege Kanton St.Gallen",
+            "tel": "+41 58 229 38 71",
+            "email": ""
+        },
+        "Kulturstandorte-und-institutionen": {
+            "name": "Amt für Kultur",
+            "tel": "+41 58 229 21 50",
+            "email": "kultur@sg.ch"
+        }
+    },
+    "wirtschaft-arbeit": {
+        "standortfoerderung": {
+            "name": "Daniel Müller, Leiter Standortförderung",
+            "tel": "+41 58 229 64 64",
+            "email": "daniel.mueller@sg.ch"
+        },
+        "arbeitnehmende": {
+            "name": "Arbeitsmarkt",
+            "tel": "+41 58 229 48 38",
+            "email": ""
+        },
+        "arbeitslos-arbeit-finden": {
+            "name": "",
+            "tel": "",
+            "email": ""
+        },
+        "arbeitgebende": {
+            "name": "",
+            "tel": "",
+            "email": ""
+        },
+        "konkurswesen": {
+            "name": "Konkursamt",
+            "tel": "+41 58 229 37 66",
+            "email": "info.dika@sg.ch"
+        }
+    },
+    "recht": {
+        "staatsanwaltschaft-jugendanwaltschaft": {
+            "name": "",
+            "tel": "",
+            "email": ""
+        },
+        "gerichte": {
+            "name": "",
+            "tel": "",
+            "email": ""
+        },
+        "planungs-bau-umweltrecht": {
+            "name": "",
+            "tel": "",
+            "email": ""
+        },
+        "beschaffungswesen": {
+            "name": "Generalsekretariat Finanzdepartement",
+            "tel": "+41 58 229 42 99",
+            "email": "beschaffungswesen@sg.ch"
+        },
+        "opferhilfe": {
+            "name": "Opferhilfe SG – AR – AI",
+            "tel": "+41 71 227 11 00",
+            "email": "info@ohsg.ch"
+        },
+        "handelsregister-notariate": {
+            "name": "Amt für Handelsregister und Notariate",
+            "tel": "+41 58 229 37 24",
+            "email": "info.afhn@sg.ch"
+        },
+        "buergerrecht-zivilstand": {
+            "name": "Amt für Gemeinden und Bürgerrecht",
+            "tel": "+41 58 229 62 31",
+            "email": "info.diafgb@sg.ch"
+        },
+        "beglaubigungen": {
+            "name": "Regierungsgebäude",
+            "tel": "+41 58 229 37 90",
+            "email": "beglaubigungen@sg.ch"
+        }
+    },
+    "bauen": {
+        "tiefbau": {
+            "name": "Bau- und Umweltdepartement",
+            "tel": "+41 58 229 30 34",
+            "email": "info.budtba@sg.ch"
+        },
+        "raumentwicklung": {
+            "name": "Amt für Raumentwicklung und Geoinformation",
+            "tel": "+41 58 229 31 47",
+            "email": "info.budareg@sg.ch"
+        },
+        "baugesuch-baubewilligung": {
+            "name": "Koordinationsstelle Bau",
+            "tel": "",
+            "email": "baugesuch@sg.ch"
+        },
+        "ich-will-bauen": {
+            "name": "Bau- und Umweltdepartement Kanton St.Gallen",
+            "tel": "+41 58 229 30 03",
+            "email": ""
+        },
+        "hochbau": {
+            "name": "Bau- und Umweltdepartement",
+            "tel": "+41 58 229 30 17",
+            "email": "info.budhba@sg.ch"
+        }
+    }
+}
