@@ -1,13 +1,12 @@
-from fastapi import FastAPI, WebSocket, Response, HTTPException, Request
+from fastapi import FastAPI, WebSocket, HTTPException, Request
 from fastapi.responses import FileResponse
 from app.text_to_speech.text_to_speech_service import (
     create_audio_file_from_text,
 )
 from app.speech_to_text.speech_to_text_service import get_text_from_audio_file
-from twilio.twiml.voice_response import VoiceResponse
 from app.check_reroute.check_reroute_service import get_reroute_nessary
 from app.vad.webrtc_service import is_speech
-import time
+from app.check_reroute.check_reroute_service import get_reroute_nessary
 import os
 from app.call_handling.call_manager import Call
 
@@ -46,7 +45,7 @@ async def wisper():
 async def check_redirect():
 
     response = await get_reroute_nessary(
-        "Wie ist das Wetter in Wien? Verdamt bitte leite mich zu einem kolegen weiter!!!",
+        "Hallo wie gehts. Ich habe eine Frage zu St. Gallen. Kannst du mir einen Menschen an die Leitung geben",
         "-",
     )
 
@@ -64,7 +63,7 @@ async def word_probability(websocket: WebSocket):
 
 @app.post("/voice/{path:path}")
 async def voice(request: Request, path: str):
-    print("voice request", request)
+    # print("voice request", request)
     return await call.send_reply(request, path)
 
 
@@ -78,3 +77,4 @@ async def get_audio(name: str):
         raise HTTPException(status_code=404, detail="Audio file not found")
 
     return FileResponse(file_path, media_type="audio/mpeg")
+
