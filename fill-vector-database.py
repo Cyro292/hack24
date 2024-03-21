@@ -35,6 +35,53 @@ aggregated_data = pd.read_csv('aggregated_data.csv')
 data_json = aggregated_data.to_json(orient='records')
 # Load the JSON data into a Python list of dictionaries
 data_list = json.loads(data_json)
+# data_list
+
+
+import ast
+
+def aggregate_headings_paragraphs(data):
+    headings = ast.literal_eval(data['headings'])
+    paragraphs = ast.literal_eval(data['paragraphs'])
+    blockquotes = ast.literal_eval(data['blockquotes'])
+    strong_bold = ast.literal_eval(data['strong_bold'])
+    
+    content = []
+    current_heading = None
+    current_paragraphs = []
+    for text in paragraphs:
+        if text in headings:
+            if current_heading is not None and current_paragraphs:
+                content.append({ 'heading': current_heading, 'paragraphs': "\n\n ".join(current_paragraphs) })
+            current_heading = text
+            current_paragraphs = []
+        elif text.strip():  # Check if paragraph is not empty
+            current_paragraphs.append(text)
+    if current_heading is not None and current_paragraphs:
+        content.append({ 'heading': current_heading, 'paragraphs': "\n\n ".join(current_paragraphs) })
+    
+    # Remove empty blockquotes and bold texts
+    blockquotes = [quote for quote in blockquotes if quote.strip()]
+    strong_bold = [bold for bold in strong_bold if bold.strip()]
+    
+    return {
+        'filepath': data['filepath'],
+        'content': content,
+        'blockquotes': blockquotes,
+        'strong_bold': strong_bold
+    }
+
+# Usage
+content = []
+for data in data_list:
+    new_data = aggregate_headings_paragraphs(data)
+    content.append(new_data)
+    
+content
+
+
+
+#%%
 
 
 llama_documents = []
