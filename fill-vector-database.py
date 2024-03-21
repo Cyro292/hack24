@@ -5,6 +5,7 @@ import ast
 import pandas as pd
 
 from dotenv import load_dotenv
+from tqdm import tqdm
 
 from llama_index.core.settings import Settings
 from llama_index.llms.openai import OpenAI
@@ -22,7 +23,7 @@ load_dotenv()
 
 # Loading the llm and embedding models
 llm = OpenAI()
-embed_model=OpenAIEmbedding(model="text-embedding-3-small",dimensions=1536)
+embed_model=OpenAIEmbedding(model="text-embedding-3-small",dimensions=512)
 Settings.llm = llm
 Settings.embed_model=embed_model
 
@@ -65,12 +66,17 @@ def aggregate_headings_paragraphs(data):
         'strong_bold': strong_bold
     }
 
-# Usage
+# Process the data
 data_processed = []
 for data in data_list:
     new_data = aggregate_headings_paragraphs(data)
     data_processed.append(new_data)
     
+# export the processed data (list)
+with open('processed_data.json', 'w') as f:
+    json.dump(data_processed, f)
+    
+
 
 #%%
 
@@ -106,18 +112,18 @@ for document in data_processed:
 # %% 
 
 ### Parsing the data into nodes ###
-parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
+parser = SentenceSplitter(chunk_size=2048, chunk_overlap=20) #
 nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
 
 
 # %% Create the embeddings
 
 # This will take a while because here, all the OpenAI API-requests are made
+
 # Louis: I ran this for 30+ min. (on Google-Colab) and it only computed 5000 embeddings
 # You can find the embeddings for the 5000 first nodes in the `embeddings.json` file
 # You can use this file to save time
 # Maybe we can run the requests concurrently?
-from tqdm import tqdm
 
 for i, node in enumerate(tqdm(nodes, desc="Generating embeddings")):
     node_embedding = embed_model.get_text_embedding(
