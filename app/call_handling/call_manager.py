@@ -29,13 +29,14 @@ class Call:
     
     client = None
     state = None
+    assistant = None
 
     def __init__(self) -> None:
         account_sid = "AC690145ec38222226d949960846d71393"
         auth_token = os.environ["TWILIO_AUTH_TOKEN"]
         self.client = Client(account_sid, auth_token)
         self.state = self.STATES["INITIAL"]
-        assistant = Assistant()
+        self.assistant = Assistant()
 
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
@@ -169,11 +170,11 @@ class Call:
 
             # print("Data received in action callback: ", data)
 
-            speech_result = data.get('SpeechResult')
-            if speech_result is None:
+            self.speech_result = data.get('SpeechResult')
+            if self.speech_result is None:
                 print("SpeechResult is not available.")
             else:
-                print("SpeechResult: ", speech_result)
+                print("SpeechResult: ", self.speech_result)
 
             confidence = data.get('Confidence')
             if confidence is None:
@@ -200,7 +201,7 @@ class Call:
             else:
                 self.state = self.STATES["PROCESSING"]
 
-                self.assistent.ask(speech_result)
+                self.assistant.ask(self.speech_result)
 
                 return await self.send_message(request, "Ich habe verstanden bitte warten Sie einen Moment.", next_url=f"{request.base_url}voice/process")
 
@@ -209,7 +210,7 @@ class Call:
 
             # call the assistant and the router
             answer, reroute_n, tel_n, department = call_llms(
-                self.assistent, speech_result)
+                self.assistant, self.speech_result)
 
             if reroute_n > 6:
                 print(tel_n, department)
