@@ -94,5 +94,3 @@ def vector_search(user_query, collection):
     # Execute the search
     results = collection.aggregate(pipeline)
     return list(results)
-
-
