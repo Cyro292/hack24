@@ -50,9 +50,26 @@ async def check_redirect():
 async def word_probability(websocket: WebSocket):
     await websocket.accept()
     try:
+
         while True:
+
             audio_data = await websocket.receive_bytes()
-            speech_probability = get_possibility_of_speech(audio_data)
+            speech_probability = await get_possibility_of_speech(audio_data)
             await websocket.send_text(f"Speech probability: {speech_probability}")
     except WebSocketDisconnect:
         print("WebSocket connection closed")
+
+
+@app.get("/speach/")
+async def is_speech_endpoint():
+
+
+    print("test")
+    with open("assets/audio/input2.mp3", "rb") as f:
+        audio_data = f.read()
+
+    # Get the speech probability
+    speech_probability = await get_possibility_of_speech(audio_data)
+
+    # Return the speech probability
+    return f"Speech probability: {speech_probability}"

@@ -10,7 +10,7 @@ async def test_word_probability():
     uri = "ws://127.0.0.1:8000/word_probability/"
     async with websockets.connect(uri) as websocket:
         # Read the audio file
-        data, samplerate = sf.read("assets/audio/input.mp3")
+        data, samplerate = sf.read("assets/audio/input2.wav")
 
         # Calculate the number of samples per chunk
         chunk_duration = 1  # duration of each chunk in seconds
