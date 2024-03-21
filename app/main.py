@@ -64,7 +64,7 @@ async def word_probability(websocket: WebSocket):
 
 @app.post("/voice/{path:path}")
 async def voice(request: Request, path: str):
-    print("voice request", request)
+    # print("voice request", request)
     return await call.send_reply(request, path)
 
 
