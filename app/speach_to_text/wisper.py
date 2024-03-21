@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-async def transcripeAudioFileToText(audio_file_path: str):
+async def transcripe_audio_file_to_text(audio_file_path: str):
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     prompt = "Transcribe the following audio to text:"

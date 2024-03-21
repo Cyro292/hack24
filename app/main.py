@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from app.textToSpeach.textToSpeachService import (
+from app.textToSpeach.text_to_speach_service import (
     getAudioLinkFromText,
     createAudioFileFromText,
 )
-from app.speachToText.speachToTextService import getTextFromAudioFile
+from app.speach_to_text.speach_to_text_service import getTextFromAudioFile
 
 app = FastAPI()
 
@@ -30,4 +30,9 @@ async def wisper():
 
     text = await getTextFromAudioFile("assets/audio/input.mp3")
 
-    return {"message": {text}}
+    return {"transscript": {text}}
+
+
+@app.get("/check-router/")
+async def checkRedirect():
+    return {"message": "Hello World"}

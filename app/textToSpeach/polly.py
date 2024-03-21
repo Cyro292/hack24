@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-async def requestPollyFromText(text: str):
+async def request_polly_from_text(text: str):
 
     session = boto3.Session(
         aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
