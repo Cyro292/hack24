@@ -4,9 +4,8 @@ from app.text_to_speech.text_to_speech_service import (
     create_audio_file_from_text,
 )
 from app.speech_to_text.speech_to_text_service import get_text_from_audio_file
-from app.check_reroute.check_reroute_service import get_reroute_nessary
+from app.check_reroute.check_reroute_service import get_reroute_info
 from app.vad.webrtc_service import is_speech
-from app.check_reroute.check_reroute_service import get_reroute_nessary
 import os
 from app.call_handling.call_manager import Call
 
@@ -44,9 +43,8 @@ async def wisper():
 @app.get("/check-router/")
 async def check_redirect():
 
-    response = await get_reroute_nessary(
-        "Hallo wie gehts. Ich habe eine Frage zu St. Gallen. Kannst du mir einen Menschen an die Leitung geben",
-        "-",
+    response = await get_reroute_info(
+        "Hallo wie gehts. Ich habe eine Frage zu St. Gallen. Kannst du mir einen Menschen an die Leitung geben"
     )
 
     return {"message": response}
@@ -77,4 +75,3 @@ async def get_audio(name: str):
         raise HTTPException(status_code=404, detail="Audio file not found")
 
     return FileResponse(file_path, media_type="audio/mpeg")
-
