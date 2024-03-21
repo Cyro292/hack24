@@ -26,7 +26,7 @@ class Call:
         "PROCESSING": 4,
         "END": 5,
     }
-    
+
     client = None
     state = None
     assistant = None
@@ -40,7 +40,7 @@ class Call:
 
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
-      
+
     async def send_sms(self, body: str, to: str):
         message = self.client.messages.create(
             from_='+14243651541',
@@ -49,7 +49,7 @@ class Call:
         )
 
         print(message.sid)
-        
+
         return message.sid
 
     async def redirect_call(self, request: Request, phone_no: str):
@@ -236,24 +236,16 @@ def router_task(question: str):
 
 
 def call_llms(assistant: Assistant, question: str):
+    results = []
+
     # Call the router + assistant concurrently to reduce IO-bound latency
     with ThreadPoolExecutor(max_workers=2) as executor:
         futures = [executor.submit(
             assistant_task, assistant), executor.submit(router_task, question)]
 
-    results = []
+        results = [future.result() for future in futures]
 
-    for future in as_completed(futures):
-        try:
-            result = future.result()
-            results.append(result)
-        except Exception as e:
-            print("Exception: ", e)
-
-    answer = results[0]
-    reroute_n, tel_n, department = results[1]
-
-    return answer, reroute_n, tel_n, department
+    return results[0], results[1]['reroute_number'], results[1]['telephone_number'], results[1]['department']
 
 
 def reroute(reroute_n: int) -> bool:
