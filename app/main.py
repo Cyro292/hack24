@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.textToSpeach.text_to_speach_service import (
+from app.text_to_speach.text_to_speach_service import (
     get_audio_link_from_text,
     create_audio_file_from_text,
 )
@@ -34,5 +34,5 @@ async def wisper():
 
 
 @app.get("/check-router/")
-async def checkRedirect():
+async def check_redirect():
     return {"message": "Hello World"}
