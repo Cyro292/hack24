@@ -1,7 +1,12 @@
 fastapi
 uvicorn
-boto3
 python-dotenv
-httpx
+pymongo
 openai
+datasets
+llama-index
+llama-index-vector-stores-mongodb
+llama-index-embeddings-openai
+httpx
+boto3
 requests
