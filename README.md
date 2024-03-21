@@ -20,4 +20,3 @@ docker push 064310218222.dkr.ecr.eu-central-1.amazonaws.com/natelai-backend:late
 
 ## AWS elasticbeanstalk
 aws elasticbeanstalk create-application --application-name natelai-backend
-aws elasticbeanstalk create-environment --application-name natelai-backend --environment-name natelai-backend-env --version-label latest --solution-stack-name "64bit Amazon Linux 2023 v4.2.2 running Docker"

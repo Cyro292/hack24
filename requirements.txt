@@ -7,7 +7,6 @@ datasets
 llama-index
 llama-index-vector-stores-mongodb
 llama-index-embeddings-openai
-boto3
-python-dotenv
 httpx
+boto3
 requests
