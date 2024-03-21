@@ -1,10 +1,11 @@
-from fastapi import FastAPI, Response
+from fastapi import FastAPI, WebSocket, Response
 from app.text_to_speech.text_to_speech_service import (
-    get_audio_link_from_text,
     create_audio_file_from_text,
 )
 from app.speech_to_text.speech_to_text_service import get_text_from_audio_file
 from twilio.twiml.voice_response import VoiceResponse
+from app.check_reroute.check_reroute_service import get_reroute_nessary
+from app.vad.webrtc_service import is_speech
 
 app = FastAPI()
 
@@ -18,7 +19,8 @@ async def root():
 async def polly():
 
     response = await create_audio_file_from_text(
-        "Hallo Welt. Ich bin dein Sprachassistent.", "assets/audio/output.mp3"
+        "Hallo Welt. Ich bin dein Sprachassistent. Und das ist Test2",
+        "assets/audio/output.mp3",
     )
 
     return {
@@ -35,8 +37,23 @@ async def wisper():
 
 
 @app.get("/check-router/")
-async def checkRedirect():
-    return {"message": "Hello World"}
+async def check_redirect():
+
+    response = await get_reroute_nessary(
+        "Wie ist das Wetter in Wien? Verdamt bitte leite mich zu einem kolegen weiter!!!",
+        "-",
+    )
+
+    return {"message": response}
+
+
+@app.websocket("/word_probability/")
+async def word_probability(websocket: WebSocket):
+    await websocket.accept()
+    while True:
+        audio_data = await websocket.receive_bytes()
+        speech_probability = is_speech(audio_data)
+        await websocket.send_text(f"Speech probability: {speech_probability}")
 
 
 

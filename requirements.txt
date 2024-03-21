@@ -11,3 +11,4 @@ httpx
 boto3
 requests
 twilio
+webrtcvad
