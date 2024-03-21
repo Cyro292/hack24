@@ -112,8 +112,8 @@ for document in data_processed:
 # %% 
 
 ### Parsing the data into nodes ###
-parser = SentenceSplitter(chunk_size=2048, chunk_overlap=20)
-nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
+parser = SentenceSplitter(chunk_size=1024, chunk_overlap=20)
+nodes = parser.get_nodes_from_documents(llama_documents[:100], show_progress=True)
 
 
 # %% Create the embeddings
@@ -157,7 +157,8 @@ for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings",
         with open(os.path.join('logs', f'checkpoint_{i+start_index+1}.pkl'), 'wb') as f:
             pickle.dump(nodes[:i+start_index+1], f)
 
-        
+     
+# %%    
 # mongo_client = get_mongo_client()
 
 # DB_NAME="natel"
