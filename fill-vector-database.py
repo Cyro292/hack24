@@ -132,9 +132,9 @@ if not os.path.exists('logs'):
 checkpoint_files = sorted([f for f in os.listdir('logs') if f.startswith('checkpoint_') and f.endswith('.pkl')])
 if checkpoint_files:
     last_checkpoint_file = checkpoint_files[-1]
+    start_index = int(last_checkpoint_file.split('_')[1].split('.')[0])
     with open(os.path.join('logs', last_checkpoint_file), 'rb') as f:
         nodes[:start_index] = pickle.load(f)
-    start_index = int(last_checkpoint_file.split('_')[1].split('.')[0])
 else:
     start_index = 0
     
@@ -155,17 +155,33 @@ for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings",
 
      
 # %%    
-# mongo_client = get_mongo_client()
+mongo_client = get_mongo_client()
 
-# DB_NAME="natel"
-# COLLECTION_NAME="sg_records"
+DB_NAME="natel"
+COLLECTION_NAME="sg_records"
 
-# db = mongo_client[DB_NAME]
-# collection = db[COLLECTION_NAME]
+db = mongo_client[DB_NAME]
+collection = db[COLLECTION_NAME]
+
+# Ingest (or reload/update) data into MongoDB
+vector_store = MongoDBAtlasVectorSearch(mongo_client, db_name=DB_NAME, collection_name=COLLECTION_NAME, index_name="vector_index")
+vector_store.add(nodes)
+
+# %%
+
+from llama_index.core import VectorStoreIndex, StorageContext
+index = VectorStoreIndex.from_vector_store(vector_store)
 
 
-# # Ingest (or reload/update) data into MongoDB
-# vector_store = MongoDBAtlasVectorSearch(mongo_client, db_name=DB_NAME, collection_name=COLLECTION_NAME, index_name="vector_index")
-# vector_store.add(nodes)
+# %%
+import pprint
+from llama_index.core.response.notebook_utils import display_response
+
+query_engine = index.as_query_engine(similarity_top_k=3)
+query = "Wir suchen engagierte, dynamische und kompetente Mitarbeiterinnen und Mitarbeiter"
+response = query_engine.query(query)
+display_response(response)
+pprint.pprint(response.source_nodes)
+
 
 # %%
