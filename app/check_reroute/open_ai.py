@@ -14,7 +14,7 @@ async def get_reroute_response_from_question(question: str, context: str):
         messages=[
             {
                 "role": "system",
-                "content": f"{context} You need to decide if the reroute and need to decide with a number from 0 to 1 if the user wants a redirect to a human expert rather then the AI. 0 means no reroute and 1 means reroute. The var should be named reroute.",
+                "content": f"{context} \n \n Gebe den value reroute zurück. Dieser Value liegt zwischen 0 und 1 und gibt an, ob ein reroute notwendig ist basierend darauf ob die Frage gut genug beantwortet wurde oder der nutzer nach einem menschlichen experten fragt.",
             },
             {"role": "user", "content": question},
         ],
