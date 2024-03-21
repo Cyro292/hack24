@@ -3,6 +3,7 @@ import os
 import json
 import ast
 import pandas as pd
+import pickle
 
 from dotenv import load_dotenv
 from tqdm import tqdm
@@ -76,8 +77,6 @@ for data in data_list:
 with open('processed_data.json', 'w') as f:
     json.dump(data_processed, f)
     
-
-
 #%%
 
 ### Generate a list of llama documents (one for each web page) ###
@@ -100,7 +99,7 @@ for document in data_processed:
     
     # Create a Document object with the text content and metadata 
     llama_document = Document(
-        text=''.join(document["content"]),
+        text=''.join(document["content"]),   # .join(document["content"]),
         metadata=meta_data,
         metadata_template="{key}=>{value}",
         text_template="Metadata: {metadata_str}\n-----\nContent: {content}",
@@ -113,15 +112,11 @@ for document in data_processed:
 
 ### Parsing the data into nodes ###
 parser = SentenceSplitter(chunk_size=2048, chunk_overlap=20)
-nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
+nodes = parser.get_nodes_from_documents(llama_documents[:300], show_progress=True)
 
 
 # %% Create the embeddings
 # This will take a while because here, all the OpenAI API-requests are made
-import os
-import pickle
-from tqdm import tqdm
-
 checkpoint_interval = 100  # Save a checkpoint every 100 nodes
 
 # Create logs directory if it doesn't exist
@@ -141,9 +136,14 @@ else:
 print(f"Starting from index {start_index}")
 
 for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings", initial=start_index, total=len(nodes))):
+    
+    #print(node.get_content(metadata_mode="none"))
+          
     node_embedding = embed_model.get_text_embedding(
-        node.get_content(metadata_mode="all")
+        # try to just add the text in here
+        node.get_content(metadata_mode="none")
     )
+    
     node.embedding = node_embedding
 
     # Save a checkpoint every checkpoint_interval nodes
@@ -151,42 +151,5 @@ for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings",
         with open(os.path.join('logs', f'checkpoint_{i+start_index+1}.pkl'), 'wb') as f:
             pickle.dump(nodes[:i+start_index+1], f)
 
-     
-# %%    
-mongo_client = get_mongo_client()
-
-DB_NAME="natel"
-COLLECTION_NAME="sg_records"
-
-db = mongo_client[DB_NAME]
-collection = db[COLLECTION_NAME]
-
-# %%
-# To ensure we are working with a fresh collection 
-# delete any existing records in the collection
-
-collection.delete_many({})
-
-# %%
-# Ingest (or reload/update) data into MongoDB
-vector_store = MongoDBAtlasVectorSearch(mongo_client, db_name=DB_NAME, collection_name=COLLECTION_NAME, index_name="vector_index")
-vector_store.add(nodes)
-
-# %%
-
-from llama_index.core import VectorStoreIndex, StorageContext
-index = VectorStoreIndex.from_vector_store(vector_store)
-
-
-# %%
-import pprint
-from llama_index.core.response.notebook_utils import display_response
-
-query_engine = index.as_query_engine(similarity_top_k=3)
-query = "Wir suchen engagierte, dynamische und kompetente Mitarbeiterinnen und Mitarbeiter"
-response = query_engine.query(query)
-display_response(response)
-pprint.pprint(response.source_nodes)
-
-
+    
 # %%
