@@ -117,13 +117,7 @@ nodes = parser.get_nodes_from_documents(llama_documents, show_progress=True)
 
 
 # %% Create the embeddings
-
 # This will take a while because here, all the OpenAI API-requests are made
-
-# Louis: I ran this for 30+ min. (on Google-Colab) and it only computed 5000 embeddings
-# You can find the embeddings for the 5000 first nodes in the `embeddings.json` file
-# You can use this file to save time
-# Maybe we can run the requests concurrently?
 import os
 import pickle
 from tqdm import tqdm
@@ -157,7 +151,8 @@ for i, node in enumerate(tqdm(nodes[start_index:], desc="Generating embeddings",
         with open(os.path.join('logs', f'checkpoint_{i+start_index+1}.pkl'), 'wb') as f:
             pickle.dump(nodes[:i+start_index+1], f)
 
-        
+
+
 # mongo_client = get_mongo_client()
 
 # DB_NAME="natel"
