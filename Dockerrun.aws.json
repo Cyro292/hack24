@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "064310218222.dkr.ecr.eu-central-1.amazonaws.com/natelai-backend:latest",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "80"
+      }
+    ]
+  }
