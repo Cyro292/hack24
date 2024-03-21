@@ -1,6 +1,6 @@
 import os
 from fastapi import FastAPI, WebSocket, Response, HTTPException, Request
-from twilio.twiml.voice_response import VoiceResponse, Gather, Record
+from twilio.twiml.voice_response import VoiceResponse, Gather, Record, Dial
 from twilio.rest import Client
 from dotenv import load_dotenv
 from app.text_to_speech.text_to_speech_service import (
@@ -32,14 +32,28 @@ class Call:
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
 
-    def make_call(self):
-        call = self.client.calls.create(
-            url="http://demo.twilio.com/docs/voice.xml",
-            to="+41779671592",
-            from_="+14243651541",
+    async def redirect_call(self, request: Request, phone_no: str):
+        resp = VoiceResponse()
+        
+        message = "Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
+
+        timestamp = time.time()
+        audio_filename = f"output_{timestamp}.mp3"
+
+        await create_audio_file_from_text(
+            message,
+            f"assets/audio/{audio_filename}",
         )
 
-        print(call.sid)
+        audio_filelink = f"{request.base_url}audio/{audio_filename}"
+        resp.play(audio_filelink)
+        
+        # Dial the given phone number
+        dial = Dial()
+        dial.number(phone_no)
+        resp.append(dial)
+
+        return self.twiml(resp)
 
     async def send_welcome_message(self, request: Request):
         resp = VoiceResponse()
@@ -48,7 +62,6 @@ class Call:
         ## say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
         message = "Hallo und Willkommen bei der Stadt St.Gallen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
-
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
@@ -89,7 +102,17 @@ class Call:
     async def end_call(self, request: Request):
         resp = VoiceResponse()
 
-        resp.say("Vielen Dank für Ihren Anruf. Auf Wiedersehen.")
+        message = "Vielen Dank für Ihren Anruf. Auf Wiedersehen."
+        timestamp = time.time()
+        audio_filename = f"output_{timestamp}.mp3"
+
+        await create_audio_file_from_text(
+            message,
+            f"assets/audio/{audio_filename}",
+        )
+
+        audio_filelink = f"{request.base_url}audio/{audio_filename}"
+        resp.play(audio_filelink)
 
         resp.hangup()
 
@@ -138,8 +161,9 @@ class Call:
                 confidence = 0
                 print("Confidence is not available.")
             else:
+                print("Confidence: ", confidence, type(confidence))
+                print("Confidence: ", float(confidence), type(float(confidence)))
                 confidence = float(confidence)
-                print("Confidence: ", confidence)
 
             language = data.get('Language')
             if language is None:
@@ -150,7 +174,7 @@ class Call:
             if language != "de-DE":
                 self.state = self.STATES["SPEAKING"]
                 return await self.send_message(request, "Ich habe Sie nicht verstanden. Bitte sprechen Sie Deutsch.", next_url=f"{request.base_url}voice/listen")
-            elif confidence < 0.5:
+            elif confidence < 0:
                 self.state = self.STATES["SPEAKING"]
                 return await self.send_message(request, "Ich habe Sie nicht verstanden. Bitte wiederholen Sie Ihre Anfrage.", next_url=f"{request.base_url}voice/listen")
             else:
@@ -160,6 +184,8 @@ class Call:
         elif path == "process":
             print("Process")
             ## TODO: Implement the processing logic here
+            
+            return await self.redirect_call(request, "+41772800638")
             
             
         elif path == "next":
