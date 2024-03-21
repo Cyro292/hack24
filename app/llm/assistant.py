@@ -15,13 +15,12 @@ class Assistant:
     def __init__(self):
         pass
 
-    def ask(self, question: str) -> str:
+    def ask(self, question: str):
         if self.thread:
             self.__add_msg_to_thread(question)
         else:
             self.__create_thread(question)
         self.__run()
-        return self.__get_answer()
 
     def __create_thread(self, question: str):
         self.thread = self.client.beta.threads.create(
@@ -46,7 +45,7 @@ class Assistant:
             assistant_id=self.id
         )
 
-    def __get_answer(self) -> str:
+    def get_answer(self) -> str:
         print('status: ', self.run.status)
         if self.run.status != 'completed':
             time.sleep(1)
@@ -57,7 +56,7 @@ class Assistant:
                 )
             except Exception as e:
                 print(e)
-            return self.__get_answer()
+            return self.get_answer()
         else:
             thread_messages = self.client.beta.threads.messages.list(
                 self.thread.id)
@@ -65,11 +64,3 @@ class Assistant:
                 c for c in thread_messages.data[0].content if c.type == 'text'
             ]
             return content[0].text.value
-
-
-assistant = Assistant()
-
-answer = assistant.ask(
-    'Ich habe geheirattet und Familiennachzug beantragt, leider geht es beim MiGa nicht weiter da, anscheinden bei Ihnen (amt für bürgerrecht)  unsere Heiraturkunde nicht registiret wurde ')
-
-print(answer)

@@ -25,7 +25,7 @@ async def get_ai_awnser(question: str, contexts: list[str]):
     return response
 
 
-async def get_ai_awnser_with_function(
+def get_ai_awnser_with_function(
     question: str,
     contexts: list[str],
     function_data: list[dict],
