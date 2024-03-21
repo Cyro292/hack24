@@ -1,7 +1,7 @@
 # Starting from "kultur", the information still needs to be filled
+import json
 
-
-router = {
+contact_information = {
     'bildung-sport': {
         'bslb': {
             'name': 'Berufs-, Studien- und Laufbahnberatung',
@@ -263,3 +263,8 @@ router = {
         },
     },
 }
+
+contact_info_JSON = json.dumps(contact_information, indent=4)
+
+with open('contact_info.json', 'w') as f:
+    f.write(contact_info_JSON)
