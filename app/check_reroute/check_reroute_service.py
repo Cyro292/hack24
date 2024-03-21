@@ -7,7 +7,7 @@ def get_reroute_info(question: str):
     with open("data/json/contact_info.json") as f:
         router = json.load(f)
 
-    prompt = f"Du bist eine Callcenter AI und hast einen Anruf von einem Kunden bezüglich St. Gallen. Der Kunde hat nun folgende Frage gestellt {question} \n \n {router} \n\n"
+    prompt = f"Du bist ein Mitarbeiter im Callcenter vom Schweizer Kanton \"St. Gallen\". Ein Kunde stellt folgende Frage:\n\"\"\"{question}\"\"\"\n\nSchlage ihm den Kontakt vor, der am Besten zur Frage passt.\nKontakte:\n\"\"\"{router}\"\"\""
     function_data = [
         {
             "name": "reroute",
