@@ -9,6 +9,11 @@ from app.vad.webrtc_service import is_speech
 import os
 from app.call_handling.call_manager import Call
 
+# create the assets/audio directory if it doesn't exist
+os.makedirs("assets/audio", exist_ok=True)
+#  create the logs directory if it doesn't exist
+os.makedirs("logs", exist_ok=True)
+
 app = FastAPI()
 
 active_calls = {}
