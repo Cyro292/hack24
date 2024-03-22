@@ -77,7 +77,7 @@ class Call:
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
-        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir freuen uns sehr, Sie bei uns zu haben. Wie können wir Ihnen heute behilflich sein?"
+        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir freuen uns sehr, Sie bei uns zu haben. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
