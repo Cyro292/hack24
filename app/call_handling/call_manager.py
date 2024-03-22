@@ -45,7 +45,7 @@ class Call:
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
 
-    async def send_sms(self, body: str, to: str):
+    async def send_sms(self, body: str, to: str = None):
         if to is None:
             to = self.call_number
 
@@ -76,7 +76,10 @@ class Call:
 
         return self.twiml(resp)
 
-    async def send_welcome_message(self, request: Request):
+    async def send_welcome_message(self, request: Request, to: str = None):
+        if to is None:
+            to = self.call_number
+        
         resp = VoiceResponse()
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
