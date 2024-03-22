@@ -57,17 +57,17 @@ class Call:
 
         return message.sid
 
-    async def redirect_call(self, request: Request, phone_no: str):
+    async def redirect_call(self, request: Request, message: str, phone_no: str):
         resp = VoiceResponse()
 
-        message = "Ich verbinde Sie gleich mit einem Kollegen, der optimal auf Ihre Frage eingehen kann. Bitte haben Sie einen kurzen Moment Geduld."
+        # message = "Ich verbinde Sie gleich mit einem Kollegen, der optimal auf Ihre Frage eingehen kann. Bitte haben Sie einen kurzen Moment Geduld."
         # "Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
         await create_audio_file_from_text(
-            message, f"assets/audio/{audio_filename}", voice_profile="de-DE/Daniel"
+            message, f"assets/audio/{audio_filename}"
         )
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
@@ -265,11 +265,8 @@ class Call:
 
             if int(reroute_n) == 10:
                 department: str = department.replace("_", " ")
-                self.send_message(
-                    request,
-                    f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld.",
-                )
-                return await self.redirect_call(request, "+41772800638")
+                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld."
+                return await self.redirect_call(request, message, "+41772800638")
             else:
                 print("Answer: ", answer)
                 return await self.send_message(
