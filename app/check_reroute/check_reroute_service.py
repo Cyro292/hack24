@@ -1,31 +1,31 @@
 import json
-from .open_ai import get_ai_awnser_with_function
+from .open_ai import get_ai_answer_with_function
 
 
-def get_reroute_info(question: str):
+def get_reroute_info(answer_customer: str, prev_statement: str):
 
     with open("data/json/contact_info.json") as f:
         router = json.load(f)
 
-    prompt = f"Du bist ein Mitarbeiter im Callcenter vom Schweizer Kanton \"St. Gallen\". Ein Kunde stellt folgende Frage:\n\"\"\"{question}\"\"\"\n\nSchlage ihm den Kontakt vor, der am Besten zur Frage passt.\nKontakte:\n\"\"\"{router}\"\"\""
+    prompt = f"Du bist ein Mitarbeiter im Callcenter vom Schweizer Kanton \"St. Gallen\". Deine Vorherige Aussage war folgende:\n\"\"\"{prev_statement}\"\"\"Ein Kunde antwortet:\n\"\"\"{answer_customer}\"\"\"\n\n "
     function_data = [
         {
             "name": "reroute",
-            "description": "Verwende ausschließlich die Informationen, die du in der Frage und in den Kontakten hast. Sei schnell",
+            "description": "Verwende ausschließlich die Informationen, die du aus dem Kundengespräch hast.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "reroute_number": {
                         "type": "number",
-                        "description": "Did the user specifically indicate that they want to speak with a specific human person? If not, they did NOT indicate it, the value shoud be 0. If they specifically indicated it, give 10. ",
+                        "description": "Gibt eine Zahl zwischen 0 und 10 zurück. Gibt 10 zurück, wenn der Benutzer ausdrücklich darum gebeten hat, mit einem bestimmten Mitarbeiter zu sprechen. Andernfalls wird 0 zurückgegeben.",
                     },
                     "department": {
                         "type": "string",
-                        "description": "abteilung an die der Anruf weitergeleitet werden soll.",
+                        "description": "Gibt die Abteilung zurück, an die der Anruf weitergeleitet werden soll.",
                     },
                     "telephone_number": {
                         "type": "string",
-                        "description": "Telephone Number to call",
+                        "description": "Gibt die Telefonnummer zurück, an die der Anruf weitergeleitet werden soll.",
                     },
                 },
                 "required": ["reroute_number", "department", "telephone_number"],
@@ -35,8 +35,8 @@ def get_reroute_info(question: str):
 
     tool_choice = {"type": "function", "function": {"name": "reroute"}}
 
-    response = get_ai_awnser_with_function(
-        question, prompt, function_data, tool_choice=tool_choice
+    response = get_ai_answer_with_function(
+        answer_customer, prompt, function_data, tool_choice=tool_choice
     )
 
     content = response.choices[0].message
