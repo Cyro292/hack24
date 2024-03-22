@@ -26,8 +26,7 @@ class Call:
         "PROCESSING": 4,
         "END": 5,
     }
-    
-    
+
     call_number = None
     client = None
     state = None
@@ -49,7 +48,7 @@ class Call:
     async def send_sms(self, body: str, to: str):
         if to is None:
             to = self.call_number
-            
+
         message = self.client.messages.create(
             from_="+14243651541", body=body, to=to)
 
@@ -216,7 +215,8 @@ class Call:
                 print("Confidence is not available.")
             else:
                 print("Confidence: ", confidence, type(confidence))
-                print("Confidence: ", float(confidence), type(float(confidence)))
+                print("Confidence: ", float(confidence),
+                      type(float(confidence)))
                 confidence = float(confidence)
 
             language = data.get("Language")
@@ -284,12 +284,20 @@ class Call:
         elif path == "next":
             print("Next")
             return await self.send_message(request, "Ich höre")
-        
+
         elif path == "end":
+            print("Generating Summary")
+
+            summary = self.assistant.summarize_msg_history()
+
+            sms_text = 'Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n' + summary
+
+            await self.send_sms(sms_text)
+
             print("End")
             self.state = self.STATES["END"]
             return await self.end_call(request)
-        
+
         else:
             raise HTTPException(status_code=404, detail="Path not found")
 
