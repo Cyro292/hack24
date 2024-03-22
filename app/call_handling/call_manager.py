@@ -10,7 +10,7 @@ import time
 import json
 from app.llm.assistant import Assistant
 import asyncio
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait
 from app.check_reroute.check_reroute_service import get_reroute_info
 
 load_dotenv()
@@ -33,6 +33,12 @@ class Call:
     assistant = None
     prev_statement = ""
     TIMEOUT_FOR_LISTENING = 3
+    is_llm_result_available = False
+    answer = None
+    reroute_n = None
+    tel_n = None 
+    department = None
+    is_start_checking_for_result = False
 
     def __init__(self, call_number) -> None:
         account_sid = "AC690145ec38222226d949960846d71393"
@@ -41,6 +47,7 @@ class Call:
         self.state = self.STATES["INITIAL"]
         self.assistant = Assistant()
         self.call_number = call_number
+        self.check_result_task = asyncio.create_task(self.check_for_result())
 
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
@@ -49,8 +56,7 @@ class Call:
         if to is None:
             to = self.call_number
 
-        message = self.client.messages.create(
-            from_="+14243651541", body=body, to=to)
+        message = self.client.messages.create(from_="+14243651541", body=body, to=to)
 
         print(message.sid)
 
@@ -65,9 +71,7 @@ class Call:
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
-        await create_audio_file_from_text(
-            message, f"assets/audio/{audio_filename}"
-        )
+        await create_audio_file_from_text(message, f"assets/audio/{audio_filename}")
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
         resp.play(audio_filelink)
@@ -168,7 +172,7 @@ class Call:
             recordingStatusCallbackMethod="POST",
             recordingStatusCallbackEvent="completed",
         )
-        resp.append(record)
+        # resp.append(record)
 
         return self.twiml(resp)
 
@@ -185,6 +189,26 @@ class Call:
             timestamp = time.time()
 
         return {"status": "success"}
+    
+    async def check_for_result(self):
+        while True:
+            if self.is_start_checking_for_result:
+                print("Waiting for start checking for result")
+                
+                print("Checking for result")
+                self.is_llm_result_available = False
+                self.answer, self.reroute_n, self.tel_n, self.department = call_llms(
+                    self.assistant, self.speech_result, self.prev_statement
+                )
+                
+                self.is_llm_result_available = True
+                
+                print("Result available")
+                self.is_start_checking_for_result = False
+            await asyncio.sleep(0.5)
+        
+    async def start_checking_for_result(self):
+        self.is_start_checking_for_result = True
 
     async def send_reply(self, request, path):
         print("path: ", path)
@@ -215,8 +239,7 @@ class Call:
                 print("Confidence is not available.")
             else:
                 print("Confidence: ", confidence, type(confidence))
-                print("Confidence: ", float(confidence),
-                      type(float(confidence)))
+                print("Confidence: ", float(confidence), type(float(confidence)))
                 confidence = float(confidence)
 
             language = data.get("Language")
@@ -245,6 +268,8 @@ class Call:
                 self.state = self.STATES["PROCESSING"]
 
                 self.assistant.ask(self.speech_result)
+                
+                await self.start_checking_for_result()
 
                 return await self.send_message(
                     request,
@@ -254,28 +279,49 @@ class Call:
 
         elif path == "process":
             print("Process")
+            
+            # wait 5 seconds for the flag to be set
+            counter = 0
+            while not self.is_llm_result_available:
+                await asyncio.sleep(1)
+                counter += 1
+                if counter > 9:
+                    break
+                
+            if self.is_llm_result_available:
+                answer = self.answer
+                reroute_n = self.reroute_n
+                department = self.department
+                
+                self.prev_statement = answer
+                print("Reroute number: ", reroute_n)
 
-            # call the assistant and the router
-            answer, reroute_n, tel_n, department = call_llms(
-                self.assistant, self.speech_result, self.prev_statement
-            )
-
-            self.prev_statement = answer
-
-            print("Reroute number: ", reroute_n)
-
-            if int(reroute_n) == 10:
-                department: str = department.replace("_", " ")
-                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld."
-                return await self.redirect_call(request, message, "+41772800638")
-            elif int(reroute_n) == 0:
-                print("Answer: ", answer)
+                if int(reroute_n) == 10:
+                    if department is not None:
+                        department: str = department.replace("_", " ")
+                        message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld."
+                        return await self.redirect_call(
+                            request, message, "+41772800638"
+                        )
+                elif int(reroute_n) == 0:
+                    return await self.send_message(
+                        request, answer, next_url=f"{request.base_url}voice/listen"
+                    )
+                elif int(reroute_n) == 15:
+                    print("Ending the call")
+                    return await self.end_call(request)
+                else:
+                    ## in german, please say it again
+                    answer = "Ich konnte Sie leider nicht verstehen. Könnten Sie Ihre Anfrage bitte wiederholen?"
+                    return await self.send_message(
+                        request, answer, next_url=f"{request.base_url}voice/listen"
+                    )
+            else:
+                ## please hold on, i'm gathering information about your question
+                answer = "Bitte warten Sie einen Moment, ich sammle Informationen zu Ihrer Frage."
                 return await self.send_message(
-                    request, answer, next_url=f"{request.base_url}voice/listen"
+                    request, answer, next_url=f"{request.base_url}voice/process"
                 )
-            elif int(reroute_n) == 15:
-                print('Ending the call')
-                return await self.end_call(request)
 
         elif path == "recording":
             print("Recording")
@@ -290,7 +336,10 @@ class Call:
 
             summary = self.assistant.summarize_msg_history()
 
-            sms_text = 'Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n' + summary
+            sms_text = (
+                "Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n"
+                + summary
+            )
 
             await self.send_sms(sms_text)
 
@@ -320,13 +369,22 @@ def call_llms(assistant: Assistant, question: str, prev_statement: str):
             executor.submit(router_task, question, prev_statement),
         ]
 
+        # # Wait for all futures to complete, with a timeout of 10 seconds
+        # done, not_done = wait(futures, timeout=10)
+
+        # # Cancel futures that are not yet done
+        # for future in not_done:
+        #     future.cancel()
+
+        # # Get the results from the completed futures
+        # results = [future.result() for future in done]
         results = [future.result() for future in futures]
 
     return (
-        results[0],
-        results[1]["reroute_number"],
-        results[1]["telephone_number"],
-        results[1]["department"],
+        results[0] if len(results) > 0 else None,
+        results[1]["reroute_number"] if len(results) > 1 else None,
+        results[1]["telephone_number"] if len(results) > 1 else None,
+        results[1]["department"] if len(results) > 1 else None,
     )
 
 
