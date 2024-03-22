@@ -52,7 +52,8 @@ class Call:
     async def redirect_call(self, request: Request, phone_no: str):
         resp = VoiceResponse()
 
-        message = "Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
+        message = "Ich verbinde Sie gleich mit einem Kollegen, der optimal auf Ihre Frage eingehen kann. Bitte haben Sie einen kurzen Moment Geduld."
+        #"Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
@@ -87,7 +88,7 @@ class Call:
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
-        message = "Hallo und Willkommen bei der Stadt St.Gallen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
+        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir freuen uns sehr, Sie bei uns zu haben. Wie können wir Ihnen heute behilflich sein?"
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
@@ -106,7 +107,7 @@ class Call:
 
         return self.twiml(resp)
 
-    async def send_message(self, request: Request, message: str, next_url=None):
+    async def send_message(self, request: Request, message: str, next_url=None, voice_profile="de-At/Hannah"):
         resp = VoiceResponse()
 
         timestamp = time.time()
@@ -114,7 +115,7 @@ class Call:
 
         await create_audio_file_from_text(
             message,
-            f"assets/audio/{audio_filename}",
+            f"assets/audio/{audio_filename}", voice_profile
         )
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
@@ -128,7 +129,7 @@ class Call:
     async def end_call(self, request: Request):
         resp = VoiceResponse()
 
-        message = "Vielen Dank für Ihren Anruf. Auf Wiedersehen."
+        message = "Vielen Dank für Ihren Anruf.Zögern Sie nicht, die Info-Nummer erneut anzurufen, falls weitere Fragen auftauchen. Eine Zusammenfassung Ihrer Frage sowie die erteilten Ratschläge und Ressourcen erhalten Sie per SMS. Einen schönen Tag noch und auf Wiedersehen!"
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
@@ -212,14 +213,14 @@ class Call:
                 self.state = self.STATES["SPEAKING"]
                 return await self.send_message(
                     request,
-                    "Ich habe Sie nicht verstanden. Bitte sprechen Sie Deutsch.",
-                    next_url=f"{request.base_url}voice/listen",
+                    "Hi! The Kanton of St. Gallen's information number only supports German for now. Please ask your questions in German. Thank you for your understanding!",
+                    next_url=f"{request.base_url}voice/listen", voice_profile="en-GB/Arthur"
                 )
             elif confidence < 0:
                 self.state = self.STATES["SPEAKING"]
                 return await self.send_message(
                     request,
-                    "Ich habe Sie nicht verstanden. Bitte wiederholen Sie Ihre Anfrage.",
+                    "Ich konnte Sie leider nicht verstehen. Könnten Sie Ihre Anfrage bitte wiederholen?",
                     next_url=f"{request.base_url}voice/listen",
                 )
             else:

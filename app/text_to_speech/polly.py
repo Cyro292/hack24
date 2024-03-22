@@ -42,6 +42,7 @@ async def audio_file_from_text(text: str, audio_output_path: str, voice_profile:
         "de-DE/Marlene": ["de-DE", "Marlene"],
         "de-DE/Hans": ["de-DE", "Hans"],
         "de-DE/Daniel": ["de-DE", "Daniel"],
+        "en-GB/Arthur": ["en-GB", "Arthur"],
     }
     
     voice_language, voice_id = voice_profiles[voice_profile]
