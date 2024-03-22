@@ -77,7 +77,7 @@ async def voice(request: Request, path: str):
             call = active_calls[twilio_phone_number]
         else:
             # Create a new call
-            call = Call()
+            call = Call(twilio_phone_number)
             active_calls[twilio_phone_number] = call
     else:
         raise HTTPException(status_code=400, detail="Twilio phone number not found")
