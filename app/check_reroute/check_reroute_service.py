@@ -7,7 +7,7 @@ def get_reroute_info(question: str):
     with open("data/json/contact_info.json") as f:
         router = json.load(f)
 
-    prompt = f"Du bist eine Callcenter AI und hast einen Anruf von einem Kunden bezüglich St. Gallen. Der Kunde hat nun folgende Frage gestellt {question} \n \n Schlage ihm eine der Folgenden Kontakte vor {router} \n\n"
+    prompt = f"Du bist eine Callcenter AI und hast einen Anruf von einem Kunden bezüglich St. Gallen. Der Kunde hat nun folgende Frage gestellt {question} \n \n {router} \n\n"
     function_data = [
         {
             "name": "reroute",
@@ -17,9 +17,12 @@ def get_reroute_info(question: str):
                 "properties": {
                     "reroute_number": {
                         "type": "number",
-                        "description": "Gib werte von 1 bis 10. 0 bedeutet er will mit der AI weitersprechen und nicht weiterleitet werden. 10 bedeutet der Kunde will unbedingt zu einem Menschlichen Mitarbeiter weiterleiten.",
+                        "description": "Did the user specifically indicate that they want to speak with a specific human person? If not, they did NOT indicate it, the value shoud be 0. If they specifically indicated it, give 10. ",
                     },
-                    "department": {"type": "string", "description": "abteilung"},
+                    "department": {
+                        "type": "string",
+                        "description": "abteilung an die der Anruf weitergeleitet werden soll.",
+                    },
                     "telephone_number": {
                         "type": "string",
                         "description": "Telephone Number to call",
