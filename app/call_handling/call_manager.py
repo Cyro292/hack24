@@ -320,9 +320,11 @@ class Call:
 
             summary = self.assistant.summarize_msg_history()
 
+            contact_info = f"\n\nKontaktinformationen:\n\nZuständige Stelle: {self.rres['department']}\nTelefonnummer: {self.rres['telephone_number']}"
+
             sms_text = (
                 "Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n"
-                + summary
+                + summary + contact_info
             )
 
             await self.send_sms(sms_text)
