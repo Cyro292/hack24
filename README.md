@@ -21,12 +21,3 @@ docker push 064310218222.dkr.ecr.eu-central-1.amazonaws.com/natelai-backend:late
 ## AWS elasticbeanstalk
 aws elasticbeanstalk create-application --application-name natelai-backend
 
-
-## Stuff to work on
-[] Include organization specific info in the rerouting voice (e.g. telephone num, organization)
-[] Test how well the re-routing
-[] Send the summary message
-[] Professional enging of the call
-
-[] Pitch
-[] Video recording
