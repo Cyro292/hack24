@@ -127,7 +127,7 @@ class Call:
     async def end_call(self, request: Request):
         resp = VoiceResponse()
 
-        message = "Vielen Dank für Ihren Anruf.Zögern Sie nicht, die Info-Nummer erneut anzurufen, falls weitere Fragen auftauchen. Eine Zusammenfassung Ihrer Frage sowie die erteilten Ratschläge und Ressourcen erhalten Sie per SMS. Einen schönen Tag noch und auf Wiedersehen!"
+        message = "Vielen Dank für Ihren Anruf. Zögern Sie nicht, die Info-Nummer erneut anzurufen, falls weitere Fragen auftauchen. Eine Zusammenfassung Ihrer Frage sowie die erteilten Ratschläge und Ressourcen erhalten Sie per SMS. Einen schönen Tag noch und auf Wiedersehen!"
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
@@ -140,6 +140,17 @@ class Call:
         resp.play(audio_filelink)
 
         resp.hangup()
+        
+        print("Generating Summary")
+
+        summary = self.assistant.summarize_msg_history()
+
+        sms_text = (
+            "Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n"
+            + summary
+        )
+
+        await self.send_sms(sms_text)
 
         return self.twiml(resp)
 
@@ -241,6 +252,8 @@ class Call:
 
                 self.assistant.ask(self.speech_result)
 
+                # I'm processing your request
+                # in german, "Ich verarbeite Ihre Anfrage"
                 return await self.send_message(
                     request,
                     "Bitte warten Sie einen Moment. Ich suche nach passenden Informationen für Sie.",
