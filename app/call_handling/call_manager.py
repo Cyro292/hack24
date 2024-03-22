@@ -44,8 +44,7 @@ class Call:
         return Response(content=str(resp), media_type="text/xml")
 
     async def send_sms(self, body: str, to: str):
-        message = self.client.messages.create(
-            from_="+14243651541", body=body, to=to)
+        message = self.client.messages.create(from_="+14243651541", body=body, to=to)
 
         print(message.sid)
 
@@ -98,15 +97,20 @@ class Call:
 
         return self.twiml(resp)
 
-    async def send_message(self, request: Request, message: str, next_url=None, voice_profile="de-At/Hannah"):
+    async def send_message(
+        self,
+        request: Request,
+        message: str,
+        next_url=None,
+        voice_profile="de-At/Hannah",
+    ):
         resp = VoiceResponse()
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
         await create_audio_file_from_text(
-            message,
-            f"assets/audio/{audio_filename}", voice_profile
+            message, f"assets/audio/{audio_filename}", voice_profile
         )
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
@@ -169,7 +173,7 @@ class Call:
         if recording_url is None:
             print("No recording URL received.")
         else:
-            recording_url = f'{recording_url}.mp3'
+            recording_url = f"{recording_url}.mp3"
             print("Recording URL: ", recording_url)
             # download the file from recording_url and save the recording to assets/audio folder
             timestamp = time.time()
@@ -205,8 +209,7 @@ class Call:
                 print("Confidence is not available.")
             else:
                 print("Confidence: ", confidence, type(confidence))
-                print("Confidence: ", float(confidence),
-                      type(float(confidence)))
+                print("Confidence: ", float(confidence), type(float(confidence)))
                 confidence = float(confidence)
 
             language = data.get("Language")
@@ -220,7 +223,8 @@ class Call:
                 return await self.send_message(
                     request,
                     "Hi! The Kanton of St. Gallen's information number only supports German for now. Please ask your questions in German. Thank you for your understanding!",
-                    next_url=f"{request.base_url}voice/listen", voice_profile="en-GB/Arthur"
+                    next_url=f"{request.base_url}voice/listen",
+                    voice_profile="en-GB/Arthur",
                 )
             elif confidence < 0:
                 self.state = self.STATES["SPEAKING"]
@@ -253,7 +257,11 @@ class Call:
             print("Reroute number: ", reroute_n)
 
             if int(reroute_n) == 10:
-                print(tel_n, department)
+                department: str = department.replace("_", " ")
+                self.send_message(
+                    request,
+                    f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld.",
+                )
                 return await self.redirect_call(request, "+41772800638")
             else:
                 print("Answer: ", answer)
