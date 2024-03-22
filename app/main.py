@@ -11,7 +11,7 @@ from app.call_handling.call_manager import Call
 
 app = FastAPI()
 
-call = Call()
+active_calls = {}
 
 
 @app.get("/")
@@ -61,6 +61,27 @@ async def word_probability(websocket: WebSocket):
 
 @app.post("/voice/{path:path}")
 async def voice(request: Request, path: str):
+    global active_calls
+    # Get the form data from the request
+    form_data = await request.form()
+    
+    # Get the Twilio phone number from the form data
+    twilio_phone_number = form_data.get('From')
+
+    print("Twilio phone number:", twilio_phone_number)
+    
+    if twilio_phone_number is not None:
+        # Check if the call is already active
+        if twilio_phone_number in active_calls:
+            # Get the active call
+            call = active_calls[twilio_phone_number]
+        else:
+            # Create a new call
+            call = Call()
+            active_calls[twilio_phone_number] = call
+    else:
+        raise HTTPException(status_code=400, detail="Twilio phone number not found")
+    
     # print("voice request", request)
     return await call.send_reply(request, path)
 
