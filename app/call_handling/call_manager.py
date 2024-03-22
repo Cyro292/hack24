@@ -278,7 +278,7 @@ class Call:
 
             if int(self.rres["reroute_number"]) == 10:
                 print('tel. nr.: ', self.rres["telephone_number"])
-                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {self.rres["department"]}. Bitte haben Sie einen kurzen Moment Geduld."
+                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {self.rres['department']}. Bitte haben Sie einen kurzen Moment Geduld."
                 return await self.redirect_call(request, message, "+41772800638")
             elif int(self.rres["reroute_number"]) == 0:
                 while not self.answer:
