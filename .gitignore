@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+.DS_Store
 # C extensions
 *.so
 
@@ -165,3 +166,5 @@ cython_debug/
 
 logs/*
 .DS_Store
+
+output_*.mp3

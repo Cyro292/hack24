@@ -1,0 +1,1380 @@
+{
+    "steuern-finanzen": {
+        "URL": "https://www.sg.ch/steuern-finanzen.html",
+        "finanzaufsicht": {
+            "URL": "https://www.sg.ch/steuern-finanzen/finanzaufsicht.html"
+        },
+        "steuern": {
+            "URL": "https://www.sg.ch/steuern-finanzen/steuern.html",
+            "steuern-bezahlen": "https://www.sg.ch/steuern-finanzen/steuern/steuern-bezahlen.html",
+            "steuerbuch": "https://www.sg.ch/steuern-finanzen/steuern/steuerbuch.html",
+            "zuwendungen-an-gemeinnuetzige-organisationen0": "https://www.sg.ch/steuern-finanzen/steuern/zuwendungen-an-gemeinnuetzige-organisationen0.html",
+            "Coronavirus": "https://www.sg.ch/steuern-finanzen/steuern/Coronavirus.html",
+            "ihr-gemeindesteueramt": "https://www.sg.ch/steuern-finanzen/steuern/ihr-gemeindesteueramt.html",
+            "elektronische-steuererklaerung": "https://www.sg.ch/steuern-finanzen/steuern/elektronische-steuererklaerung.html",
+            "informationsveranstaltungen-medienkonferenz": "https://www.sg.ch/steuern-finanzen/steuern/informationsveranstaltungen-medienkonferenz.html",
+            "fristverlaengerung": "https://www.sg.ch/steuern-finanzen/steuern/fristverlaengerung.html",
+            "ekonto-efaktoren-privatperson---ihr-online-steuerportal": "https://www.sg.ch/steuern-finanzen/steuern/ekonto-efaktoren-privatperson---ihr-online-steuerportal.html",
+            "formulare-wegleitungen": "https://www.sg.ch/steuern-finanzen/steuern/formulare-wegleitungen.html",
+            "steuerarten": "https://www.sg.ch/steuern-finanzen/steuern/steuerarten.html",
+            "steuerkalkulator": "https://www.sg.ch/steuern-finanzen/steuern/steuerkalkulator.html",
+            "kryptowaehrungen": "https://www.sg.ch/steuern-finanzen/steuern/kryptowaehrungen.html",
+            "contact": {
+                "name": "Steueramt",
+                "tel": "+41 58 229 41 01",
+                "email": "felix.sager@sg.ch"
+            }
+        },
+        "finanzen": {
+            "URL": "https://www.sg.ch/steuern-finanzen/finanzen.html",
+            "zahlungsverkehr": "https://www.sg.ch/steuern-finanzen/finanzen/zahlungsverkehr.html",
+            "beteiligungsmanagement-des-kantons": "https://www.sg.ch/steuern-finanzen/finanzen/beteiligungsmanagement-des-kantons.html",
+            "projekte": "https://www.sg.ch/steuern-finanzen/finanzen/projekte.html",
+            "risk-mgmt----schaeden-anmelden": "https://www.sg.ch/steuern-finanzen/finanzen/risk-mgmt----schaeden-anmelden.html",
+            "finanzhaushalt": "https://www.sg.ch/steuern-finanzen/finanzen/finanzhaushalt.html",
+            "finanzpublikationen": "https://www.sg.ch/steuern-finanzen/finanzen/finanzpublikationen.html",
+            "contact": {
+                "name": "Generalsekretariat Finanzdepartement",
+                "tel": "+41 58 229 32 85",
+                "email": "gs.fdgs@sg.ch"
+            }
+        },
+        "category-contact": {
+            "steuern": {
+                "name": "Steueramt",
+                "tel": "+41 58 229 41 01",
+                "email": "felix.sager@sg.ch"
+            },
+            "finanzen": {
+                "name": "Generalsekretariat Finanzdepartement",
+                "tel": "+41 58 229 32 85",
+                "email": "gs.fdgs@sg.ch"
+            }
+        }
+    },
+    "ueber-den-kanton-st-gallen": {
+        "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen.html",
+        "portraet-des-kantons-st-gallen-in-leichter-sprache": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache.html",
+            "staat-und-recht-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/staat-und-recht-in-leichter-sprache.html",
+            "bevoelkerung-und-gemeinden-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/bevoelkerung-und-gemeinden-in-leichter-sprache.html",
+            "gesundheit-und-vorsorge-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/gesundheit-und-vorsorge-in-leichter-sprache.html",
+            "bauen-und-wohnen-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/bauen-und-wohnen-in-leichter-sprache.html",
+            "arbeit-wirtschaft-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/arbeit-wirtschaft-in-leichter-sprache.html",
+            "bildung-und-kultur-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/bildung-und-kultur-in-leichter-sprache.html",
+            "geografie-und-umwelt-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/geografie-und-umwelt-in-leichter-sprache.html",
+            "tourismus-und-standort-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/tourismus-und-standort-in-leichter-sprache.html",
+            "geschichte-und-wappen-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/geschichte-und-wappen-in-leichter-sprache.html",
+            "verkehr-und-mobilitaet-in-leichter-sprache": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen-in-leichter-sprache/verkehr-und-mobilitaet-in-leichter-sprache.html"
+        },
+        "aussenbeziehungen": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/aussenbeziehungen.html",
+            "st-gallen-hydrogen-summit": "https://www.sg.ch/ueber-den-kanton-st-gallen/aussenbeziehungen/st-gallen-hydrogen-summit.html",
+            "zusammenarbeit-mit-dem-bund": "https://www.sg.ch/ueber-den-kanton-st-gallen/aussenbeziehungen/zusammenarbeit-mit-dem-bund.html",
+            "grundlagen-der-aussenbeziehungen": "https://www.sg.ch/ueber-den-kanton-st-gallen/aussenbeziehungen/grundlagen-der-aussenbeziehungen.html",
+            "internationale-zusammenarbeit": "https://www.sg.ch/ueber-den-kanton-st-gallen/aussenbeziehungen/internationale-zusammenarbeit.html",
+            "zusammenarbeit-mit-kantonen": "https://www.sg.ch/ueber-den-kanton-st-gallen/aussenbeziehungen/zusammenarbeit-mit-kantonen.html"
+        },
+        "amtsblatt": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/amtsblatt.html",
+            "webshop-publikationen": "https://www.sg.ch/ueber-den-kanton-st-gallen/amtsblatt/webshop-publikationen.html"
+        },
+        "arbeitgeber-kanton-stgallen": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/arbeitgeber-kanton-stgallen.html",
+            "nachwuchsentwicklung": "https://www.sg.ch/ueber-den-kanton-st-gallen/arbeitgeber-kanton-stgallen/nachwuchsentwicklung.html",
+            "plattform--respekt-": "https://www.sg.ch/ueber-den-kanton-st-gallen/arbeitgeber-kanton-stgallen/plattform--respekt-.html",
+            "ziel-der-personalpolitik-": "https://www.sg.ch/ueber-den-kanton-st-gallen/arbeitgeber-kanton-stgallen/ziel-der-personalpolitik-.html",
+            "stellenportal": "https://www.sg.ch/ueber-den-kanton-st-gallen/arbeitgeber-kanton-stgallen/stellenportal.html",
+            "mein-neues-arbeitsverhaeltnis": "https://www.sg.ch/ueber-den-kanton-st-gallen/arbeitgeber-kanton-stgallen/mein-neues-arbeitsverhaeltnis.html"
+        },
+        "messenger-kanaele-des-kantons-st-gallen": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/messenger-kanaele-des-kantons-st-gallen.html"
+        },
+        "portraet-des-kantons-st-gallen": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen.html",
+            "arbeit-und-wirtschaft": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/arbeit-und-wirtschaft.html",
+            "bildung-und-kultur": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/bildung-und-kultur.html",
+            "verkehr-und-mobilitaet": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/verkehr-und-mobilitaet.html",
+            "bevoelkerung-und-gemeinden": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/bevoelkerung-und-gemeinden.html",
+            "staat-und-recht": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/staat-und-recht.html",
+            "klosterplatz-st-gallen": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/klosterplatz-st-gallen.html",
+            "gesundheit-und-vorsorge": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/gesundheit-und-vorsorge.html",
+            "bauen-und-wohnen": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/bauen-und-wohnen.html",
+            "geografie-und-umwelt": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/geografie-und-umwelt.html",
+            "geschichte-und-wappen": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/geschichte-und-wappen.html",
+            "tourismus-und-standort": "https://www.sg.ch/ueber-den-kanton-st-gallen/portraet-des-kantons-st-gallen/tourismus-und-standort.html"
+        },
+        "statistik": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik.html",
+            "faktencheck-politische-ziele": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/faktencheck-politische-ziele.html",
+            "statistikberichte": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/statistikberichte.html",
+            "statistikdatenbanken": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/statistikdatenbanken.html",
+            "statistikgesetz": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/statistikgesetz.html",
+            "publikationenkalender": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/publikationenkalender.html",
+            "erhebungen": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/erhebungen.html",
+            "covid-19": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/covid-19.html",
+            "statistiken-schnell-finden": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/statistiken-schnell-finden.html",
+            "fachstelle-fuer-statistik": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/fachstelle-fuer-statistik.html",
+            "themen": "https://www.sg.ch/ueber-den-kanton-st-gallen/statistik/themen.html"
+        },
+        "marke---kanton-st-gallen---einer-fuer-alle--": {
+            "URL": "https://www.sg.ch/ueber-den-kanton-st-gallen/marke---kanton-st-gallen---einer-fuer-alle--.html"
+        }
+    },
+    "umwelt-natur": {
+        "URL": "https://www.sg.ch/umwelt-natur.html",
+        "natur-landschaft": {
+            "URL": "https://www.sg.ch/umwelt-natur/natur-landschaft.html",
+            "oekologischer-ausgleich": "https://www.sg.ch/umwelt-natur/natur-landschaft/oekologischer-ausgleich.html",
+            "projektunterstuetzung": "https://www.sg.ch/umwelt-natur/natur-landschaft/projektunterstuetzung.html",
+            "landschaft": "https://www.sg.ch/umwelt-natur/natur-landschaft/landschaft.html",
+            "ausnahmebewilligungen": "https://www.sg.ch/umwelt-natur/natur-landschaft/ausnahmebewilligungen.html",
+            "schutzverordnungen": "https://www.sg.ch/umwelt-natur/natur-landschaft/schutzverordnungen.html",
+            "team-natur-und-landschaft": "https://www.sg.ch/umwelt-natur/natur-landschaft/team-natur-und-landschaft.html",
+            "biodiversitaet": "https://www.sg.ch/umwelt-natur/natur-landschaft/biodiversitaet.html",
+            "gaoel-naturschutzvertraege": "https://www.sg.ch/umwelt-natur/natur-landschaft/gaoel-naturschutzvertraege.html"
+        },
+        "Klima": {
+            "URL": "https://www.sg.ch/umwelt-natur/Klima.html",
+            "klimaschutz": "https://www.sg.ch/umwelt-natur/Klima/klimaschutz.html",
+            "arbeitshilfen-klimafreundliche-raumentwicklung": "https://www.sg.ch/umwelt-natur/Klima/arbeitshilfen-klimafreundliche-raumentwicklung.html",
+            "vorgehensberatung-fuer-gemeinden": "https://www.sg.ch/umwelt-natur/Klima/vorgehensberatung-fuer-gemeinden.html",
+            "klima-und-wetter-im-kanton-st-gallen": "https://www.sg.ch/umwelt-natur/Klima/klima-und-wetter-im-kanton-st-gallen.html",
+            "klimawandel": "https://www.sg.ch/umwelt-natur/Klima/klimawandel.html",
+            "klima": "https://www.sg.ch/umwelt-natur/Klima/klima.html"
+        },
+        "naturgefahren": {
+            "URL": "https://www.sg.ch/umwelt-natur/naturgefahren.html",
+            "gefahrenkarte": "https://www.sg.ch/umwelt-natur/naturgefahren/gefahrenkarte.html",
+            "organisation_aufgaben": "https://www.sg.ch/umwelt-natur/naturgefahren/organisation_aufgaben.html",
+            "planen-und-bauen-im-gefahrengebiet": "https://www.sg.ch/umwelt-natur/naturgefahren/planen-und-bauen-im-gefahrengebiet.html",
+            "hilfsmittel-fuer-die-gemeinde": "https://www.sg.ch/umwelt-natur/naturgefahren/hilfsmittel-fuer-die-gemeinde.html",
+            "aktuelles_ereignisse": "https://www.sg.ch/umwelt-natur/naturgefahren/aktuelles_ereignisse.html",
+            "gefahrenpraevention": "https://www.sg.ch/umwelt-natur/naturgefahren/gefahrenpraevention.html"
+        },
+        "nachhaltigkeit": {
+            "URL": "https://www.sg.ch/umwelt-natur/nachhaltigkeit.html",
+            "ergebnisse": "https://www.sg.ch/umwelt-natur/nachhaltigkeit/ergebnisse.html",
+            "massnahmen": "https://www.sg.ch/umwelt-natur/nachhaltigkeit/massnahmen.html",
+            "grundlagen": "https://www.sg.ch/umwelt-natur/nachhaltigkeit/grundlagen.html"
+        },
+        "umwelt": {
+            "URL": "https://www.sg.ch/umwelt-natur/umwelt.html",
+            "altlasten-und-belastete-standorte": "https://www.sg.ch/umwelt-natur/umwelt/altlasten-und-belastete-standorte.html",
+            "publikationen---umwelt": "https://www.sg.ch/umwelt-natur/umwelt/publikationen---umwelt.html",
+            "Vollzugshilfsmittel": "https://www.sg.ch/umwelt-natur/umwelt/Vollzugshilfsmittel.html",
+            "lagerung-gefaehrlicher-stoffe0": "https://www.sg.ch/umwelt-natur/umwelt/lagerung-gefaehrlicher-stoffe0.html",
+            "rechtsgrundlagen": "https://www.sg.ch/umwelt-natur/umwelt/rechtsgrundlagen.html",
+            "umweltstrafrecht": "https://www.sg.ch/umwelt-natur/umwelt/umweltstrafrecht.html",
+            "gruener-garten": "https://www.sg.ch/umwelt-natur/umwelt/gruener-garten.html",
+            "strahlung-und-licht": "https://www.sg.ch/umwelt-natur/umwelt/strahlung-und-licht.html",
+            "luft": "https://www.sg.ch/umwelt-natur/umwelt/luft.html",
+            "kundengruppen": "https://www.sg.ch/umwelt-natur/umwelt/kundengruppen.html",
+            "boden": "https://www.sg.ch/umwelt-natur/umwelt/boden.html",
+            "abfall": "https://www.sg.ch/umwelt-natur/umwelt/abfall.html",
+            "laermschutz": "https://www.sg.ch/umwelt-natur/umwelt/laermschutz.html",
+            "stoerfallvorsorge---biosicherheit": "https://www.sg.ch/umwelt-natur/umwelt/stoerfallvorsorge---biosicherheit.html"
+        },
+        "wald": {
+            "URL": "https://www.sg.ch/umwelt-natur/wald.html",
+            "-rund-um-den-st-galler-wald": "https://www.sg.ch/umwelt-natur/wald/-rund-um-den-st-galler-wald.html",
+            "unterstuetzung-fuer-den-rueckbau-von-zaeunen": "https://www.sg.ch/umwelt-natur/wald/unterstuetzung-fuer-den-rueckbau-von-zaeunen.html",
+            "publikationen---links": "https://www.sg.ch/umwelt-natur/wald/publikationen---links.html",
+            "revierfoerster-forstbetriebe-waldregionen-kfa": "https://www.sg.ch/umwelt-natur/wald/revierfoerster-forstbetriebe-waldregionen-kfa.html",
+            "waldregion-2-werdenberg-rheintal": "https://www.sg.ch/umwelt-natur/wald/waldregion-2-werdenberg-rheintal.html",
+            "waldregion-1-st-gallen": "https://www.sg.ch/umwelt-natur/wald/waldregion-1-st-gallen.html",
+            "bewilligungen-beantragen": "https://www.sg.ch/umwelt-natur/wald/bewilligungen-beantragen.html",
+            "waldregion-5-toggenburg": "https://www.sg.ch/umwelt-natur/wald/waldregion-5-toggenburg.html",
+            "forstbetrieb-staatswald": "https://www.sg.ch/umwelt-natur/wald/forstbetrieb-staatswald.html",
+            "waldregion-3-sargans": "https://www.sg.ch/umwelt-natur/wald/waldregion-3-sargans.html",
+            "rechte---pflichten-waldeigentuemer": "https://www.sg.ch/umwelt-natur/wald/rechte---pflichten-waldeigentuemer.html",
+            "waldregion-4-see": "https://www.sg.ch/umwelt-natur/wald/waldregion-4-see.html"
+        },
+        "landwirtschaft": {
+            "URL": "https://www.sg.ch/umwelt-natur/landwirtschaft.html",
+            "lzsg": "https://www.sg.ch/umwelt-natur/landwirtschaft/lzsg.html",
+            "landwirtschaftliche-buergschaftsgenossenschaft-des-kantons-st-ga": "https://www.sg.ch/umwelt-natur/landwirtschaft/landwirtschaftliche-buergschaftsgenossenschaft-des-kantons-st-ga.html",
+            "boden--und-pachtrecht-bgbb": "https://www.sg.ch/umwelt-natur/landwirtschaft/boden--und-pachtrecht-bgbb.html",
+            "jahresberichte-merkblaetter-formulare": "https://www.sg.ch/umwelt-natur/landwirtschaft/jahresberichte-merkblaetter-formulare.html",
+            "lkg": "https://www.sg.ch/umwelt-natur/landwirtschaft/lkg.html",
+            "strukturverbesserung": "https://www.sg.ch/umwelt-natur/landwirtschaft/strukturverbesserung.html",
+            "betriebe--und-direktzahlungen0": "https://www.sg.ch/umwelt-natur/landwirtschaft/betriebe--und-direktzahlungen0.html"
+        },
+        "jagd-fischerei": {
+            "URL": "https://www.sg.ch/umwelt-natur/jagd-fischerei.html",
+            "jagd": "https://www.sg.ch/umwelt-natur/jagd-fischerei/jagd.html",
+            "fischerei": "https://www.sg.ch/umwelt-natur/jagd-fischerei/fischerei.html",
+            "webshop-efj": "https://www.sg.ch/umwelt-natur/jagd-fischerei/webshop-efj.html"
+        },
+        "energie": {
+            "URL": "https://www.sg.ch/umwelt-natur/energie.html",
+            "grossverbraucher": "https://www.sg.ch/umwelt-natur/energie/grossverbraucher.html",
+            "stromversorgung": "https://www.sg.ch/umwelt-natur/energie/stromversorgung.html",
+            "Innovationen-foerdern": "https://www.sg.ch/umwelt-natur/energie/Innovationen-foerdern.html",
+            "Energiedaten": "https://www.sg.ch/umwelt-natur/energie/Energiedaten.html",
+            "Energiegesetz": "https://www.sg.ch/umwelt-natur/energie/Energiegesetz.html",
+            "formulare-und-hilfsmittel": "https://www.sg.ch/umwelt-natur/energie/formulare-und-hilfsmittel.html",
+            "Energiepolitik": "https://www.sg.ch/umwelt-natur/energie/Energiepolitik.html",
+            "energie-in-gemeinden-": "https://www.sg.ch/umwelt-natur/energie/energie-in-gemeinden-.html",
+            "Energiekonzept": "https://www.sg.ch/umwelt-natur/energie/Energiekonzept.html",
+            "energierecht-und-vollzug": "https://www.sg.ch/umwelt-natur/energie/energierecht-und-vollzug.html"
+        },
+        "wasser": {
+            "URL": "https://www.sg.ch/umwelt-natur/wasser.html",
+            "gewaessernutzungen": "https://www.sg.ch/umwelt-natur/wasser/gewaessernutzungen.html",
+            "gewaesserqualitaet--verteilerseite-hidden-": "https://www.sg.ch/umwelt-natur/wasser/gewaesserqualitaet--verteilerseite-hidden-.html",
+            "abfluesse--pegelstaende-und-wassertemperaturen": "https://www.sg.ch/umwelt-natur/wasser/abfluesse--pegelstaende-und-wassertemperaturen.html",
+            "Publikationen_Wasser": "https://www.sg.ch/umwelt-natur/wasser/Publikationen_Wasser.html",
+            "seen---weiher": "https://www.sg.ch/umwelt-natur/wasser/seen---weiher.html",
+            "grundwasser---quellen-": "https://www.sg.ch/umwelt-natur/wasser/grundwasser---quellen-.html",
+            "abwasser": "https://www.sg.ch/umwelt-natur/wasser/abwasser.html",
+            "fluesse---baeche": "https://www.sg.ch/umwelt-natur/wasser/fluesse---baeche.html",
+            "eingetaucht--wasserwissen": "https://www.sg.ch/umwelt-natur/wasser/eingetaucht--wasserwissen.html",
+            "trockenheit": "https://www.sg.ch/umwelt-natur/wasser/trockenheit.html",
+            "schadendienst": "https://www.sg.ch/umwelt-natur/wasser/schadendienst.html",
+            "belastungen-und-massnahmen": "https://www.sg.ch/umwelt-natur/wasser/belastungen-und-massnahmen.html"
+        },
+        "veterinaerwesen": {
+            "URL": "https://www.sg.ch/umwelt-natur/veterinaerwesen.html",
+            "tieraerzte": "https://www.sg.ch/umwelt-natur/veterinaerwesen/tieraerzte.html",
+            "registrierung-von-tieren-und-tierhaltung": "https://www.sg.ch/umwelt-natur/veterinaerwesen/registrierung-von-tieren-und-tierhaltung.html",
+            "arbeiten-mit-tieren": "https://www.sg.ch/umwelt-natur/veterinaerwesen/arbeiten-mit-tieren.html",
+            "tierschutz": "https://www.sg.ch/umwelt-natur/veterinaerwesen/tierschutz.html",
+            "entsorgung-von-toten-tieren": "https://www.sg.ch/umwelt-natur/veterinaerwesen/entsorgung-von-toten-tieren.html",
+            "praesentation-von-tieren--ausstellungen--maerkte--boersen-": "https://www.sg.ch/umwelt-natur/veterinaerwesen/praesentation-von-tieren--ausstellungen--maerkte--boersen-.html",
+            "tiergesundheit": "https://www.sg.ch/umwelt-natur/veterinaerwesen/tiergesundheit.html",
+            "tiere-halten": "https://www.sg.ch/umwelt-natur/veterinaerwesen/tiere-halten.html",
+            "unterwegs-mit-tieren": "https://www.sg.ch/umwelt-natur/veterinaerwesen/unterwegs-mit-tieren.html"
+        }
+    },
+    "politik-verwaltung": {
+        "URL": "https://www.sg.ch/politik-verwaltung.html",
+        "abstimmungen-wahlen": {
+            "URL": "https://www.sg.ch/politik-verwaltung/abstimmungen-wahlen.html",
+            "aktuelle-abstimmungen": "https://www.sg.ch/politik-verwaltung/abstimmungen-wahlen/aktuelle-abstimmungen.html",
+            "initiativen---referenden": "https://www.sg.ch/politik-verwaltung/abstimmungen-wahlen/initiativen---referenden.html",
+            "auslandschweizer--innen": "https://www.sg.ch/politik-verwaltung/abstimmungen-wahlen/auslandschweizer--innen.html",
+            "e-voting": "https://www.sg.ch/politik-verwaltung/abstimmungen-wahlen/e-voting.html",
+            "wahlen": "https://www.sg.ch/politik-verwaltung/abstimmungen-wahlen/wahlen.html",
+            "contact": {
+                "name": "Dienst für politische Rechte",
+                "tel": "+41 58 229 88 88",
+                "email": "wahlen@sg.ch"
+            }
+        },
+        "staatskalender": {
+            "URL": "https://www.sg.ch/politik-verwaltung/staatskalender.html"
+        },
+        "departemente-und-staatskanzlei": {
+            "URL": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei.html",
+            "finanzdepartement": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/finanzdepartement.html",
+            "volkswirtschaftsdepartement": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/volkswirtschaftsdepartement.html",
+            "bildungsdepartement": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bildungsdepartement.html",
+            "bau--und-umweltdepartement": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bau--und-umweltdepartement.html",
+            "gesundheitsdepartement": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/gesundheitsdepartement.html",
+            "staatskanzlei": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/staatskanzlei.html",
+            "departement-des-innern": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/departement-des-innern.html",
+            "sicherheits--und-justizdepartement": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/sicherheits--und-justizdepartement.html"
+        },
+        "kantonale-vernehmlassungen": {
+            "URL": "https://www.sg.ch/politik-verwaltung/kantonale-vernehmlassungen.html"
+        },
+        "kantonsrat": {
+            "URL": "https://www.sg.ch/politik-verwaltung/kantonsrat.html",
+            "der-kantonsrat-kurz-erklaert": "https://www.sg.ch/politik-verwaltung/kantonsrat/der-kantonsrat-kurz-erklaert.html",
+            "organisation": "https://www.sg.ch/politik-verwaltung/kantonsrat/organisation.html",
+            "geschaefte": "https://www.sg.ch/politik-verwaltung/kantonsrat/geschaefte.html",
+            "sessionen": "https://www.sg.ch/politik-verwaltung/kantonsrat/sessionen.html",
+            "mitglieder": "https://www.sg.ch/politik-verwaltung/kantonsrat/mitglieder.html",
+            "Links": "https://www.sg.ch/politik-verwaltung/kantonsrat/Links.html"
+        },
+        "regierung": {
+            "URL": "https://www.sg.ch/politik-verwaltung/regierung.html",
+            "geschaeftsbericht-der-regierung": "https://www.sg.ch/politik-verwaltung/regierung/geschaeftsbericht-der-regierung.html",
+            "planen-und-steuern": "https://www.sg.ch/politik-verwaltung/regierung/planen-und-steuern.html",
+            "mitglieder-der-regierung": "https://www.sg.ch/politik-verwaltung/regierung/mitglieder-der-regierung.html",
+            "wissenswertes": "https://www.sg.ch/politik-verwaltung/regierung/wissenswertes.html"
+        },
+        "eidgenoessische-vernehmlassungen": {
+            "URL": "https://www.sg.ch/politik-verwaltung/eidgenoessische-vernehmlassungen.html"
+        },
+        "gemeinden": {
+            "URL": "https://www.sg.ch/politik-verwaltung/gemeinden.html",
+            "ueber-die-gemeinden": "https://www.sg.ch/politik-verwaltung/gemeinden/ueber-die-gemeinden.html",
+            "gemeindeaufsicht": "https://www.sg.ch/politik-verwaltung/gemeinden/gemeindeaufsicht.html",
+            "grundbuch": "https://www.sg.ch/politik-verwaltung/gemeinden/grundbuch.html",
+            "gemeindeorganisation": "https://www.sg.ch/politik-verwaltung/gemeinden/gemeindeorganisation.html",
+            "newsletter": "https://www.sg.ch/politik-verwaltung/gemeinden/newsletter.html",
+            "upload-jahresunterlagen-gemeinden": "https://www.sg.ch/politik-verwaltung/gemeinden/upload-jahresunterlagen-gemeinden.html",
+            "strukturreformen": "https://www.sg.ch/politik-verwaltung/gemeinden/strukturreformen.html",
+            "gemeindefinanzen": "https://www.sg.ch/politik-verwaltung/gemeinden/gemeindefinanzen.html",
+            "grundstueckerwerb-durch-personen-im-ausland": "https://www.sg.ch/politik-verwaltung/gemeinden/grundstueckerwerb-durch-personen-im-ausland.html"
+        },
+        "category-contact": {
+            "abstimmungen-wahlen": {
+                "name": "Dienst für politische Rechte",
+                "tel": "+41 58 229 88 88",
+                "email": "wahlen@sg.ch"
+            }
+        }
+    },
+    "gesundheit-soziales": {
+        "URL": "https://www.sg.ch/gesundheit-soziales.html",
+        "kompass-sg": {
+            "URL": "https://www.sg.ch/gesundheit-soziales/kompass-sg.html"
+        },
+        "heb_hinschauen_einschaetzen_begleiten": {
+            "URL": "https://www.sg.ch/gesundheit-soziales/heb_hinschauen_einschaetzen_begleiten.html",
+            "_jcr_content": "https://www.sg.ch/gesundheit-soziales/heb_hinschauen_einschaetzen_begleiten/_jcr_content.html",
+            "welches_hilfsmittel_in_welcher_situation": "https://www.sg.ch/gesundheit-soziales/heb_hinschauen_einschaetzen_begleiten/welches_hilfsmittel_in_welcher_situation.html"
+        },
+        "verbraucherschutz": {
+            "URL": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz.html",
+            "solarienbetriebe": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz/solarienbetriebe.html",
+            "chemikalien": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz/chemikalien.html",
+            "hanfprodukte": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz/hanfprodukte.html",
+            "gebrauchsgegenstaende": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz/gebrauchsgegenstaende.html",
+            "lebensmittel": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz/lebensmittel.html",
+            "wasser": "https://www.sg.ch/gesundheit-soziales/verbraucherschutz/wasser.html",
+            "contact": {
+                "name": "Amt für Verbraucherschutz und Veterinärwesen",
+                "tel": "+41 58 229 28 00",
+                "email": "info.avsv@sg.ch"
+            }
+        },
+        "gesundheit": {
+            "URL": "https://www.sg.ch/gesundheit-soziales/gesundheit.html",
+            "disclaimer": "https://www.sg.ch/gesundheit-soziales/gesundheit/disclaimer.html",
+            "krankenversicherung0": "https://www.sg.ch/gesundheit-soziales/gesundheit/krankenversicherung0.html",
+            "praevention---gesundheitsfoerderung": "https://www.sg.ch/gesundheit-soziales/gesundheit/praevention---gesundheitsfoerderung.html",
+            "aufsicht0": "https://www.sg.ch/gesundheit-soziales/gesundheit/aufsicht0.html",
+            "suchthilfe---substitutionstherapien": "https://www.sg.ch/gesundheit-soziales/gesundheit/suchthilfe---substitutionstherapien.html",
+            "ZulassungOKP": "https://www.sg.ch/gesundheit-soziales/gesundheit/ZulassungOKP.html",
+            "pflegeinitiative": "https://www.sg.ch/gesundheit-soziales/gesundheit/pflegeinitiative.html",
+            "covid": "https://www.sg.ch/gesundheit-soziales/gesundheit/covid.html",
+            "gesundheitsversorgung--spitaeler-spitex": "https://www.sg.ch/gesundheit-soziales/gesundheit/gesundheitsversorgung--spitaeler-spitex.html",
+            "elektronisches-patientendossier": "https://www.sg.ch/gesundheit-soziales/gesundheit/elektronisches-patientendossier.html",
+            "meldewesen": "https://www.sg.ch/gesundheit-soziales/gesundheit/meldewesen.html",
+            "gremien": "https://www.sg.ch/gesundheit-soziales/gesundheit/gremien.html",
+            "bewilligungen": "https://www.sg.ch/gesundheit-soziales/gesundheit/bewilligungen.html",
+            "contact": {
+                "name": "Gesundheitsdepartement",
+                "tel": "+41 58 229 35 70",
+                "email": "info.gdgs@sg.ch"
+            }
+        },
+        "soziales": {
+            "URL": "https://www.sg.ch/gesundheit-soziales/soziales.html",
+            "familie": "https://www.sg.ch/gesundheit-soziales/soziales/familie.html",
+            "verbindungsstelle-ivse": "https://www.sg.ch/gesundheit-soziales/soziales/verbindungsstelle-ivse.html",
+            "sozialberatung": "https://www.sg.ch/gesundheit-soziales/soziales/sozialberatung.html",
+            "foerdergelder-fuer-projekte": "https://www.sg.ch/gesundheit-soziales/soziales/foerdergelder-fuer-projekte.html",
+            "gleichstellung": "https://www.sg.ch/gesundheit-soziales/soziales/gleichstellung.html",
+            "behinderung": "https://www.sg.ch/gesundheit-soziales/soziales/behinderung.html",
+            "sozialhilfe": "https://www.sg.ch/gesundheit-soziales/soziales/sozialhilfe.html",
+            "alter": "https://www.sg.ch/gesundheit-soziales/soziales/alter.html",
+            "kinder-und-jugendliche": "https://www.sg.ch/gesundheit-soziales/soziales/kinder-und-jugendliche.html",
+            "integration": "https://www.sg.ch/gesundheit-soziales/soziales/integration.html",
+            "contact": {
+                "name": "Amt für Soziales",
+                "tel": "+41 58 229 33 18",
+                "email": ""
+            }
+        },
+        "category-contact": {
+            "verbraucherschutz": {
+                "name": "Amt für Verbraucherschutz und Veterinärwesen",
+                "tel": "+41 58 229 28 00",
+                "email": "info.avsv@sg.ch"
+            },
+            "gesundheit": {
+                "name": "Gesundheitsdepartement",
+                "tel": "+41 58 229 35 70",
+                "email": "info.gdgs@sg.ch"
+            },
+            "soziales": {
+                "name": "Amt für Soziales",
+                "tel": "+41 58 229 33 18",
+                "email": ""
+            }
+        }
+    },
+    "bildung-sport": {
+        "URL": "https://www.sg.ch/bildung-sport.html",
+        "bslb": {
+            "URL": "https://www.sg.ch/bildung-sport/bslb.html",
+            "download-center": "https://www.sg.ch/bildung-sport/bslb/download-center.html",
+            "Kalender": "https://www.sg.ch/bildung-sport/bslb/Kalender.html",
+            "biz-standorte": "https://www.sg.ch/bildung-sport/bslb/biz-standorte.html",
+            "studienwahl": "https://www.sg.ch/bildung-sport/bslb/studienwahl.html",
+            "berufswahl": "https://www.sg.ch/bildung-sport/bslb/berufswahl.html",
+            "ueber-uns": "https://www.sg.ch/bildung-sport/bslb/ueber-uns.html",
+            "bizebiz": "https://www.sg.ch/bildung-sport/bslb/bizebiz.html",
+            "terminanfrage": "https://www.sg.ch/bildung-sport/bslb/terminanfrage.html",
+            "laufbahn": "https://www.sg.ch/bildung-sport/bslb/laufbahn.html",
+            "ebiz": "https://www.sg.ch/bildung-sport/bslb/ebiz.html",
+            "contact": {
+                "name": "Berufs-, Studien- und Laufbahnberatung",
+                "tel": "+41 58 229 84 08",
+                "email": "irene.marciello@sg.ch"
+            }
+        },
+        "volksschule": {
+            "URL": "https://www.sg.ch/bildung-sport/volksschule.html",
+            "unterricht": "https://www.sg.ch/bildung-sport/volksschule/unterricht.html",
+            "aus-dem-amt": "https://www.sg.ch/bildung-sport/volksschule/aus-dem-amt.html",
+            "das-st-galler-schulsystem": "https://www.sg.ch/bildung-sport/volksschule/das-st-galler-schulsystem.html",
+            "support_und_beratung": "https://www.sg.ch/bildung-sport/volksschule/support_und_beratung.html",
+            "inhalte-fuer-eltern": "https://www.sg.ch/bildung-sport/volksschule/inhalte-fuer-eltern.html",
+            "rahmenbedingungen": "https://www.sg.ch/bildung-sport/volksschule/rahmenbedingungen.html",
+            "schulisches-umfeld": "https://www.sg.ch/bildung-sport/volksschule/schulisches-umfeld.html",
+            "weiterbildung": "https://www.sg.ch/bildung-sport/volksschule/weiterbildung.html",
+            "extranet_vs": "https://www.sg.ch/bildung-sport/volksschule/extranet_vs.html",
+            "sonderpaedagogik": "https://www.sg.ch/bildung-sport/volksschule/sonderpaedagogik.html",
+            "contact": {
+                "name": "Amt für Volksschule",
+                "tel": "+41 58 229 32 36",
+                "email": "avs@sg.ch"
+            }
+        },
+        "mittelschule": {
+            "URL": "https://www.sg.ch/bildung-sport/mittelschule.html",
+            "projekte": "https://www.sg.ch/bildung-sport/mittelschule/projekte.html",
+            "information-fuer-lehrpersonen-und-kommissionen": "https://www.sg.ch/bildung-sport/mittelschule/information-fuer-lehrpersonen-und-kommissionen.html",
+            "aus-dem-amt": "https://www.sg.ch/bildung-sport/mittelschule/aus-dem-amt.html",
+            "kantonsschulen": "https://www.sg.ch/bildung-sport/mittelschule/kantonsschulen.html",
+            "lehrplaene-und-stundentafeln": "https://www.sg.ch/bildung-sport/mittelschule/lehrplaene-und-stundentafeln.html",
+            "ausbildungsgaenge0": "https://www.sg.ch/bildung-sport/mittelschule/ausbildungsgaenge0.html",
+            "contact": {
+                "name": "Amt für Mittelschulen",
+                "tel": "+41 58 229 32 21",
+                "email": "info.bldams@sg.ch"
+            }
+        },
+        "hochschule": {
+            "URL": "https://www.sg.ch/bildung-sport/hochschule.html",
+            "die-hochschulinstitutionen-des-kantons-st-gallen": "https://www.sg.ch/bildung-sport/hochschule/die-hochschulinstitutionen-des-kantons-st-gallen.html",
+            "studium": "https://www.sg.ch/bildung-sport/hochschule/studium.html",
+            "links-im-hochschulbereich": "https://www.sg.ch/bildung-sport/hochschule/links-im-hochschulbereich.html",
+            "contact": {
+                "name": "Amt für Hochschulen",
+                "tel": "+41 58 229 62 00",
+                "email": "info.bldahs@sg.ch"
+            }
+        },
+        "berufsbildung": {
+            "URL": "https://www.sg.ch/bildung-sport/berufsbildung.html",
+            "weiterbildung-und-hoehere-berufsbildung": "https://www.sg.ch/bildung-sport/berufsbildung/weiterbildung-und-hoehere-berufsbildung.html",
+            "itbo-berufsbildung": "https://www.sg.ch/bildung-sport/berufsbildung/itbo-berufsbildung.html",
+            "brueckenangebote": "https://www.sg.ch/bildung-sport/berufsbildung/brueckenangebote.html",
+            "BetrieblicheGrundbildung": "https://www.sg.ch/bildung-sport/berufsbildung/BetrieblicheGrundbildung.html",
+            "berufsfachschulen": "https://www.sg.ch/bildung-sport/berufsbildung/berufsfachschulen.html",
+            "infos-aus-der-berufsbildung": "https://www.sg.ch/bildung-sport/berufsbildung/infos-aus-der-berufsbildung.html",
+            "contact": {
+                "name": "Amt für Berufsbildung",
+                "tel": "+41 58 229 38 76",
+                "email": "info.bldabb@sg.ch"
+            }
+        },
+        "stipendien-und-studiendarlehen": {
+            "URL": "https://www.sg.ch/bildung-sport/stipendien-und-studiendarlehen.html"
+        },
+        "ueber-bildung": {
+            "URL": "https://www.sg.ch/bildung-sport/ueber-bildung.html",
+            "schulblatt": "https://www.sg.ch/bildung-sport/ueber-bildung/schulblatt.html",
+            "bildungstag-sek-ii": "https://www.sg.ch/bildung-sport/ueber-bildung/bildungstag-sek-ii.html"
+        },
+        "offene-stellen-fuer-lehrpersonen": {
+            "URL": "https://www.sg.ch/bildung-sport/offene-stellen-fuer-lehrpersonen.html",
+            "feste_stellen": "https://www.sg.ch/bildung-sport/offene-stellen-fuer-lehrpersonen/feste_stellen.html",
+            "stellvertretungen": "https://www.sg.ch/bildung-sport/offene-stellen-fuer-lehrpersonen/stellvertretungen.html"
+        },
+        "sport": {
+            "URL": "https://www.sg.ch/bildung-sport/sport.html",
+            "Sportangebote": "https://www.sg.ch/bildung-sport/sport/Sportangebote.html",
+            "leiter--und-lagerboerse": "https://www.sg.ch/bildung-sport/sport/leiter--und-lagerboerse.html",
+            "SportinderGemeinde": "https://www.sg.ch/bildung-sport/sport/SportinderGemeinde.html",
+            "Nachwuchsleistungssport": "https://www.sg.ch/bildung-sport/sport/Nachwuchsleistungssport.html",
+            "news-archiv.newsArea__53.newsType__Veranstaltungen": "https://www.sg.ch/bildung-sport/sport/news-archiv.newsArea__53.newsType__Veranstaltungen.html",
+            "Schulsport": "https://www.sg.ch/bildung-sport/sport/Schulsport.html",
+            "leihmaterial": "https://www.sg.ch/bildung-sport/sport/leihmaterial.html",
+            "news-archiv.newsArea__53.newsType__News": "https://www.sg.ch/bildung-sport/sport/news-archiv.newsArea__53.newsType__News.html",
+            "publikationen": "https://www.sg.ch/bildung-sport/sport/publikationen.html",
+            "Jugendsportcamps": "https://www.sg.ch/bildung-sport/sport/Jugendsportcamps.html",
+            "erwachsenensport": "https://www.sg.ch/bildung-sport/sport/erwachsenensport.html",
+            "contact": {
+                "name": "Amt für Sport",
+                "tel": "+41 58 229 39 26",
+                "email": "sport@sg.ch"
+            }
+        },
+        "bildungsrat": {
+            "URL": "https://www.sg.ch/bildung-sport/bildungsrat.html",
+            "mitglieder-des-bildungsrates": "https://www.sg.ch/bildung-sport/bildungsrat/mitglieder-des-bildungsrates.html",
+            "paedagogische-kommissionen": "https://www.sg.ch/bildung-sport/bildungsrat/paedagogische-kommissionen.html"
+        },
+        "category-contact": {
+            "bslb": {
+                "name": "Berufs-, Studien- und Laufbahnberatung",
+                "tel": "+41 58 229 84 08",
+                "email": "irene.marciello@sg.ch"
+            },
+            "volksschule": {
+                "name": "Amt für Volksschule",
+                "tel": "+41 58 229 32 36",
+                "email": "avs@sg.ch"
+            },
+            "mittelschule": {
+                "name": "Amt für Mittelschulen",
+                "tel": "+41 58 229 32 21",
+                "email": "info.bldams@sg.ch"
+            },
+            "hochschule": {
+                "name": "Amt für Hochschulen",
+                "tel": "+41 58 229 62 00",
+                "email": "info.bldahs@sg.ch"
+            },
+            "berufsbildung": {
+                "name": "Amt für Berufsbildung",
+                "tel": "+41 58 229 38 76",
+                "email": "info.bldabb@sg.ch"
+            },
+            "sport": {
+                "name": "Amt für Sport",
+                "tel": "+41 58 229 39 26",
+                "email": "sport@sg.ch"
+            }
+        }
+    },
+    "sicherheit": {
+        "URL": "https://www.sg.ch/sicherheit.html",
+        "kantonspolizei": {
+            "URL": "https://www.sg.ch/sicherheit/kantonspolizei.html",
+            "newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Fahndungen": "https://www.sg.ch/sicherheit/kantonspolizei/newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Fahndungen.html",
+            "standorte-der-kantonspolizei-st-gallen": "https://www.sg.ch/sicherheit/kantonspolizei/standorte-der-kantonspolizei-st-gallen.html",
+            "statistiken": "https://www.sg.ch/sicherheit/kantonspolizei/statistiken.html",
+            "newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Zeugenaufrufe": "https://www.sg.ch/sicherheit/kantonspolizei/newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Zeugenaufrufe.html",
+            "forensik": "https://www.sg.ch/sicherheit/kantonspolizei/forensik.html",
+            "medien": "https://www.sg.ch/sicherheit/kantonspolizei/medien.html",
+            "kapo-shop": "https://www.sg.ch/sicherheit/kantonspolizei/kapo-shop.html",
+            "uploadportal-kantonspolizei-st-gallen": "https://www.sg.ch/sicherheit/kantonspolizei/uploadportal-kantonspolizei-st-gallen.html",
+            "verkehr": "https://www.sg.ch/sicherheit/kantonspolizei/verkehr.html",
+            "anzeige-erstatten--gesucht-und-vermisst": "https://www.sg.ch/sicherheit/kantonspolizei/anzeige-erstatten--gesucht-und-vermisst.html",
+            "praevention--jugend--cybercrime": "https://www.sg.ch/sicherheit/kantonspolizei/praevention--jugend--cybercrime.html",
+            "newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Ratgeber": "https://www.sg.ch/sicherheit/kantonspolizei/newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Ratgeber.html",
+            "newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__News": "https://www.sg.ch/sicherheit/kantonspolizei/newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__News.html",
+            "arbeiten-bei-der-polizei": "https://www.sg.ch/sicherheit/kantonspolizei/arbeiten-bei-der-polizei.html",
+            "fuehrungen--vortraege--schularbeiten": "https://www.sg.ch/sicherheit/kantonspolizei/fuehrungen--vortraege--schularbeiten.html",
+            "newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Veranstaltungen": "https://www.sg.ch/sicherheit/kantonspolizei/newsuebersicht-kantonspolizei-st-gallen.newsArea__29.newsType__Veranstaltungen.html",
+            "sprengstoff--waffen--sicherheitsfirmen--alarmanlagen-und-sportve": "https://www.sg.ch/sicherheit/kantonspolizei/sprengstoff--waffen--sicherheitsfirmen--alarmanlagen-und-sportve.html",
+            "contact": {
+                "name": "Kantonspolizei St.Gallen",
+                "tel": "+41 58 229 49 49",
+                "email": "infokapo@kapo.sg.ch"
+            }
+        },
+        "asyl-fluechtlinge": {
+            "URL": "https://www.sg.ch/sicherheit/asyl-fluechtlinge.html",
+            "erwerbstaetigkeit-von-personen-im-asylbereich": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/erwerbstaetigkeit-von-personen-im-asylbereich.html",
+            "zentren-des-asylbereichs-": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/zentren-des-asylbereichs-.html",
+            "faq": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/faq.html",
+            "neustrukturierung-des-asylbereichs": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/neustrukturierung-des-asylbereichs.html",
+            "kontaktformular_Migraamt": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/kontaktformular_Migraamt.html",
+            "rueckkehrhilfe": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/rueckkehrhilfe.html",
+            "reisedokumente-fuer-auslaendische-personen": "https://www.sg.ch/sicherheit/asyl-fluechtlinge/reisedokumente-fuer-auslaendische-personen.html",
+            "contact": {
+                "name": "Asylabteilung / Migrationsamt",
+                "tel": "+41 58 229 31 11",
+                "email": ""
+            }
+        },
+        "schweizer-pass-id": {
+            "URL": "https://www.sg.ch/sicherheit/schweizer-pass-id.html",
+            "Biometrieerfassungs-Termin1": "https://www.sg.ch/sicherheit/schweizer-pass-id/Biometrieerfassungs-Termin1.html",
+            "kontaktformular": "https://www.sg.ch/sicherheit/schweizer-pass-id/kontaktformular.html",
+            "News": "https://www.sg.ch/sicherheit/schweizer-pass-id/News.html",
+            "reisepass-kombi-angebot": "https://www.sg.ch/sicherheit/schweizer-pass-id/reisepass-kombi-angebot.html",
+            "identitaetskarte": "https://www.sg.ch/sicherheit/schweizer-pass-id/identitaetskarte.html",
+            "contact": {
+                "name": "Ausweisstelle",
+                "tel": "+41 58 229 36 31",
+                "email": "ausweisstelle@sg.ch"
+            }
+        },
+        "einreise-aufenthalt-ausreise": {
+            "URL": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise.html",
+            "ausreise": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/ausreise.html",
+            "bewilligungen-drittstaaten": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/bewilligungen-drittstaaten.html",
+            "bewilligugnen-eu-efta": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/bewilligugnen-eu-efta.html",
+            "bewilligugnen_schweizer": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/bewilligugnen_schweizer.html",
+            "bewilligugnen_schweizer1": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/bewilligugnen_schweizer1.html",
+            "Akteneinsicht-Fristverlaengerung": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/Akteneinsicht-Fristverlaengerung.html",
+            "spezial-news": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/spezial-news.html",
+            "integration": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/integration.html",
+            "contact": {
+                "name": "Asylabteilung / Migrationsamt",
+                "tel": "+41 58 229 36 90",
+                "email": ""
+            }
+        },
+        "haeusliche-gewalt": {
+            "URL": "https://www.sg.ch/sicherheit/haeusliche-gewalt.html",
+            "16-tage-gegen-gewalt-an-frauen-": "https://www.sg.ch/sicherheit/haeusliche-gewalt/16-tage-gegen-gewalt-an-frauen-.html",
+            "schweizerische-konferenz-gegen-haeusliche-gewalt": "https://www.sg.ch/sicherheit/haeusliche-gewalt/schweizerische-konferenz-gegen-haeusliche-gewalt.html",
+            "zwangsheirat--zwangsehe": "https://www.sg.ch/sicherheit/haeusliche-gewalt/zwangsheirat--zwangsehe.html",
+            "hilfe-finden": "https://www.sg.ch/sicherheit/haeusliche-gewalt/hilfe-finden.html",
+            "menschenhandel": "https://www.sg.ch/sicherheit/haeusliche-gewalt/menschenhandel.html",
+            "rechtliche-bestimmungen": "https://www.sg.ch/sicherheit/haeusliche-gewalt/rechtliche-bestimmungen.html",
+            "haeusliche-gewalt": "https://www.sg.ch/sicherheit/haeusliche-gewalt/haeusliche-gewalt.html",
+            "istanbul-konvention": "https://www.sg.ch/sicherheit/haeusliche-gewalt/istanbul-konvention.html",
+            "projekte--haeusliche-gewalt---die-kinder-mitendrin-": "https://www.sg.ch/sicherheit/haeusliche-gewalt/projekte--haeusliche-gewalt---die-kinder-mitendrin-.html",
+            "stalking": "https://www.sg.ch/sicherheit/haeusliche-gewalt/stalking.html",
+            "links": "https://www.sg.ch/sicherheit/haeusliche-gewalt/links.html",
+            "genitalbeschneidung": "https://www.sg.ch/sicherheit/haeusliche-gewalt/genitalbeschneidung.html",
+            "contact": {
+                "name": "Koordinationsstelle Häusliche Gewalt und Menschenhandel, Sicherheits- und Justizdepartement",
+                "tel": "+41 58 229 75 43",
+                "email": "petra.baumann@sg.ch"
+            }
+        },
+        "justizvollzug": {
+            "URL": "https://www.sg.ch/sicherheit/justizvollzug.html",
+            "rgal": "https://www.sg.ch/sicherheit/justizvollzug/rgal.html",
+            "bewaehrungshilfe": "https://www.sg.ch/sicherheit/justizvollzug/bewaehrungshilfe.html",
+            "massnahmenzentrum-bitzi": "https://www.sg.ch/sicherheit/justizvollzug/massnahmenzentrum-bitzi.html",
+            "saxerriet": "https://www.sg.ch/sicherheit/justizvollzug/saxerriet.html",
+            "straf-massnahmenvollzug": "https://www.sg.ch/sicherheit/justizvollzug/straf-massnahmenvollzug.html",
+            "platanenhof": "https://www.sg.ch/sicherheit/justizvollzug/platanenhof.html",
+            "contact": {
+                "name": "Amt für Justizvollzug",
+                "tel": "+41 58 229 36 99",
+                "email": ""
+            }
+        },
+        "datenschutz": {
+            "URL": "https://www.sg.ch/sicherheit/datenschutz.html",
+            "meldungen-von-verletzungen-der-datensicherheit": "https://www.sg.ch/sicherheit/datenschutz/meldungen-von-verletzungen-der-datensicherheit.html",
+            "rechtliche-grundlagen": "https://www.sg.ch/sicherheit/datenschutz/rechtliche-grundlagen.html",
+            "merkblaetter-und-arbeitshilfen": "https://www.sg.ch/sicherheit/datenschutz/merkblaetter-und-arbeitshilfen.html",
+            "videos---links": "https://www.sg.ch/sicherheit/datenschutz/videos---links.html",
+            "datenschutz-folgenabschaetzung0": "https://www.sg.ch/sicherheit/datenschutz/datenschutz-folgenabschaetzung0.html",
+            "meine-rechte": "https://www.sg.ch/sicherheit/datenschutz/meine-rechte.html",
+            "kontakt-weitere-datenschutzbehoerden": "https://www.sg.ch/sicherheit/datenschutz/kontakt-weitere-datenschutzbehoerden.html",
+            "taetigkeitsbericht": "https://www.sg.ch/sicherheit/datenschutz/taetigkeitsbericht.html",
+            "register-der-datensammlungen": "https://www.sg.ch/sicherheit/datenschutz/register-der-datensammlungen.html",
+            "Vorabkonsultation": "https://www.sg.ch/sicherheit/datenschutz/Vorabkonsultation.html",
+            "grundbegriffe-": "https://www.sg.ch/sicherheit/datenschutz/grundbegriffe-.html",
+            "portrait-fachstelle-fuer-datenschutz": "https://www.sg.ch/sicherheit/datenschutz/portrait-fachstelle-fuer-datenschutz.html",
+            "Kontaktformular": "https://www.sg.ch/sicherheit/datenschutz/Kontaktformular.html",
+            "contact": {
+                "name": "Fachstelle für Datenschutz",
+                "tel": "+41 58 229 14 14",
+                "email": ""
+            }
+        },
+        "militaer-zivilschutz": {
+            "URL": "https://www.sg.ch/sicherheit/militaer-zivilschutz.html",
+            "dienst-und-termin-verschieben": "https://www.sg.ch/sicherheit/militaer-zivilschutz/dienst-und-termin-verschieben.html",
+            "armee-logistik": "https://www.sg.ch/sicherheit/militaer-zivilschutz/armee-logistik.html",
+            "zivilschutz1": "https://www.sg.ch/sicherheit/militaer-zivilschutz/zivilschutz1.html",
+            "militaer_kreiskommando": "https://www.sg.ch/sicherheit/militaer-zivilschutz/militaer_kreiskommando.html",
+            "army-liq-shop": "https://www.sg.ch/sicherheit/militaer-zivilschutz/army-liq-shop.html",
+            "bevoelkerungsschutz0": "https://www.sg.ch/sicherheit/militaer-zivilschutz/bevoelkerungsschutz0.html",
+            "ueber-uns": "https://www.sg.ch/sicherheit/militaer-zivilschutz/ueber-uns.html",
+            "wehrpflichtersatz": "https://www.sg.ch/sicherheit/militaer-zivilschutz/wehrpflichtersatz.html",
+            "contact": {
+                "name": "Amt für Militär und Zivilschutz",
+                "tel": "+41 58 229 71 11",
+                "email": ""
+            }
+        },
+        "category-contact": {
+            "kantonspolizei": {
+                "name": "Kantonspolizei St.Gallen",
+                "tel": "+41 58 229 49 49",
+                "email": "infokapo@kapo.sg.ch"
+            },
+            "asyl-fluechtlinge": {
+                "name": "Asylabteilung / Migrationsamt",
+                "tel": "+41 58 229 31 11",
+                "email": ""
+            },
+            "schweizer-pass-id": {
+                "name": "Ausweisstelle",
+                "tel": "+41 58 229 36 31",
+                "email": "ausweisstelle@sg.ch"
+            },
+            "einreise-aufenthalt-ausreise": {
+                "name": "Asylabteilung / Migrationsamt",
+                "tel": "+41 58 229 36 90",
+                "email": ""
+            },
+            "haeusliche-gewalt": {
+                "name": "Koordinationsstelle Häusliche Gewalt und Menschenhandel, Sicherheits- und Justizdepartement",
+                "tel": "+41 58 229 75 43",
+                "email": "petra.baumann@sg.ch"
+            },
+            "justizvollzug": {
+                "name": "Amt für Justizvollzug",
+                "tel": "+41 58 229 36 99",
+                "email": ""
+            },
+            "datenschutz": {
+                "name": "Fachstelle für Datenschutz",
+                "tel": "+41 58 229 14 14",
+                "email": ""
+            },
+            "militaer-zivilschutz": {
+                "name": "Amt für Militär und Zivilschutz",
+                "tel": "+41 58 229 71 11",
+                "email": ""
+            }
+        }
+    },
+    "verkehr": {
+        "URL": "https://www.sg.ch/verkehr.html",
+        "strassenverkehr": {
+            "URL": "https://www.sg.ch/verkehr/strassenverkehr.html",
+            "unsere-pruefstellen": "https://www.sg.ch/verkehr/strassenverkehr/unsere-pruefstellen.html",
+            "lernfahrausweise": "https://www.sg.ch/verkehr/strassenverkehr/lernfahrausweise.html",
+            "fuehrerausweisentzuege": "https://www.sg.ch/verkehr/strassenverkehr/fuehrerausweisentzuege.html",
+            "kontrollschilder": "https://www.sg.ch/verkehr/strassenverkehr/kontrollschilder.html",
+            "fuehrerausweise": "https://www.sg.ch/verkehr/strassenverkehr/fuehrerausweise.html",
+            "fahrzeuge": "https://www.sg.ch/verkehr/strassenverkehr/fahrzeuge.html",
+            "hilfsmittel": "https://www.sg.ch/verkehr/strassenverkehr/hilfsmittel.html",
+            "pruefungstermine0": "https://www.sg.ch/verkehr/strassenverkehr/pruefungstermine0.html",
+            "sonderbewilligungen": "https://www.sg.ch/verkehr/strassenverkehr/sonderbewilligungen.html",
+            "rechnung_gebuehren": "https://www.sg.ch/verkehr/strassenverkehr/rechnung_gebuehren.html",
+            "formulare_merkblaetter": "https://www.sg.ch/verkehr/strassenverkehr/formulare_merkblaetter.html",
+            "medizinische_kontrolluntersuchung_seniorinnen_und_senioren": "https://www.sg.ch/verkehr/strassenverkehr/medizinische_kontrolluntersuchung_seniorinnen_und_senioren.html",
+            "contact": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 22 22",
+                "email": "info.stva@sg.ch"
+            }
+        },
+        "oeffentlicher-verkehr": {
+            "URL": "https://www.sg.ch/verkehr/oeffentlicher-verkehr.html",
+            "zahlen-und-fakten": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/zahlen-und-fakten.html",
+            "ausschreibungen": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/ausschreibungen.html",
+            "strategien-und-programme": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/strategien-und-programme.html",
+            "grundlagen": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/grundlagen.html",
+            "infrastrukturprojekte": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/infrastrukturprojekte.html",
+            "planung-oev-angebote": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/planung-oev-angebote.html",
+            "s-bahn-bodensse": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/s-bahn-bodensse.html",
+            "fahrplanprozess": "https://www.sg.ch/verkehr/oeffentlicher-verkehr/fahrplanprozess.html",
+            "contact": {
+                "name": "Amt für öffentlichen Verkehr",
+                "tel": "+41 58 229 34 88",
+                "email": ""
+            }
+        },
+        "baustellen": {
+            "URL": "https://www.sg.ch/verkehr/baustellen.html",
+            "contact": {
+                "name": "Baudepartement",
+                "tel": "+41 58 229 30 34",
+                "email": ""
+            }
+        },
+        "schifffahrt": {
+            "URL": "https://www.sg.ch/verkehr/schifffahrt.html",
+            "schiff": "https://www.sg.ch/verkehr/schifffahrt/schiff.html",
+            "rechtliche-grundlagen": "https://www.sg.ch/verkehr/schifffahrt/rechtliche-grundlagen.html",
+            "formulare": "https://www.sg.ch/verkehr/schifffahrt/formulare.html",
+            "bewilligungen---verfuegungen----verkehrsbeschraenkungen": "https://www.sg.ch/verkehr/schifffahrt/bewilligungen---verfuegungen----verkehrsbeschraenkungen.html",
+            "steuern-und-gebuehren": "https://www.sg.ch/verkehr/schifffahrt/steuern-und-gebuehren.html",
+            "schiffsfuehrer": "https://www.sg.ch/verkehr/schifffahrt/schiffsfuehrer.html",
+            "ausweise---fuehrer-und-schiff": "https://www.sg.ch/verkehr/schifffahrt/ausweise---fuehrer-und-schiff.html",
+            "seepolizei--seerettung---sturmwarndienst": "https://www.sg.ch/verkehr/schifffahrt/seepolizei--seerettung---sturmwarndienst.html",
+            "contact": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 93 20",
+                "email": ""
+            }
+        },
+        "category-contact": {
+            "strassenverkehr": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 22 22",
+                "email": "info.stva@sg.ch"
+            },
+            "oeffentlicher-verkehr": {
+                "name": "Amt für öffentlichen Verkehr",
+                "tel": "+41 58 229 34 88",
+                "email": ""
+            },
+            "baustellen": {
+                "name": "Baudepartement",
+                "tel": "+41 58 229 30 34",
+                "email": ""
+            },
+            "schifffahrt": {
+                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                "tel": "+41 58 229 93 20",
+                "email": ""
+            }
+        }
+    },
+    "kultur": {
+        "URL": "https://www.sg.ch/kultur.html",
+        "diverse-themen": {
+            "URL": "https://www.sg.ch/kultur/diverse-themen.html",
+            "anmeldung-newsletter-amt-fuer-kultur": "https://www.sg.ch/kultur/diverse-themen/anmeldung-newsletter-amt-fuer-kultur.html"
+        },
+        "staatsarchiv": {
+            "URL": "https://www.sg.ch/kultur/staatsarchiv.html",
+            "bibliotheksnetz": "https://www.sg.ch/kultur/staatsarchiv/bibliotheksnetz.html",
+            "Spezialthemen-": "https://www.sg.ch/kultur/staatsarchiv/Spezialthemen-.html",
+            "Privatpersonen": "https://www.sg.ch/kultur/staatsarchiv/Privatpersonen.html",
+            "ihr-besuch-im-lesesaal": "https://www.sg.ch/kultur/staatsarchiv/ihr-besuch-im-lesesaal.html",
+            "uber-uns": "https://www.sg.ch/kultur/staatsarchiv/uber-uns.html",
+            "Oeffentliche-Organe": "https://www.sg.ch/kultur/staatsarchiv/Oeffentliche-Organe.html",
+            "kontakt": "https://www.sg.ch/kultur/staatsarchiv/kontakt.html",
+            "contact": {
+                "name": "Staatsarchiv St.Gallen",
+                "tel": "+41 58 229 32 05",
+                "email": "info.staatsarchiv@sg.ch"
+            }
+        },
+        "leitfaden-downloads": {
+            "URL": "https://www.sg.ch/kultur/leitfaden-downloads.html"
+        },
+        "kulturerbe": {
+            "URL": "https://www.sg.ch/kultur/kulturerbe.html",
+            "Fachstelle-Kulturerbe": "https://www.sg.ch/kultur/kulturerbe/Fachstelle-Kulturerbe.html",
+            "contact": {
+                "name": "Christopher Rühle, Leiter Fachstelle Kulturerbe",
+                "tel": "+41 58 229 21 51",
+                "email": "christopher.ruehle@sg.ch"
+            }
+        },
+        "kulturfoerderung": {
+            "URL": "https://www.sg.ch/kultur/kulturfoerderung.html",
+            "foerderung-beantragen": "https://www.sg.ch/kultur/kulturfoerderung/foerderung-beantragen.html",
+            "leitfaden-downloads": "https://www.sg.ch/kultur/kulturfoerderung/leitfaden-downloads.html",
+            "praesentation-des-kulturschaffens": "https://www.sg.ch/kultur/kulturfoerderung/praesentation-des-kulturschaffens.html",
+            "moeglichkeiten-der-kulturfoerderung": "https://www.sg.ch/kultur/kulturfoerderung/moeglichkeiten-der-kulturfoerderung.html"
+        },
+        "archaeologie": {
+            "URL": "https://www.sg.ch/kultur/archaeologie.html",
+            "archaeologie-erleben": "https://www.sg.ch/kultur/archaeologie/archaeologie-erleben.html",
+            "bauen---archaeologie": "https://www.sg.ch/kultur/archaeologie/bauen---archaeologie.html",
+            "pfahlbauten": "https://www.sg.ch/kultur/archaeologie/pfahlbauten.html",
+            "haeufig-gestellte-fragen--faq-": "https://www.sg.ch/kultur/archaeologie/haeufig-gestellte-fragen--faq-.html",
+            "was-ist-archaeologie-": "https://www.sg.ch/kultur/archaeologie/was-ist-archaeologie-.html",
+            "filme": "https://www.sg.ch/kultur/archaeologie/filme.html",
+            "metalldetektoren": "https://www.sg.ch/kultur/archaeologie/metalldetektoren.html",
+            "archaeologische-fundstellen": "https://www.sg.ch/kultur/archaeologie/archaeologische-fundstellen.html",
+            "links": "https://www.sg.ch/kultur/archaeologie/links.html",
+            "funde-melden": "https://www.sg.ch/kultur/archaeologie/funde-melden.html",
+            "ueber-uns": "https://www.sg.ch/kultur/archaeologie/ueber-uns.html",
+            "gesetzliche-grundlagen": "https://www.sg.ch/kultur/archaeologie/gesetzliche-grundlagen.html",
+            "contact": {
+                "name": "Kantonsarchäologie",
+                "tel": "+41 58 229 38 72",
+                "email": "archaeologie@sg.ch"
+            }
+        },
+        "kantonsbibliothek-vadiana": {
+            "URL": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana.html",
+            "vadianische-sammlung": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/vadianische-sammlung.html",
+            "alles-ueber-den-kanton": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/alles-ueber-den-kanton.html",
+            "gesellschaft-pro-vadiana": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/gesellschaft-pro-vadiana.html",
+            "historische-bestaende": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/historische-bestaende.html",
+            "st-galler-zentrum-fuer-das-buch": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/st-galler-zentrum-fuer-das-buch.html",
+            "ueber-die-kantonsbibliothek-vadiana": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/ueber-die-kantonsbibliothek-vadiana.html",
+            "recherche": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/recherche.html",
+            "bibliotheksfoerderung": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/bibliotheksfoerderung.html",
+            "veranstaltungsprogramm": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/veranstaltungsprogramm.html",
+            "schenkungen": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/schenkungen.html",
+            "links": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/links.html",
+            "digitale-angebote": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/digitale-angebote.html",
+            "bibliothekswesen-st-gallen": "https://www.sg.ch/kultur/kantonsbibliothek-vadiana/bibliothekswesen-st-gallen.html",
+            "contact": {
+                "name": "Kantonsbibliothek Vadiana - Bibliothek Hauptpost",
+                "tel": "+41 58 229 09 90",
+                "email": "info@bibliosg.ch"
+            }
+        },
+        "stiftsarchiv": {
+            "URL": "https://www.sg.ch/kultur/stiftsarchiv.html",
+            "benutzung": "https://www.sg.ch/kultur/stiftsarchiv/benutzung.html",
+            "recherche": "https://www.sg.ch/kultur/stiftsarchiv/recherche.html",
+            "bestaende": "https://www.sg.ch/kultur/stiftsarchiv/bestaende.html",
+            "contact": {
+                "name": "Stiftsarchiv",
+                "tel": "+41 58 229 38 23",
+                "email": "info.stiftsarchiv@sg.ch"
+            }
+        },
+        "denkmalpflege": {
+            "URL": "https://www.sg.ch/kultur/denkmalpflege.html",
+            "Ortsbildschutz-ISOS": "https://www.sg.ch/kultur/denkmalpflege/Ortsbildschutz-ISOS.html",
+            "Geschuetzte-Einzelobjekte": "https://www.sg.ch/kultur/denkmalpflege/Geschuetzte-Einzelobjekte.html",
+            "Leitfaden": "https://www.sg.ch/kultur/denkmalpflege/Leitfaden.html",
+            "Weiterfuehrende-Informationen": "https://www.sg.ch/kultur/denkmalpflege/Weiterfuehrende-Informationen.html",
+            "Bauberatung": "https://www.sg.ch/kultur/denkmalpflege/Bauberatung.html",
+            "Subventionen": "https://www.sg.ch/kultur/denkmalpflege/Subventionen.html",
+            "contact": {
+                "name": "Denkmalpflege Kanton St.Gallen",
+                "tel": "+41 58 229 38 71",
+                "email": ""
+            }
+        },
+        "Kulturstandorte-und-institutionen": {
+            "URL": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen.html",
+            "gefoerderte-institutionen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/gefoerderte-institutionen.html",
+            "kunst-zeug-haus-rapperswil-jona": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/kunst-zeug-haus-rapperswil-jona.html",
+            "klanghaus-toggenburg": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/klanghaus-toggenburg.html",
+            "konzert-und-theater-st-gallen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/konzert-und-theater-st-gallen.html",
+            "schloss-werdenberg": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/schloss-werdenberg.html",
+            "altes-bad-pfaefers": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/altes-bad-pfaefers.html",
+            "unesco-weltkulturerbe-stiftsbezirk-st-gallen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/unesco-weltkulturerbe-stiftsbezirk-st-gallen.html",
+            "Lokremise_St_Gallen": "https://www.sg.ch/kultur/Kulturstandorte-und-institutionen/Lokremise_St_Gallen.html",
+            "contact": {
+                "name": "Amt für Kultur",
+                "tel": "+41 58 229 21 50",
+                "email": "kultur@sg.ch"
+            }
+        },
+        "kulturkanton-st-gallen": {
+            "URL": "https://www.sg.ch/kultur/kulturkanton-st-gallen.html",
+            "perspektive-stiftsarchiv": "https://www.sg.ch/kultur/kulturkanton-st-gallen/perspektive-stiftsarchiv.html",
+            "info-grafik-perspektive-kulturfoerderung5": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung5.html",
+            "info-grafik-perspektive-kulturfoerderung": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung.html",
+            "info-grafik-perspektive-kulturfoerderung4": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung4.html",
+            "info-grafik-perspektive-kulturfoerderung2": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung2.html",
+            "info-grafik-perspektive-kulturfoerderung6": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung6.html",
+            "info-grafik-perspektive-kulturfoerderung1": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung1.html",
+            "info-grafik-perspektive-kulturfoerderung3": "https://www.sg.ch/kultur/kulturkanton-st-gallen/info-grafik-perspektive-kulturfoerderung3.html"
+        },
+        "category-contact": {
+            "staatsarchiv": {
+                "name": "Staatsarchiv St.Gallen",
+                "tel": "+41 58 229 32 05",
+                "email": "info.staatsarchiv@sg.ch"
+            },
+            "kulturerbe": {
+                "name": "Christopher Rühle, Leiter Fachstelle Kulturerbe",
+                "tel": "+41 58 229 21 51",
+                "email": "christopher.ruehle@sg.ch"
+            },
+            "archaeologie": {
+                "name": "Kantonsarchäologie",
+                "tel": "+41 58 229 38 72",
+                "email": "archaeologie@sg.ch"
+            },
+            "kantonsbibliothek-vadiana": {
+                "name": "Kantonsbibliothek Vadiana - Bibliothek Hauptpost",
+                "tel": "+41 58 229 09 90",
+                "email": "info@bibliosg.ch"
+            },
+            "stiftsarchiv": {
+                "name": "Stiftsarchiv",
+                "tel": "+41 58 229 38 23",
+                "email": "info.stiftsarchiv@sg.ch"
+            },
+            "denkmalpflege": {
+                "name": "Denkmalpflege Kanton St.Gallen",
+                "tel": "+41 58 229 38 71",
+                "email": ""
+            },
+            "Kulturstandorte-und-institutionen": {
+                "name": "Amt für Kultur",
+                "tel": "+41 58 229 21 50",
+                "email": "kultur@sg.ch"
+            }
+        }
+    },
+    "wirtschaft-arbeit": {
+        "URL": "https://www.sg.ch/wirtschaft-arbeit.html",
+        "standortfoerderung": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung.html",
+            "neue-regionalpolitik": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/neue-regionalpolitik.html",
+            "standortvorteile-und--unterstuetzung": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/standortvorteile-und--unterstuetzung.html",
+            "immobilien--und-arealentwicklung": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/immobilien--und-arealentwicklung.html",
+            "EasyGovOnlineSchalterfuerUnternehmen": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/EasyGovOnlineSchalterfuerUnternehmen.html",
+            "tourismus": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/tourismus.html",
+            "innovation-leben": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/innovation-leben.html",
+            "start-up-und-gruender": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/start-up-und-gruender.html",
+            "Arbeits-undFachkraefte": "https://www.sg.ch/wirtschaft-arbeit/standortfoerderung/Arbeits-undFachkraefte.html",
+            "contact": {
+                "name": "Daniel Müller, Leiter Standortförderung",
+                "tel": "+41 58 229 64 64",
+                "email": "daniel.mueller@sg.ch"
+            }
+        },
+        "arbeitnehmende": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende.html",
+            "insolvenzentschaedigung": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/insolvenzentschaedigung.html",
+            "arbeitssicherheit-und-gesundheitsschutz": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeitssicherheit-und-gesundheitsschutz.html",
+            "arbeiten-in-der-schweiz": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeiten-in-der-schweiz.html",
+            "arbeiten-in-europa": "https://www.sg.ch/wirtschaft-arbeit/arbeitnehmende/arbeiten-in-europa.html",
+            "contact": {
+                "name": "Arbeitsmarkt",
+                "tel": "+41 58 229 48 38",
+                "email": ""
+            }
+        },
+        "arbeitslos-arbeit-finden": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden.html",
+            "arbeitslos-so-geht-es-weiter": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/arbeitslos-so-geht-es-weiter.html",
+            "job-chancen-verbessern": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/job-chancen-verbessern.html",
+            "rav": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/rav.html",
+            "stellenangebote": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/stellenangebote.html",
+            "rav-anmeldung": "https://www.sg.ch/wirtschaft-arbeit/arbeitslos-arbeit-finden/rav-anmeldung.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
+        },
+        "informatik": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/informatik.html",
+            "it-strategie-sg-2016-plus": "https://www.sg.ch/wirtschaft-arbeit/informatik/it-strategie-sg-2016-plus.html",
+            "Portal-Strategie": "https://www.sg.ch/wirtschaft-arbeit/informatik/Portal-Strategie.html"
+        },
+        "beschaffungen": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/beschaffungen.html"
+        },
+        "publikationen": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/publikationen.html",
+            "magazin-wirtschaft-arbeit-abonnieren": "https://www.sg.ch/wirtschaft-arbeit/publikationen/magazin-wirtschaft-arbeit-abonnieren.html"
+        },
+        "arbeitgebende": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende.html",
+            "schlechtwetter-anmelden": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/schlechtwetter-anmelden.html",
+            "arbeitsicherheit-und-gesundheitsschutz": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/arbeitsicherheit-und-gesundheitsschutz.html",
+            "rekrutierung-und-stellen-melden": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/rekrutierung-und-stellen-melden.html",
+            "personalabbau": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/personalabbau.html",
+            "messwesen": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/messwesen.html",
+            "kurzarbeit-anmelden": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/kurzarbeit-anmelden.html",
+            "bewilligungen": "https://www.sg.ch/wirtschaft-arbeit/arbeitgebende/bewilligungen.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
+        },
+        "schwarzarbeit": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/schwarzarbeit.html"
+        },
+        "konkurswesen": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen.html",
+            "versteigerungen-und-verkaeufe": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/versteigerungen-und-verkaeufe.html",
+            "formulare": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/formulare.html",
+            "forderung-anmelden": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/forderung-anmelden.html",
+            "wissenswertes": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/wissenswertes.html",
+            "Standorte": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/Standorte.html",
+            "links": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/links.html",
+            "konkursverzeichnis": "https://www.sg.ch/wirtschaft-arbeit/konkurswesen/konkursverzeichnis.html",
+            "contact": {
+                "name": "Konkursamt",
+                "tel": "+41 58 229 37 66",
+                "email": "info.dika@sg.ch"
+            }
+        },
+        "arbeitsrechtliche-auskunft": {
+            "URL": "https://www.sg.ch/wirtschaft-arbeit/arbeitsrechtliche-auskunft.html"
+        },
+        "category-contact": {
+            "standortfoerderung": {
+                "name": "Daniel Müller, Leiter Standortförderung",
+                "tel": "+41 58 229 64 64",
+                "email": "daniel.mueller@sg.ch"
+            },
+            "arbeitnehmende": {
+                "name": "Arbeitsmarkt",
+                "tel": "+41 58 229 48 38",
+                "email": ""
+            },
+            "arbeitslos-arbeit-finden": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "arbeitgebende": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "konkurswesen": {
+                "name": "Konkursamt",
+                "tel": "+41 58 229 37 66",
+                "email": "info.dika@sg.ch"
+            }
+        }
+    },
+    "recht": {
+        "URL": "https://www.sg.ch/recht.html",
+        "staatsanwaltschaft-jugendanwaltschaft": {
+            "URL": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft.html",
+            "Berufseinstieg": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/Berufseinstieg.html",
+            "formulare": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/formulare.html",
+            "medienstelle---statistik-der-staatsanwaltschaft": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/medienstelle---statistik-der-staatsanwaltschaft.html",
+            "strafverfahren": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/strafverfahren.html",
+            "gesetzliche-grundlage": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/gesetzliche-grundlage.html",
+            "elektronischer-rechtsverkehr-staatsanwaltschaft": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/elektronischer-rechtsverkehr-staatsanwaltschaft.html",
+            "standorte": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/standorte.html",
+            "jugendanwaltschaft": "https://www.sg.ch/recht/staatsanwaltschaft-jugendanwaltschaft/jugendanwaltschaft.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
+        },
+        "unentgeltliche-rechtspflege": {
+            "URL": "https://www.sg.ch/recht/unentgeltliche-rechtspflege.html"
+        },
+        "gerichte": {
+            "URL": "https://www.sg.ch/recht/gerichte.html",
+            "aktuelles": "https://www.sg.ch/recht/gerichte/aktuelles.html",
+            "rechtsprechung": "https://www.sg.ch/recht/gerichte/rechtsprechung.html",
+            "anwalts----notarwesen": "https://www.sg.ch/recht/gerichte/anwalts----notarwesen.html",
+            "verhandlungstermine": "https://www.sg.ch/recht/gerichte/verhandlungstermine.html",
+            "organisation---standorte": "https://www.sg.ch/recht/gerichte/organisation---standorte.html",
+            "links": "https://www.sg.ch/recht/gerichte/links.html",
+            "offenlegung-interessenbindung": "https://www.sg.ch/recht/gerichte/offenlegung-interessenbindung.html",
+            "informationen---formulare": "https://www.sg.ch/recht/gerichte/informationen---formulare.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
+        },
+        "planungs-bau-umweltrecht": {
+            "URL": "https://www.sg.ch/recht/planungs-bau-umweltrecht.html",
+            "Wissenswertes_Rechtsabteilung": "https://www.sg.ch/recht/planungs-bau-umweltrecht/Wissenswertes_Rechtsabteilung.html",
+            "Rechtsprechung": "https://www.sg.ch/recht/planungs-bau-umweltrecht/Rechtsprechung.html",
+            "energierecht": "https://www.sg.ch/recht/planungs-bau-umweltrecht/energierecht.html",
+            "umweltrecht": "https://www.sg.ch/recht/planungs-bau-umweltrecht/umweltrecht.html",
+            "gewaesserrecht": "https://www.sg.ch/recht/planungs-bau-umweltrecht/gewaesserrecht.html",
+            "Planungs_und_Baugesetz": "https://www.sg.ch/recht/planungs-bau-umweltrecht/Planungs_und_Baugesetz.html",
+            "contact": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            }
+        },
+        "opferhilfe": {
+            "URL": "https://www.sg.ch/recht/opferhilfe.html",
+            "contact": {
+                "name": "Opferhilfe SG – AR – AI",
+                "tel": "+41 71 227 11 00",
+                "email": "info@ohsg.ch"
+            }
+        },
+        "beschaffungswesen": {
+            "URL": "https://www.sg.ch/recht/beschaffungswesen.html",
+            "schwellenwerte": "https://www.sg.ch/recht/beschaffungswesen/schwellenwerte.html",
+            "kompetenzzentrum-und-informationsstellen": "https://www.sg.ch/recht/beschaffungswesen/kompetenzzentrum-und-informationsstellen.html",
+            "muster-beispiele": "https://www.sg.ch/recht/beschaffungswesen/muster-beispiele.html",
+            "neues_beschaffungsrecht_2023": "https://www.sg.ch/recht/beschaffungswesen/neues_beschaffungsrecht_2023.html",
+            "offertoeffnungen": "https://www.sg.ch/recht/beschaffungswesen/offertoeffnungen.html",
+            "schulungen": "https://www.sg.ch/recht/beschaffungswesen/schulungen.html",
+            "vergabestatistik": "https://www.sg.ch/recht/beschaffungswesen/vergabestatistik.html",
+            "vergabeverbot-an-russische-anbieterinnen": "https://www.sg.ch/recht/beschaffungswesen/vergabeverbot-an-russische-anbieterinnen.html",
+            "handbuch-zum-beschaffungswesen": "https://www.sg.ch/recht/beschaffungswesen/handbuch-zum-beschaffungswesen.html",
+            "simap-ausschreibungsplattform-": "https://www.sg.ch/recht/beschaffungswesen/simap-ausschreibungsplattform-.html",
+            "contact": {
+                "name": "Generalsekretariat Finanzdepartement",
+                "tel": "+41 58 229 42 99",
+                "email": "beschaffungswesen@sg.ch"
+            }
+        },
+        "geldspiele": {
+            "URL": "https://www.sg.ch/recht/geldspiele.html"
+        },
+        "handelsregister-notariate": {
+            "URL": "https://www.sg.ch/recht/handelsregister-notariate.html",
+            "handelsregister": "https://www.sg.ch/recht/handelsregister-notariate/handelsregister.html",
+            "offene-stellen": "https://www.sg.ch/recht/handelsregister-notariate/offene-stellen.html",
+            "merkblaetter": "https://www.sg.ch/recht/handelsregister-notariate/merkblaetter.html",
+            "standorte": "https://www.sg.ch/recht/handelsregister-notariate/standorte.html",
+            "amtsnotariate": "https://www.sg.ch/recht/handelsregister-notariate/amtsnotariate.html",
+            "contact": {
+                "name": "Amt für Handelsregister und Notariate",
+                "tel": "+41 58 229 37 24",
+                "email": "info.afhn@sg.ch"
+            }
+        },
+        "buergerrecht-zivilstand": {
+            "URL": "https://www.sg.ch/recht/buergerrecht-zivilstand.html",
+            "zivilstandsaemter-": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsaemter-.html",
+            "zivilstandsaemter-login": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsaemter-login.html",
+            "einbuergerungsraete-login": "https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerungsraete-login.html",
+            "namensaenderung": "https://www.sg.ch/recht/buergerrecht-zivilstand/namensaenderung.html",
+            "adoption": "https://www.sg.ch/recht/buergerrecht-zivilstand/adoption.html",
+            "zivilstandsereignisse-in-der-schweiz": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsereignisse-in-der-schweiz.html",
+            "einbuergerung": "https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung.html",
+            "zivilstandsereignis-im-ausland": "https://www.sg.ch/recht/buergerrecht-zivilstand/zivilstandsereignis-im-ausland.html",
+            "contact": {
+                "name": "Amt für Gemeinden und Bürgerrecht",
+                "tel": "+41 58 229 62 31",
+                "email": "info.diafgb@sg.ch"
+            }
+        },
+        "beglaubigungen": {
+            "URL": "https://www.sg.ch/recht/beglaubigungen.html",
+            "webshop-beglaubigungen": "https://www.sg.ch/recht/beglaubigungen/webshop-beglaubigungen.html",
+            "deckblaetter--oeffentliche-urkunden--fuer-anwaelte": "https://www.sg.ch/recht/beglaubigungen/deckblaetter--oeffentliche-urkunden--fuer-anwaelte.html",
+            "unterschriftenliste-fuer-gemeinden": "https://www.sg.ch/recht/beglaubigungen/unterschriftenliste-fuer-gemeinden.html",
+            "adressen-staatskanzleien-der-schweiz": "https://www.sg.ch/recht/beglaubigungen/adressen-staatskanzleien-der-schweiz.html",
+            "contact": {
+                "name": "Regierungsgebäude",
+                "tel": "+41 58 229 37 90",
+                "email": "beglaubigungen@sg.ch"
+            }
+        },
+        "category-contact": {
+            "staatsanwaltschaft-jugendanwaltschaft": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "gerichte": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "planungs-bau-umweltrecht": {
+                "name": "",
+                "tel": "",
+                "email": ""
+            },
+            "beschaffungswesen": {
+                "name": "Generalsekretariat Finanzdepartement",
+                "tel": "+41 58 229 42 99",
+                "email": "beschaffungswesen@sg.ch"
+            },
+            "opferhilfe": {
+                "name": "Opferhilfe SG – AR – AI",
+                "tel": "+41 71 227 11 00",
+                "email": "info@ohsg.ch"
+            },
+            "handelsregister-notariate": {
+                "name": "Amt für Handelsregister und Notariate",
+                "tel": "+41 58 229 37 24",
+                "email": "info.afhn@sg.ch"
+            },
+            "buergerrecht-zivilstand": {
+                "name": "Amt für Gemeinden und Bürgerrecht",
+                "tel": "+41 58 229 62 31",
+                "email": "info.diafgb@sg.ch"
+            },
+            "beglaubigungen": {
+                "name": "Regierungsgebäude",
+                "tel": "+41 58 229 37 90",
+                "email": "beglaubigungen@sg.ch"
+            }
+        }
+    },
+    "bauen": {
+        "URL": "https://www.sg.ch/bauen.html",
+        "hausanalyse": {
+            "URL": "https://www.sg.ch/bauen/hausanalyse.html"
+        },
+        "tiefbau": {
+            "URL": "https://www.sg.ch/bauen/tiefbau.html",
+            "veroeffentlichungen": "https://www.sg.ch/bauen/tiefbau/veroeffentlichungen.html",
+            "projekte": "https://www.sg.ch/bauen/tiefbau/projekte.html",
+            "vorlagen-fuer-projektierende": "https://www.sg.ch/bauen/tiefbau/vorlagen-fuer-projektierende.html",
+            "strassenzustand-taminaschlucht": "https://www.sg.ch/bauen/tiefbau/strassenzustand-taminaschlucht.html",
+            "mitwirkung-kantonsstrassenprojekte": "https://www.sg.ch/bauen/tiefbau/mitwirkung-kantonsstrassenprojekte.html",
+            "fuss--und-veloverkehr": "https://www.sg.ch/bauen/tiefbau/fuss--und-veloverkehr.html",
+            "baustellen": "https://www.sg.ch/bauen/tiefbau/baustellen.html",
+            "richtlinien--normalien--merkblaetter": "https://www.sg.ch/bauen/tiefbau/richtlinien--normalien--merkblaetter.html",
+            "oeffentliche-planauflagen-kantonsstrassenprojekte": "https://www.sg.ch/bauen/tiefbau/oeffentliche-planauflagen-kantonsstrassenprojekte.html",
+            "Laermbelastungskataster": "https://www.sg.ch/bauen/tiefbau/Laermbelastungskataster.html",
+            "verkehrszahlen": "https://www.sg.ch/bauen/tiefbau/verkehrszahlen.html",
+            "contact": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 34",
+                "email": "info.budtba@sg.ch"
+            }
+        },
+        "raumentwicklung": {
+            "URL": "https://www.sg.ch/bauen/raumentwicklung.html",
+            "raumbeobachtung": "https://www.sg.ch/bauen/raumentwicklung/raumbeobachtung.html",
+            "zweitwohnungen": "https://www.sg.ch/bauen/raumentwicklung/zweitwohnungen.html",
+            "seilbahnen": "https://www.sg.ch/bauen/raumentwicklung/seilbahnen.html",
+            "bauenausserhalbbauzonen": "https://www.sg.ch/bauen/raumentwicklung/bauenausserhalbbauzonen.html",
+            "internationaleprojekte": "https://www.sg.ch/bauen/raumentwicklung/internationaleprojekte.html",
+            "kantonaleplanung": "https://www.sg.ch/bauen/raumentwicklung/kantonaleplanung.html",
+            "ortsplanung": "https://www.sg.ch/bauen/raumentwicklung/ortsplanung.html",
+            "contact": {
+                "name": "Amt für Raumentwicklung und Geoinformation",
+                "tel": "+41 58 229 31 47",
+                "email": "info.budareg@sg.ch"
+            }
+        },
+        "baugesuch-baubewilligung": {
+            "URL": "https://www.sg.ch/bauen/baugesuch-baubewilligung.html",
+            "zusatzformulare": "https://www.sg.ch/bauen/baugesuch-baubewilligung/zusatzformulare.html",
+            "hilfsmittel": "https://www.sg.ch/bauen/baugesuch-baubewilligung/hilfsmittel.html",
+            "baugesuch-einreichen": "https://www.sg.ch/bauen/baugesuch-baubewilligung/baugesuch-einreichen.html",
+            "kontakte1": "https://www.sg.ch/bauen/baugesuch-baubewilligung/kontakte1.html",
+            "contact": {
+                "name": "Koordinationsstelle Bau",
+                "tel": "",
+                "email": "baugesuch@sg.ch"
+            }
+        },
+        "wohnbaufoerderung": {
+            "URL": "https://www.sg.ch/bauen/wohnbaufoerderung.html"
+        },
+        "ich-will-bauen": {
+            "URL": "https://www.sg.ch/bauen/ich-will-bauen.html",
+            "umweltvertraeglichkeitspruefung-uvp": "https://www.sg.ch/bauen/ich-will-bauen/umweltvertraeglichkeitspruefung-uvp.html",
+            "umweltschutz-beim-bauen": "https://www.sg.ch/bauen/ich-will-bauen/umweltschutz-beim-bauen.html",
+            "bauen-innerhalb-bauzone": "https://www.sg.ch/bauen/ich-will-bauen/bauen-innerhalb-bauzone.html",
+            "ich-will-bauen": "https://www.sg.ch/bauen/ich-will-bauen/ich-will-bauen.html",
+            "gewaesser": "https://www.sg.ch/bauen/ich-will-bauen/gewaesser.html",
+            "contact": {
+                "name": "Bau- und Umweltdepartement Kanton St.Gallen",
+                "tel": "+41 58 229 30 03",
+                "email": ""
+            }
+        },
+        "hochbau": {
+            "URL": "https://www.sg.ch/bauen/hochbau.html",
+            "bauten": "https://www.sg.ch/bauen/hochbau/bauten.html",
+            "richtlinien-und-vorlagen": "https://www.sg.ch/bauen/hochbau/richtlinien-und-vorlagen.html",
+            "Ausschreibungen": "https://www.sg.ch/bauen/hochbau/Ausschreibungen.html",
+            "formular-buchbestellung": "https://www.sg.ch/bauen/hochbau/formular-buchbestellung.html",
+            "contact": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 17",
+                "email": "info.budhba@sg.ch"
+            }
+        },
+        "category-contact": {
+            "tiefbau": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 34",
+                "email": "info.budtba@sg.ch"
+            },
+            "raumentwicklung": {
+                "name": "Amt für Raumentwicklung und Geoinformation",
+                "tel": "+41 58 229 31 47",
+                "email": "info.budareg@sg.ch"
+            },
+            "baugesuch-baubewilligung": {
+                "name": "Koordinationsstelle Bau",
+                "tel": "",
+                "email": "baugesuch@sg.ch"
+            },
+            "ich-will-bauen": {
+                "name": "Bau- und Umweltdepartement Kanton St.Gallen",
+                "tel": "+41 58 229 30 03",
+                "email": ""
+            },
+            "hochbau": {
+                "name": "Bau- und Umweltdepartement",
+                "tel": "+41 58 229 30 17",
+                "email": "info.budhba@sg.ch"
+            }
+        }
+    }
+}

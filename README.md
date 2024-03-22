@@ -12,7 +12,7 @@ aws ecr create-repository --repository-name natelai-backend --region eu-central-
 
 ## docker build and run
 docker build -t natelai-backend .  
-docker run -d --name natelai-backend -p 8000:80 natelai-backend  
+docker run -it --rm --name natelai-backend -p 8000:80 natelai-backend  
 
 ## docker deploy
 docker tag natelai-backend:latest 064310218222.dkr.ecr.eu-central-1.amazonaws.com/natelai-backend:latest  
@@ -20,4 +20,13 @@ docker push 064310218222.dkr.ecr.eu-central-1.amazonaws.com/natelai-backend:late
 
 ## AWS elasticbeanstalk
 aws elasticbeanstalk create-application --application-name natelai-backend
-aws elasticbeanstalk create-environment --application-name natelai-backend --environment-name natelai-backend-env --version-label latest --solution-stack-name "64bit Amazon Linux 2023 v4.2.2 running Docker"
+
+
+## Stuff to work on
+[] Include organization specific info in the rerouting voice (e.g. telephone num, organization)
+[] Test how well the re-routing
+[] Send the summary message
+[] Professional enging of the call
+
+[] Pitch
+[] Video recording
