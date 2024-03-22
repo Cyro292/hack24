@@ -92,4 +92,4 @@ class Assistant:
 
         print('Finished summarizing msg history')
 
-        return summary.choices[0].message
+        return summary.choices[0].message.content[0].text.value
