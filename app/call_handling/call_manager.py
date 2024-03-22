@@ -271,7 +271,8 @@ class Call:
             print("Process")
 
             if self.rres is None:
-                self.rres = get_reroute_info(self.speech_result, self.prev_statement)
+                self.rres = get_reroute_info(
+                    self.speech_result, self.prev_statement)
                 print("Reroute number: ", self.rres["reroute_number"])
 
             self.answer = self.assistant.get_answer()
@@ -282,7 +283,7 @@ class Call:
                 return await self.redirect_call(request, message, "+41772800638")
             elif int(self.rres["reroute_number"]) == 0:
                 while not self.answer:
-                    if self.secs_since_last_msg >= 9:
+                    if self.secs_since_last_msg >= 6:
                         return await self.send_message(
                             request,
                             "Bitte warten Sie einen Moment. Ich suche nach passenden Informationen für Sie.",
@@ -291,10 +292,11 @@ class Call:
                     else:
                         time.sleep(1)
                         self.answer = self.assistant.get_answer()
-                        self.secs_since_last_msg = (self.secs_since_last_msg + 1) % 10
-                
+                        self.secs_since_last_msg = (
+                            self.secs_since_last_msg + 1) % 7
+
                 self.prev_statement = self.answer
-                
+
                 print("Answer: ", self.answer)
                 local_answer = self.answer
                 self.answer = None
