@@ -278,11 +278,11 @@ class Call:
 
             if int(self.rres["reroute_number"]) == 10:
                 print('tel. nr.: ', self.rres["telephone_number"])
-                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {self.rres["department"].replace("_", " ")}. Bitte haben Sie einen kurzen Moment Geduld."
+                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {self.rres["department"]}. Bitte haben Sie einen kurzen Moment Geduld."
                 return await self.redirect_call(request, message, "+41772800638")
             elif int(self.rres["reroute_number"]) == 0:
                 while not self.answer:
-                    if self.secs_since_last_msg >= 6:
+                    if self.secs_since_last_msg >= 9:
                         return await self.send_message(
                             request,
                             "Bitte warten Sie einen Moment. Ich suche nach passenden Informationen für Sie.",
@@ -291,7 +291,7 @@ class Call:
                     else:
                         time.sleep(1)
                         self.answer = self.assistant.get_answer()
-                        self.secs_since_last_msg = (self.secs_since_last_msg + 1) % 7
+                        self.secs_since_last_msg = (self.secs_since_last_msg + 1) % 10
                 
                 self.prev_statement = self.answer
                 
@@ -299,6 +299,7 @@ class Call:
                 local_answer = self.answer
                 self.answer = None
                 self.rres = None
+                self.secs_since_last_msg = 0
                 return await self.send_message(
                     request, local_answer, next_url=f"{request.base_url}voice/listen"
                 )
