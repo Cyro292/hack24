@@ -26,24 +26,30 @@ class Call:
         "PROCESSING": 4,
         "END": 5,
     }
-
+    
+    
+    call_number = None
     client = None
     state = None
     assistant = None
     prev_statement = ""
     TIMEOUT_FOR_LISTENING = 3
 
-    def __init__(self) -> None:
+    def __init__(self, call_number) -> None:
         account_sid = "AC690145ec38222226d949960846d71393"
         auth_token = os.environ["TWILIO_AUTH_TOKEN"]
         self.client = Client(account_sid, auth_token)
         self.state = self.STATES["INITIAL"]
         self.assistant = Assistant()
+        self.call_number = call_number
 
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
 
     async def send_sms(self, body: str, to: str):
+        if to is None:
+            to = self.call_number
+            
         message = self.client.messages.create(
             from_="+14243651541", body=body, to=to)
 
@@ -51,17 +57,17 @@ class Call:
 
         return message.sid
 
-    async def redirect_call(self, request: Request, phone_no: str):
+    async def redirect_call(self, request: Request, message: str, phone_no: str):
         resp = VoiceResponse()
 
-        message = "Ich verbinde Sie gleich mit einem Kollegen, der optimal auf Ihre Frage eingehen kann. Bitte haben Sie einen kurzen Moment Geduld."
+        # message = "Ich verbinde Sie gleich mit einem Kollegen, der optimal auf Ihre Frage eingehen kann. Bitte haben Sie einen kurzen Moment Geduld."
         # "Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
         await create_audio_file_from_text(
-            message, f"assets/audio/{audio_filename}", voice_profile="de-DE/Daniel"
+            message, f"assets/audio/{audio_filename}"
         )
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
@@ -79,7 +85,7 @@ class Call:
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
-        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir freuen uns sehr, Sie bei uns zu haben. Wie können wir Ihnen heute behilflich sein?"
+        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
@@ -98,15 +104,20 @@ class Call:
 
         return self.twiml(resp)
 
-    async def send_message(self, request: Request, message: str, next_url=None, voice_profile="de-At/Hannah"):
+    async def send_message(
+        self,
+        request: Request,
+        message: str,
+        next_url=None,
+        voice_profile="de-At/Hannah",
+    ):
         resp = VoiceResponse()
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
         await create_audio_file_from_text(
-            message,
-            f"assets/audio/{audio_filename}", voice_profile
+            message, f"assets/audio/{audio_filename}", voice_profile
         )
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
@@ -158,7 +169,7 @@ class Call:
             recordingStatusCallbackMethod="POST",
             recordingStatusCallbackEvent="completed",
         )
-        # resp.append(record)
+        resp.append(record)
 
         return self.twiml(resp)
 
@@ -169,7 +180,7 @@ class Call:
         if recording_url is None:
             print("No recording URL received.")
         else:
-            recording_url = f'{recording_url}.mp3'
+            recording_url = f"{recording_url}.mp3"
             print("Recording URL: ", recording_url)
             # download the file from recording_url and save the recording to assets/audio folder
             timestamp = time.time()
@@ -205,8 +216,7 @@ class Call:
                 print("Confidence is not available.")
             else:
                 print("Confidence: ", confidence, type(confidence))
-                print("Confidence: ", float(confidence),
-                      type(float(confidence)))
+                print("Confidence: ", float(confidence), type(float(confidence)))
                 confidence = float(confidence)
 
             language = data.get("Language")
@@ -220,8 +230,10 @@ class Call:
                 return await self.send_message(
                     request,
                     "Hi! The Kanton of St. Gallen's information number only supports German for now. Please ask your questions in German. Thank you for your understanding!",
-                    next_url=f"{request.base_url}voice/listen", voice_profile="en-GB/Arthur"
+                    next_url=f"{request.base_url}voice/listen",
+                    voice_profile="en-GB/Arthur",
                 )
+            # twillio transcription confidence doesn't work properly yet
             elif confidence < 0:
                 self.state = self.STATES["SPEAKING"]
                 return await self.send_message(
@@ -253,13 +265,17 @@ class Call:
             print("Reroute number: ", reroute_n)
 
             if int(reroute_n) == 10:
-                print(tel_n, department)
-                return await self.redirect_call(request, "+41772800638")
-            else:
+                department: str = department.replace("_", " ")
+                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld."
+                return await self.redirect_call(request, message, "+41772800638")
+            elif int(reroute_n) == 0:
                 print("Answer: ", answer)
                 return await self.send_message(
                     request, answer, next_url=f"{request.base_url}voice/listen"
                 )
+            elif int(reroute_n) == 15:
+                print('Ending the call')
+                return await self.end_call(request)
 
         elif path == "recording":
             print("Recording")
@@ -268,6 +284,7 @@ class Call:
         elif path == "next":
             print("Next")
             return await self.send_message(request, "Ich höre")
+        
         elif path == "end":
             print("Generating Summary")
 
@@ -275,7 +292,9 @@ class Call:
             await self.send_sms(summary)
 
             print("End")
+            self.state = self.STATES["END"]
             return await self.end_call(request)
+        
         else:
             raise HTTPException(status_code=404, detail="Path not found")
 
