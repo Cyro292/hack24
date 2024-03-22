@@ -1,5 +1,6 @@
 import time
 import os
+import json
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -64,3 +65,31 @@ class Assistant:
                 c for c in thread_messages.data[0].content if c.type == 'text'
             ]
             return content[0].text.value
+
+    def get_user_message_history(self) -> list:
+        print("Retrieving msg history")
+        thread_messages = self.client.beta.threads.messages.list(
+            self.thread.id)
+
+        msg_texts = []
+        for (i, msg) in enumerate(thread_messages.data[0].content):
+            if (msg.type == 'text'):
+                msg_texts.append({f'user_{(i%2)+1}': msg.text.value})
+
+        return msg_texts
+
+    def summarize_msg_history(self) -> str:
+        msg_history = self.get_user_message_history()
+        print("Summarizing msg history")
+
+        summary = self.client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "Erstelle eine Zusammenfassung der Nachrichtenhistorie zwischen zwei Nutzern. Die Zusammenfassung soll klar und verständlich für den Nutzer sein, der Fragen gestellt hat. Die Zusammenfassung soll kurz und prägnant sein."},
+                {"role": "user", "content": json.dumps(msg_history)}
+            ]
+        )
+
+        print('Finished summarizing msg history')
+
+        return summary.choices[0].message

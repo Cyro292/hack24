@@ -269,6 +269,11 @@ class Call:
             print("Next")
             return await self.send_message(request, "Ich höre")
         elif path == "end":
+            print("Generating Summary")
+
+            summary = self.assistant.summarize_msg_history()
+            await self.send_sms(summary)
+
             print("End")
             return await self.end_call(request)
         else:
