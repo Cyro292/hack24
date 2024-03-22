@@ -30,6 +30,7 @@ class Call:
     client = None
     state = None
     assistant = None
+    prev_statement = ""
     TIMEOUT_FOR_LISTENING = 3
 
     def __init__(self) -> None:
@@ -43,7 +44,8 @@ class Call:
         return Response(content=str(resp), media_type="text/xml")
 
     async def send_sms(self, body: str, to: str):
-        message = self.client.messages.create(from_="+14243651541", body=body, to=to)
+        message = self.client.messages.create(
+            from_="+14243651541", body=body, to=to)
 
         print(message.sid)
 
@@ -53,7 +55,7 @@ class Call:
         resp = VoiceResponse()
 
         message = "Ich verbinde Sie gleich mit einem Kollegen, der optimal auf Ihre Frage eingehen kann. Bitte haben Sie einen kurzen Moment Geduld."
-        #"Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
+        # "Ich leite Ihren Anruf an den nächsten verfügbaren Agenten weiter. Bitte warten Sie einen Moment."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
@@ -146,7 +148,7 @@ class Call:
         )
 
         resp.append(gather)
-        
+
         # Start recording the call and set the callback URL
         record = Record(
             recordingStatusCallback=f"{request.base_url}voice/recording",
@@ -169,10 +171,8 @@ class Call:
         else:
             recording_url = f'{recording_url}.mp3'
             print("Recording URL: ", recording_url)
-            ## download the file from recording_url and save the recording to assets/audio folder
+            # download the file from recording_url and save the recording to assets/audio folder
             timestamp = time.time()
-            
-            
 
         return {"status": "success"}
 
@@ -205,7 +205,8 @@ class Call:
                 print("Confidence is not available.")
             else:
                 print("Confidence: ", confidence, type(confidence))
-                print("Confidence: ", float(confidence), type(float(confidence)))
+                print("Confidence: ", float(confidence),
+                      type(float(confidence)))
                 confidence = float(confidence)
 
             language = data.get("Language")
@@ -244,8 +245,10 @@ class Call:
 
             # call the assistant and the router
             answer, reroute_n, tel_n, department = call_llms(
-                self.assistant, self.speech_result
+                self.assistant, self.speech_result, self.prev_statement
             )
+
+            self.prev_statement = answer
 
             print("Reroute number: ", reroute_n)
 
@@ -276,18 +279,18 @@ def assistant_task(instance: Assistant):
     return instance.get_answer()
 
 
-def router_task(question: str):
-    return get_reroute_info(question)
+def router_task(question: str, prev_statement: str):
+    return get_reroute_info(question, prev_statement)
 
 
-def call_llms(assistant: Assistant, question: str):
+def call_llms(assistant: Assistant, question: str, prev_statement: str):
     results = []
 
     # Call the router + assistant concurrently to reduce IO-bound latency
     with ThreadPoolExecutor(max_workers=2) as executor:
         futures = [
             executor.submit(assistant_task, assistant),
-            executor.submit(router_task, question),
+            executor.submit(router_task, question, prev_statement),
         ]
 
         results = [future.result() for future in futures]
