@@ -26,8 +26,8 @@ async def get_ai_awnser(question: str, contexts: list[str]):
 
 
 def get_ai_awnser_with_function(
-    question: str,
-    contexts: list[str],
+    user_input: str,
+    system_input: list[str],
     function_data: list[dict],
     tool_choice=None,
 ):
@@ -37,15 +37,14 @@ def get_ai_awnser_with_function(
         {"type": "function", "function": function_data[0]},
     ]
 
-    context = "\n".join(contexts)
     response = client.chat.completions.create(
         model="gpt-4-turbo-preview",
         messages=[
             {
                 "role": "system",
-                "content": f"Du Gibst dabei immer im JSON Format deine Antwort zurück {context}\n\n",
+                "content": f"Antworte immer im JSON Format. {system_input}",
             },
-            {"role": "user", "content": f'Frage:\n"""{question}"""'},
+            {"role": "user", "content": user_input},
         ],
         temperature=0.4,
         tools=tools,

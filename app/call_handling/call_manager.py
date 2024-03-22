@@ -75,17 +75,6 @@ class Call:
     async def send_welcome_message(self, request: Request):
         resp = VoiceResponse()
 
-        # Start recording the call and set the callback URL
-        record = Record(
-            recordingStatusCallback=f"{request.base_url}voice/recording",
-            timeout=10,
-            playBeep=False,
-            trim="trim-silence",
-            recordingStatusCallbackMethod="POST",
-            recordingStatusCallbackEvent="completed",
-        )
-        resp.append(record)
-
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
         message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir freuen uns sehr, Sie bei uns zu haben. Wie können wir Ihnen heute behilflich sein?"
@@ -100,6 +89,17 @@ class Call:
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
         resp.play(audio_filelink)
+        
+        # Start recording the call and set the callback URL
+        record = Record(
+            recordingStatusCallback=f"{request.base_url}voice/recording",
+            timeout=10,
+            playBeep=False,
+            trim="trim-silence",
+            recordingStatusCallbackMethod="POST",
+            recordingStatusCallbackEvent="completed",
+        )
+        # resp.append(record)
 
         # Redirect to a custom URL
         next_url = f"{request.base_url}voice/listen"
@@ -167,7 +167,7 @@ class Call:
         if recording_url is None:
             print("No recording URL received.")
         else:
-            print("Recording URL: ", recording_url)
+            print("Recording URL: ", f'{recording_url}.mp3')
 
         return {"status": "success"}
 
@@ -244,12 +244,11 @@ class Call:
 
             print("Reroute number: ", reroute_n)
 
-            print("Reroute number: ", reroute_n)
-
             if int(reroute_n) == 10:
                 print(tel_n, department)
                 return await self.redirect_call(request, "+41772800638")
             else:
+                print("Answer: ", answer)
                 return await self.send_message(
                     request, answer, next_url=f"{request.base_url}voice/listen"
                 )
