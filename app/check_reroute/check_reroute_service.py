@@ -7,7 +7,7 @@ def get_reroute_info(answer_customer: str, prev_statement: str):
     with open("data/json/contact_info.json") as f:
         router = json.load(f)
 
-    prompt = f"Du bist ein Mitarbeiter im Callcenter vom Schweizer Kanton \"St. Gallen\". Deine Vorherige Aussage war folgende:\n\"\"\"{prev_statement}\"\"\"Ein Kunde antwortet:\n\"\"\"{answer_customer}\"\"\"\n\n. Das sind die Kontaktinformationen der Einzelnen Behörden:\n```{json.dumps(router)}```"
+    prompt = f"Du bist ein Mitarbeiter im Callcenter vom Schweizer Kanton \"St. Gallen\". Deine Vorherige Aussage war folgende:\n\"\"\"{prev_statement}\"\"\"Ein Kunde antwortet:\n\"\"\"{answer_customer}\"\"\"\n\n."
     function_data = [
         {
             "name": "reroute",
