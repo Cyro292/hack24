@@ -89,17 +89,6 @@ class Call:
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
         resp.play(audio_filelink)
-        
-        # Start recording the call and set the callback URL
-        record = Record(
-            recordingStatusCallback=f"{request.base_url}voice/recording",
-            timeout=10,
-            playBeep=False,
-            trim="trim-silence",
-            recordingStatusCallbackMethod="POST",
-            recordingStatusCallbackEvent="completed",
-        )
-        # resp.append(record)
 
         # Redirect to a custom URL
         next_url = f"{request.base_url}voice/listen"
@@ -157,6 +146,17 @@ class Call:
         )
 
         resp.append(gather)
+        
+        # Start recording the call and set the callback URL
+        record = Record(
+            recordingStatusCallback=f"{request.base_url}voice/recording",
+            timeout=10,
+            playBeep=False,
+            trim="trim-silence",
+            recordingStatusCallbackMethod="POST",
+            recordingStatusCallbackEvent="completed",
+        )
+        # resp.append(record)
 
         return self.twiml(resp)
 
@@ -167,7 +167,12 @@ class Call:
         if recording_url is None:
             print("No recording URL received.")
         else:
-            print("Recording URL: ", f'{recording_url}.mp3')
+            recording_url = f'{recording_url}.mp3'
+            print("Recording URL: ", recording_url)
+            ## download the file from recording_url and save the recording to assets/audio folder
+            timestamp = time.time()
+            
+            
 
         return {"status": "success"}
 
