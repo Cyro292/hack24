@@ -17,7 +17,7 @@ def get_reroute_info(answer_customer: str, prev_statement: str):
                 "properties": {
                     "reroute_number": {
                         "type": "number",
-                        "description": "Gibt eine Zahl zwischen 0 und 10 zurück. Gibt 10 zurück, wenn der Benutzer ausdrücklich darum gebeten hat, mit einem bestimmten Mitarbeiter zu sprechen. Andernfalls wird 0 zurückgegeben.",
+                        "description": "Gibt eine Zahl zwischen 0 und 10 zurück. Gibt 10 zurück, wenn der Benutzer ausdrücklich darum gebeten hat, mit einem bestimmten Mitarbeiter zu sprechen. Andernfalls wird 0 zurückgegeben. Wenn der Anrufer deutlich zu verstehen gibt, dass er das Gespräch beenden möchte, indem er z. B. sagt: Danke für den Anruf, tschüss oder Mir geht es gut, danke oder Ich werde/will jetzt auflegen, rufen Sie bitte die 15 zurück.",
                     },
                     "department": {
                         "type": "string",

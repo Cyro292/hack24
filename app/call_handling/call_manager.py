@@ -79,7 +79,7 @@ class Call:
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
         # message = "Hallo und Willkommen bei der Stadt St.Gallen. Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
-        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir freuen uns sehr, Sie bei uns zu haben. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
+        message = "Herzlich willkommen bei der Info-Nummer des Kantons St. Gallen! Wir sind hier um Ihnen zu helfen. Bitte sagen Sie uns, wie wir Ihnen heute helfen können."
 
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
@@ -222,6 +222,7 @@ class Call:
                     "Hi! The Kanton of St. Gallen's information number only supports German for now. Please ask your questions in German. Thank you for your understanding!",
                     next_url=f"{request.base_url}voice/listen", voice_profile="en-GB/Arthur"
                 )
+            # twillio transcription confidence doesn't work properly yet
             elif confidence < 0:
                 self.state = self.STATES["SPEAKING"]
                 return await self.send_message(
@@ -255,11 +256,14 @@ class Call:
             if int(reroute_n) == 10:
                 print(tel_n, department)
                 return await self.redirect_call(request, "+41772800638")
-            else:
+            elif int(reroute_n) == 0:
                 print("Answer: ", answer)
                 return await self.send_message(
                     request, answer, next_url=f"{request.base_url}voice/listen"
                 )
+            elif int(reroute_n) == 15:
+                print('Ending the call')
+                return await self.end_call(request)
 
         elif path == "recording":
             print("Recording")
@@ -268,9 +272,12 @@ class Call:
         elif path == "next":
             print("Next")
             return await self.send_message(request, "Ich höre")
+        
         elif path == "end":
             print("End")
+            self.state = self.STATES["END"]
             return await self.end_call(request)
+        
         else:
             raise HTTPException(status_code=404, detail="Path not found")
 
