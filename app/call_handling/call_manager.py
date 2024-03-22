@@ -33,6 +33,9 @@ class Call:
     assistant = None
     prev_statement = ""
     TIMEOUT_FOR_LISTENING = 3
+    secs_since_last_msg = 0
+    answer = None
+    rres = None
 
     def __init__(self, call_number) -> None:
         account_sid = "AC690145ec38222226d949960846d71393"
@@ -49,7 +52,8 @@ class Call:
         if to is None:
             to = self.call_number
 
-        message = self.client.messages.create(from_="+14243651541", body=body, to=to)
+        message = self.client.messages.create(
+            from_="+14243651541", body=body, to=to)
 
         print(message.sid)
 
@@ -79,7 +83,7 @@ class Call:
     async def send_welcome_message(self, request: Request, to: str = None):
         if to is None:
             to = self.call_number
-        
+
         resp = VoiceResponse()
 
         # say welcome to the City of St.Gallen support service. We are here to help you. Please tell us how we can help you today?
@@ -143,7 +147,7 @@ class Call:
         resp.play(audio_filelink)
 
         resp.hangup()
-        
+
         print("Generating Summary")
 
         summary = self.assistant.summarize_msg_history()
@@ -266,25 +270,39 @@ class Call:
         elif path == "process":
             print("Process")
 
-            # call the assistant and the router
-            answer, reroute_n, tel_n, department = call_llms(
-                self.assistant, self.speech_result, self.prev_statement
-            )
+            if self.rres is None:
+                self.rres = get_reroute_info(self.speech_result, self.prev_statement)
+                print("Reroute number: ", self.rres["reroute_number"])
 
-            self.prev_statement = answer
+            self.answer = self.assistant.get_answer()
 
-            print("Reroute number: ", reroute_n)
-
-            if int(reroute_n) == 10:
-                department: str = department.replace("_", " ")
-                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {department}. Bitte haben Sie einen kurzen Moment Geduld."
+            if int(self.rres["reroute_number"]) == 10:
+                print('tel. nr.: ', self.rres["telephone_number"])
+                message = f"Ich verbinde Sie gleich mit einem Kollegen der Abteilung {self.rres["department"].replace("_", " ")}. Bitte haben Sie einen kurzen Moment Geduld."
                 return await self.redirect_call(request, message, "+41772800638")
-            elif int(reroute_n) == 0:
-                print("Answer: ", answer)
+            elif int(self.rres["reroute_number"]) == 0:
+                while not self.answer:
+                    if self.secs_since_last_msg >= 6:
+                        return await self.send_message(
+                            request,
+                            "Bitte warten Sie einen Moment. Ich suche nach passenden Informationen für Sie.",
+                            next_url=f"{request.base_url}voice/process",
+                        )
+                    else:
+                        time.sleep(1)
+                        self.answer = self.assistant.get_answer()
+                        self.secs_since_last_msg = (self.secs_since_last_msg + 1) % 7
+                
+                self.prev_statement = self.answer
+                
+                print("Answer: ", self.answer)
+                local_answer = self.answer
+                self.answer = None
+                self.rres = None
                 return await self.send_message(
-                    request, answer, next_url=f"{request.base_url}voice/listen"
+                    request, local_answer, next_url=f"{request.base_url}voice/listen"
                 )
-            elif int(reroute_n) == 15:
+            elif int(self.rres["reroute_number"]) == 15:
                 print('Ending the call')
                 return await self.end_call(request)
 
@@ -314,35 +332,3 @@ class Call:
 
         else:
             raise HTTPException(status_code=404, detail="Path not found")
-
-
-def assistant_task(instance: Assistant):
-    return instance.get_answer()
-
-
-def router_task(question: str, prev_statement: str):
-    return get_reroute_info(question, prev_statement)
-
-
-def call_llms(assistant: Assistant, question: str, prev_statement: str):
-    results = []
-
-    # Call the router + assistant concurrently to reduce IO-bound latency
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        futures = [
-            executor.submit(assistant_task, assistant),
-            executor.submit(router_task, question, prev_statement),
-        ]
-
-        results = [future.result() for future in futures]
-
-    return (
-        results[0],
-        results[1]["reroute_number"],
-        results[1]["telephone_number"],
-        results[1]["department"],
-    )
-
-
-def reroute(reroute_n: int) -> bool:
-    return reroute_n > 6

@@ -49,7 +49,6 @@ class Assistant:
     def get_answer(self) -> str:
         print('status: ', self.run.status)
         if self.run.status != 'completed':
-            time.sleep(1)
             try:
                 self.run = self.client.beta.threads.runs.retrieve(
                     thread_id=self.thread.id,
@@ -57,7 +56,7 @@ class Assistant:
                 )
             except Exception as e:
                 print(e)
-            return self.get_answer()
+            return None
         else:
             thread_messages = self.client.beta.threads.messages.list(
                 self.thread.id)
