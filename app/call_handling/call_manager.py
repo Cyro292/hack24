@@ -49,8 +49,7 @@ class Call:
         if to is None:
             to = self.call_number
 
-        message = self.client.messages.create(
-            from_="+14243651541", body=body, to=to)
+        message = self.client.messages.create(from_="+14243651541", body=body, to=to)
 
         print(message.sid)
 
@@ -65,9 +64,7 @@ class Call:
         timestamp = time.time()
         audio_filename = f"output_{timestamp}.mp3"
 
-        await create_audio_file_from_text(
-            message, f"assets/audio/{audio_filename}"
-        )
+        await create_audio_file_from_text(message, f"assets/audio/{audio_filename}")
 
         audio_filelink = f"{request.base_url}audio/{audio_filename}"
         resp.play(audio_filelink)
@@ -168,7 +165,7 @@ class Call:
             recordingStatusCallbackMethod="POST",
             recordingStatusCallbackEvent="completed",
         )
-        resp.append(record)
+        # resp.append(record)
 
         return self.twiml(resp)
 
@@ -215,8 +212,6 @@ class Call:
                 print("Confidence is not available.")
             else:
                 print("Confidence: ", confidence, type(confidence))
-                print("Confidence: ", float(confidence),
-                      type(float(confidence)))
                 confidence = float(confidence)
 
             language = data.get("Language")
@@ -290,7 +285,10 @@ class Call:
 
             summary = self.assistant.summarize_msg_history()
 
-            sms_text = 'Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n' + summary
+            sms_text = (
+                "Grüezi! Eine kurze Zusammenfassung Ihres Telefonats mit dem Kanton St. Gallen:\n\n"
+                + summary
+            )
 
             await self.send_sms(sms_text)
 
