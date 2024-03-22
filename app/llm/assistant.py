@@ -67,6 +67,7 @@ class Assistant:
             return content[0].text.value
 
     def get_user_message_history(self) -> list:
+        users = ['Kanton St Gallen', 'Anrufer']
         print("Retrieving msg history")
         thread_messages = self.client.beta.threads.messages.list(
             self.thread.id)
@@ -74,7 +75,7 @@ class Assistant:
         msg_texts = []
         for (i, msg) in enumerate(thread_messages.data[0].content):
             if (msg.type == 'text'):
-                msg_texts.append({f'user_{(i%2)+1}': msg.text.value})
+                msg_texts.append({users[i % 2]: msg.text.value})
 
         return msg_texts
 
@@ -85,7 +86,7 @@ class Assistant:
         summary = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "Erstelle eine Zusammenfassung der Nachrichtenhistorie zwischen zwei Nutzern. Die Zusammenfassung soll klar und verständlich für den Nutzer sein, der Fragen gestellt hat. Die Zusammenfassung soll kurz und prägnant sein."},
+                {"role": "system", "content": "Erstelle eine Zusammenfassung der Nachrichtenhistorie zwischen dem Anrufer und \"Kanton St Gallen\". Die Zusammenfassung soll aus Sicht des Anrufers sein."},
                 {"role": "user", "content": json.dumps(msg_history)}
             ]
         )
