@@ -248,7 +248,7 @@ class Call:
 
                 return await self.send_message(
                     request,
-                    "Ich habe verstanden bitte warten Sie einen Moment.",
+                    "Bitte warten Sie einen Moment. Ich suche nach passenden Informationen für Sie.",
                     next_url=f"{request.base_url}voice/process",
                 )
 
