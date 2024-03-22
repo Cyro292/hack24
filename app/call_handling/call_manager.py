@@ -26,24 +26,30 @@ class Call:
         "PROCESSING": 4,
         "END": 5,
     }
-
+    
+    
+    call_number = None
     client = None
     state = None
     assistant = None
     prev_statement = ""
     TIMEOUT_FOR_LISTENING = 3
 
-    def __init__(self) -> None:
+    def __init__(self, call_number) -> None:
         account_sid = "AC690145ec38222226d949960846d71393"
         auth_token = os.environ["TWILIO_AUTH_TOKEN"]
         self.client = Client(account_sid, auth_token)
         self.state = self.STATES["INITIAL"]
         self.assistant = Assistant()
+        self.call_number = call_number
 
     def twiml(self, resp):
         return Response(content=str(resp), media_type="text/xml")
 
     async def send_sms(self, body: str, to: str):
+        if to is None:
+            to = self.call_number
+            
         message = self.client.messages.create(
             from_="+14243651541", body=body, to=to)
 
@@ -158,7 +164,7 @@ class Call:
             recordingStatusCallbackMethod="POST",
             recordingStatusCallbackEvent="completed",
         )
-        # resp.append(record)
+        resp.append(record)
 
         return self.twiml(resp)
 
