@@ -1,4 +1,4 @@
-# hack24
+# AI Call Voice Assistant - START HACK 2024
 
 
 # info
